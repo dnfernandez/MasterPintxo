@@ -35,18 +35,18 @@
       <file leaf-file-name="JuradoProfesionalMapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/JuradoProfesionalMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.129032">
-              <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+            <state vertical-scroll-proportion="-31.192308">
+              <caret line="70" column="5" selection-start-line="42" selection-start-column="3" selection-end-line="70" selection-end-column="5" />
               <folding>
-                <marker date="1447766000000" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
-                <marker date="1447766000000" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
-                <marker date="1447766000000" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
-                <marker date="1447766000000" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
-                <marker date="1447766000000" expanded="true" signature="1826:1871" placeholder="delete from ..." />
-                <marker date="1447766000000" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
-                <marker date="1447766000000" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
-                <marker date="1447766000000" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
-                <marker date="1447766000000" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
+                <marker date="1447766000209" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
+                <marker date="1447766000209" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
+                <marker date="1447766000209" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
+                <marker date="1447766000209" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
+                <marker date="1447766000209" expanded="true" signature="1826:1871" placeholder="delete from ..." />
+                <marker date="1447766000209" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
+                <marker date="1447766000209" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
+                <marker date="1447766000209" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
+                <marker date="1447766000209" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
               </folding>
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="Pincho.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Pincho.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.032259">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
               <folding />
             </state>
@@ -65,20 +65,19 @@
       <file leaf-file-name="PinchoMapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-63.451614">
+            <state vertical-scroll-proportion="-26.615385">
               <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
               <folding>
-                <marker date="1447776980240" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
-                <marker date="1447776980240" expanded="true" signature="723:864" placeholder="insert into pincho..." />
-                <marker date="1447776980240" expanded="true" signature="1244:1357" placeholder="update pinch..." />
-                <marker date="1447776980240" expanded="true" signature="1701:1736" placeholder="delete from ..." />
-                <marker date="1447776980240" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
-                <marker date="1447776980240" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
-                <marker date="1447776980240" expanded="true" signature="2542:2594" placeholder="select * fro..Pincho..." />
-                <marker date="1447776980240" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
-                <marker date="1447776980240" expanded="true" signature="3013:3063" placeholder="update pinch..." />
-                <marker date="1447776980240" expanded="true" signature="3268:3379" placeholder="update pinch..." />
-                <marker date="1447776980240" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
+                <marker date="1447776980000" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
+                <marker date="1447776980000" expanded="true" signature="723:864" placeholder="insert into pincho..." />
+                <marker date="1447776980000" expanded="true" signature="1244:1357" placeholder="update pinch..." />
+                <marker date="1447776980000" expanded="true" signature="1701:1736" placeholder="delete from ..." />
+                <marker date="1447776980000" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
+                <marker date="1447776980000" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
+                <marker date="1447776980000" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
+                <marker date="1447776980000" expanded="true" signature="3013:3063" placeholder="update pinch..." />
+                <marker date="1447776980000" expanded="true" signature="3268:3379" placeholder="update pinch..." />
+                <marker date="1447776980000" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
               </folding>
             </state>
           </provider>
@@ -87,8 +86,8 @@
       <file leaf-file-name="Organizador.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Organizador.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7096774">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state vertical-scroll-proportion="-15.5">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -97,11 +96,44 @@
       <file leaf-file-name="OrganizadorMapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.870968">
-              <caret line="33" column="107" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
+            <state vertical-scroll-proportion="-32.5">
+              <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
               <folding>
-                <marker date="1447759271000" expanded="true" signature="405:500" placeholder="select count..Organizador..." />
-                <marker date="1447759271000" expanded="true" signature="761:830" placeholder="update Organ..." />
+                <marker date="1447796604194" expanded="true" signature="414:509" placeholder="select count..Organizador..." />
+                <marker date="1447796604194" expanded="true" signature="780:849" placeholder="update Organ..." />
+                <marker date="1447796604194" expanded="true" signature="1130:1220" placeholder="select * fro..Pincho..." />
+                <marker date="1447796604194" expanded="true" signature="1174:1219" placeholder="select Pinch..Pincho_Elegido_JP..." />
+                <marker date="1447796604194" expanded="true" signature="1434:1510" placeholder="select count..Pincho_Elegido_JP..." />
+                <marker date="1447796604194" expanded="true" signature="1888:1987" placeholder="insert into Pincho_Elegido_JP..." />
+                <marker date="1447796604194" expanded="true" signature="2228:2268" placeholder="select * fro..Pincho..." />
+                <marker date="1447796604194" expanded="true" signature="2365:2396" placeholder="select * fro..JuradoProfesional..." />
+                <marker date="1447796604194" expanded="true" signature="2589:2700" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+                <marker date="1447796604194" expanded="true" signature="2878:2993" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Concurso.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Concurso.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.26923">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConcursoMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/ConcursoMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-28.115385">
+              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+              <folding>
+                <marker date="1447797843504" expanded="true" signature="362:414" placeholder="insert into JuradoProfesional..." />
+                <marker date="1447797843504" expanded="true" signature="362:418" placeholder="insert into Concurso..." />
+                <marker date="1447797843504" expanded="true" signature="640:690" placeholder="update Concu..." />
+                <marker date="1447797843504" expanded="true" signature="910:946" placeholder="delete from ..." />
               </folding>
             </state>
           </provider>
@@ -110,8 +142,8 @@
       <file leaf-file-name="prueba.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prueba.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67012686">
-              <caret line="105" column="38" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.86194897">
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,12 +157,14 @@
         <option value="$PROJECT_DIR$/Modelo/JuradoProfesional.php" />
         <option value="$PROJECT_DIR$/Modelo/Pincho.php" />
         <option value="$PROJECT_DIR$/model/JuradoProfesional.php" />
-        <option value="$PROJECT_DIR$/model/Organizador.php" />
-        <option value="$PROJECT_DIR$/model/OrganizadorMapper.php" />
         <option value="$PROJECT_DIR$/model/JuradoProfesionalMapper.php" />
         <option value="$PROJECT_DIR$/nucleo/PDOConnection.php" />
         <option value="$PROJECT_DIR$/model/PinchoMapper.php" />
         <option value="$PROJECT_DIR$/model/Pincho.php" />
+        <option value="$PROJECT_DIR$/model/Organizador.php" />
+        <option value="$PROJECT_DIR$/model/OrganizadorMapper.php" />
+        <option value="$PROJECT_DIR$/model/Concurso.php" />
+        <option value="$PROJECT_DIR$/model/ConcursoMapper.php" />
         <option value="$PROJECT_DIR$/prueba.php" />
       </list>
     </option>
@@ -147,8 +181,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -175,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,12 +237,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nucleo" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,10 +297,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17760417" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17738095" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -316,15 +350,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
           <folding>
-            <marker date="1447766000000" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
-            <marker date="1447766000000" expanded="true" signature="1826:1871" placeholder="delete from ..." />
-            <marker date="1447766000000" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
-            <marker date="1447766000000" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
-            <marker date="1447766000000" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
+            <marker date="1447766000209" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
+            <marker date="1447766000209" expanded="true" signature="1826:1871" placeholder="delete from ..." />
+            <marker date="1447766000209" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
+            <marker date="1447766000209" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
+            <marker date="1447766000209" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
           </folding>
         </state>
       </provider>
@@ -332,7 +366,7 @@
     <entry file="file://$PROJECT_DIR$/model/Pincho.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
           <folding />
         </state>
       </provider>
@@ -340,19 +374,18 @@
     <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
           <folding>
-            <marker date="1447776980240" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="723:864" placeholder="insert into pincho..." />
-            <marker date="1447776980240" expanded="true" signature="1244:1357" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="1701:1736" placeholder="delete from ..." />
-            <marker date="1447776980240" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2542:2594" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="3013:3063" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="3268:3379" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
+            <marker date="1447776980000" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="723:864" placeholder="insert into pincho..." />
+            <marker date="1447776980000" expanded="true" signature="1244:1357" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="1701:1736" placeholder="delete from ..." />
+            <marker date="1447776980000" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="3013:3063" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3268:3379" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
           </folding>
         </state>
       </provider>
@@ -370,8 +403,104 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="107" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
           <folding>
-            <marker date="1447759271000" expanded="true" signature="405:500" placeholder="select count..Organizador..." />
-            <marker date="1447759271000" expanded="true" signature="761:830" placeholder="update Organ..." />
+            <marker date="1447796604194" expanded="true" signature="414:509" placeholder="select count..Organizador..." />
+            <marker date="1447796604194" expanded="true" signature="780:849" placeholder="update Organ..." />
+            <marker date="1447796604194" expanded="true" signature="1130:1220" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="1174:1219" placeholder="select Pinch..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1434:1510" placeholder="select count..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1888:1987" placeholder="insert into Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="2228:2268" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="2365:2396" placeholder="select * fro..JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2589:2700" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2878:2993" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/JuradoProfesional.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="104" selection-start-line="18" selection-start-column="104" selection-end-line="18" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/JuradoProfesionalMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+          <folding>
+            <marker date="1447766000209" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
+            <marker date="1447766000209" expanded="true" signature="1826:1871" placeholder="delete from ..." />
+            <marker date="1447766000209" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
+            <marker date="1447766000209" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
+            <marker date="1447766000209" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Pincho.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1447776980000" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="723:864" placeholder="insert into pincho..." />
+            <marker date="1447776980000" expanded="true" signature="1244:1357" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="1701:1736" placeholder="delete from ..." />
+            <marker date="1447776980000" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="3013:3063" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3268:3379" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Organizador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="107" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
+          <folding>
+            <marker date="1447796604194" expanded="true" signature="414:509" placeholder="select count..Organizador..." />
+            <marker date="1447796604194" expanded="true" signature="780:849" placeholder="update Organ..." />
+            <marker date="1447796604194" expanded="true" signature="1130:1220" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="1174:1219" placeholder="select Pinch..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1434:1510" placeholder="select count..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1888:1987" placeholder="insert into Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="2228:2268" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="2365:2396" placeholder="select * fro..JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2589:2700" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2878:2993" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
           </folding>
         </state>
       </provider>
@@ -408,46 +537,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.870968">
-          <caret line="33" column="107" selection-start-line="33" selection-start-column="107" selection-end-line="33" selection-end-column="107" />
-          <folding>
-            <marker date="1447759271000" expanded="true" signature="405:500" placeholder="select count..Organizador..." />
-            <marker date="1447759271000" expanded="true" signature="761:830" placeholder="update Organ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Organizador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7096774">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state vertical-scroll-proportion="-15.5">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/JuradoProfesionalMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.129032">
-          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
-          <folding>
-            <marker date="1447766000000" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
-            <marker date="1447766000000" expanded="true" signature="1826:1871" placeholder="delete from ..." />
-            <marker date="1447766000000" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
-            <marker date="1447766000000" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
-            <marker date="1447766000000" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
-            <marker date="1447766000000" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Pincho.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.032259">
+        <state vertical-scroll-proportion="-0.65384614">
           <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
           <folding />
         </state>
@@ -455,28 +555,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-63.451614">
+        <state vertical-scroll-proportion="-26.615385">
           <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
           <folding>
-            <marker date="1447776980240" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="723:864" placeholder="insert into pincho..." />
-            <marker date="1447776980240" expanded="true" signature="1244:1357" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="1701:1736" placeholder="delete from ..." />
-            <marker date="1447776980240" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2542:2594" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
-            <marker date="1447776980240" expanded="true" signature="3013:3063" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="3268:3379" placeholder="update pinch..." />
-            <marker date="1447776980240" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
+            <marker date="1447776980000" expanded="true" signature="393:444" placeholder="select count..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="723:864" placeholder="insert into pincho..." />
+            <marker date="1447776980000" expanded="true" signature="1244:1357" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="1701:1736" placeholder="delete from ..." />
+            <marker date="1447776980000" expanded="true" signature="1968:2010" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2244:2286" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="2542:2646" placeholder="select * fro..Pincho..." />
+            <marker date="1447776980000" expanded="true" signature="3013:3063" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3268:3379" placeholder="update pinch..." />
+            <marker date="1447776980000" expanded="true" signature="3297:3361" placeholder="select valor..Pincho_Elegido_JP..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.5">
+          <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
+          <folding>
+            <marker date="1447796604194" expanded="true" signature="414:509" placeholder="select count..Organizador..." />
+            <marker date="1447796604194" expanded="true" signature="780:849" placeholder="update Organ..." />
+            <marker date="1447796604194" expanded="true" signature="1130:1220" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="1174:1219" placeholder="select Pinch..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1434:1510" placeholder="select count..Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="1888:1987" placeholder="insert into Pincho_Elegido_JP..." />
+            <marker date="1447796604194" expanded="true" signature="2228:2268" placeholder="select * fro..Pincho..." />
+            <marker date="1447796604194" expanded="true" signature="2365:2396" placeholder="select * fro..JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2589:2700" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447796604194" expanded="true" signature="2878:2993" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Concurso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.26923">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/JuradoProfesionalMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.192308">
+          <caret line="70" column="5" selection-start-line="42" selection-start-column="3" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <marker date="1447766000209" expanded="true" signature="408:468" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="754:836" placeholder="select count..JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1104:1199" placeholder="insert into JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="1469:1558" placeholder="update Jurad..." />
+            <marker date="1447766000209" expanded="true" signature="1826:1871" placeholder="delete from ..." />
+            <marker date="1447766000209" expanded="true" signature="2139:2223" placeholder="select * fro..Pincho_Elegido_JP..." />
+            <marker date="1447766000209" expanded="true" signature="2607:2704" placeholder="UPDATE Pinch..." />
+            <marker date="1447766000209" expanded="true" signature="2997:3079" placeholder="select * fro..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1447766000209" expanded="true" signature="3410:3524" placeholder="UPDATE Pinch..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ConcursoMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.115385">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+          <folding>
+            <marker date="1447797843504" expanded="true" signature="362:414" placeholder="insert into JuradoProfesional..." />
+            <marker date="1447797843504" expanded="true" signature="362:418" placeholder="insert into Concurso..." />
+            <marker date="1447797843504" expanded="true" signature="640:690" placeholder="update Concu..." />
+            <marker date="1447797843504" expanded="true" signature="910:946" placeholder="delete from ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prueba.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67012686">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.86194897">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding />
         </state>
       </provider>

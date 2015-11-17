@@ -5,6 +5,8 @@ require_once(__DIR__."/./model/JuradoProfesional.php");
 require_once(__DIR__."/./model/JuradoProfesionalMapper.php");
 require_once(__DIR__."/./model/Organizador.php");
 require_once(__DIR__."/./model/OrganizadorMapper.php");
+require_once(__DIR__."/./model/Concurso.php");
+require_once(__DIR__."/./model/ConcursoMapper.php");
 
 $pincho1 = new Pincho("1", "Croquetas", "Croquetas de masa", "2", "0", "0","44556677E","./images/pincho1.jpg");
 $pinchoMapper = new PinchoMapper();
@@ -82,24 +84,24 @@ if($juradoProfesionalMapper->existeUsuario($juradoProfesional2->getDniJpro())){
     echo "JPro eliminado<br>";
 }*/
 
-$listadoElegirFinalistas = $juradoProfesionalMapper->listarElegirFinalistas("44998877E");
+$listadoElegirFinalistas = $juradoProfesionalMapper->listarElegirFinalistas("44112233E");
 if($listadoElegirFinalistas != null){
     foreach($listadoElegirFinalistas as $finalistas){
         echo "Pincho: ".$finalistas["Pincho_idPincho"]." JPro: ".$finalistas["JuradoProfesional_dniJPro"]." Finalista: ".$finalistas["valoracion"]."<br>";
     }
 }
 
-$juradoProfesionalMapper->elegirFinalistas("1","1","44998877E");
+$juradoProfesionalMapper->elegirFinalistas("1","1","44112233E");
 
 
-$listadoValorarPinchos = $juradoProfesionalMapper->listarValorarPinchosJpro("44998877E");
+$listadoValorarPinchos = $juradoProfesionalMapper->listarValorarPinchosJpro("44112233E");
 if($listadoValorarPinchos != null){
     foreach($listadoValorarPinchos as $valorar){
         echo "Pincho: ".$valorar["Pincho_idPincho"]." JPro: ".$valorar["JuradoProfesional_dniJPro"]." Puntuacion: ".$valorar["puntuacion"]."<br>";
     }
 }
 
-$juradoProfesionalMapper->valorarPinchosJpro("1","44998877E","Sabor: 10, Color:5");
+$juradoProfesionalMapper->valorarPinchosJpro("1","44112233E","Sabor: 10, Color:5");
 
 echo "-----------------------------------<br><br>";
 
@@ -111,3 +113,29 @@ $organizadorMapper->modificar($organizador);
 if($organizadorMapper->comprobarUsuario($organizador->getIdOrganizador(),$organizador->getContrasenhaOrganizador())){
     echo "Organizador validado<br>";
 }
+
+$listadoPinchosSinAsignar=$organizadorMapper->listarNoAsignados();
+foreach($listadoPinchosSinAsignar as $pincho){
+    echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Finalista: " . $pincho["finalista"] . "<br>";
+}
+
+if(!$organizadorMapper->comprobarAsignado("3")){
+    $organizadorMapper->asignarElegidos("3","44112233E");
+}
+if(!$organizadorMapper->comprobarAsignado("4")){
+    $organizadorMapper->asignarElegidos("4","44112233E");
+}
+
+$organizadorMapper->asignarFinalistas();
+
+echo "-----------------------------------<br><br>";
+
+$concurso = new Concurso("MasterPintxo","Concurso de pinchos de cocina y tapas de botes");
+$concursoMapper = new ConcursoMapper();
+
+$concursoMapper->insertar($concurso);
+
+$concurso = new Concurso("MasterPintxo","Concurso de pinchos de catctus y tapas de botes");
+$concursoMapper->modificar($concurso);
+
+$concursoMapper->eliminar($concurso);
