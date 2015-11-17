@@ -8,7 +8,8 @@ class Pincho
     private $precio;
     private $concursante;
     private $finalista;
-
+    private $Establecimiento_nif;
+    private $rutaImagen;
 
     /**
      * Pincho constructor.
@@ -18,8 +19,10 @@ class Pincho
      * @param $precio
      * @param $concursante
      * @param $finalista
+     * @param $rutaImagen
+     * @param $Establecimiento_nif
      */
-    public function __construct($idPincho=NULL, $nombreP=NULL, $descripcionP=NULL, $precio=NULL, $concursante=NULL, $finalista=NULL)
+    public function __construct($idPincho, $nombreP, $descripcionP, $precio, $concursante, $finalista, $Establecimiento_nif, $rutaImagen)
     {
         $this->idPincho = $idPincho;
         $this->nombreP = $nombreP;
@@ -27,6 +30,8 @@ class Pincho
         $this->precio = $precio;
         $this->concursante = $concursante;
         $this->finalista = $finalista;
+        $this->Establecimiento_nif = $Establecimiento_nif;
+        $this->rutaImagen = $rutaImagen;
     }
 
     /**
@@ -124,4 +129,41 @@ class Pincho
     {
         $this->finalista = $finalista;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRutaImagen()
+    {
+        return $this->rutaImagen;
+    }
+
+    /**
+     * @param mixed $rutaImagen
+     */
+    public function setRutaImagen($rutaImagen)
+    {
+        $this->rutaImagen = $rutaImagen;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEstablecimientoNif()
+    {
+        return $this->Establecimiento_nif;
+    }
+
+    /**
+     * @param mixed $Establecimiento_nif
+     */
+    public function setEstablecimientoNif($Establecimiento_nif)
+    {
+        $this->Establecimiento_nif = $Establecimiento_nif;
+    }
+
+
+
+
+
 }

@@ -36,8 +36,8 @@ class PinchoMapper
 
     public function insertar(Pincho $pincho)
     {
-        $stmt = $this->db->prepare("insert into pincho(idPincho, nombreP, descripcionP, precio, concursante, finalista) values (?,?,?,?,?,?)");
-        $stmt->execute(array($pincho->getIdPincho(), $pincho->getNombreP(), $pincho->getDescripcionP(), $pincho->getPrecio(), $pincho->getConcursante(), $pincho->getFinalista()));
+        $stmt = $this->db->prepare("insert into pincho(idPincho, nombreP, descripcionP, precio, concursante, finalista, Establecimiento_nif, rutaImagen) values (?,?,?,?,?,?,?,?)");
+        $stmt->execute(array($pincho->getIdPincho(), $pincho->getNombreP(), $pincho->getDescripcionP(), $pincho->getPrecio(), $pincho->getConcursante(), $pincho->getFinalista(), $pincho->getEstablecimientoNif(), $pincho->getRutaImagen()));
     }
 
     /**
@@ -46,8 +46,8 @@ class PinchoMapper
 
     public function modificar(Pincho $pincho)
     {
-        $stmt = $this->db->prepare("update pincho set nombreP=?, descripcionP=?, precio=?, concursante=?, finalista=? where idPincho=?");
-        $stmt->execute(array($pincho->getNombreP(), $pincho->getDescripcionP(), $pincho->getPrecio(), $pincho->getConcursante(), $pincho->getFinalista(), $pincho->getIdPincho()));
+        $stmt = $this->db->prepare("update pincho set nombreP=?, descripcionP=?, precio=?, concursante=?, finalista=? , rutaImagen=? where idPincho=?");
+        $stmt->execute(array($pincho->getNombreP(), $pincho->getDescripcionP(), $pincho->getPrecio(), $pincho->getConcursante(), $pincho->getFinalista(), $pincho->getIdPincho(), $pincho->getRutaImagen()));
     }
 
     /**
@@ -87,7 +87,7 @@ class PinchoMapper
      */
     public function obtenerPincho($idPincho)
     {
-        $stmt = $this->db->prepare("select * from Pincho, Establecimiento where idPincho=?");
+        $stmt = $this->db->prepare("select * from Pincho,Establecimiento where idPincho=? and Establecimiento.nif=Pincho.Establecimiento_nif");
         $stmt->execute(array($idPincho));
         $pincho = $stmt->fetchAll(PDO::FETCH_BOTH);
         if ($pincho != null) {

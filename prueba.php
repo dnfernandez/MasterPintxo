@@ -6,7 +6,7 @@ require_once(__DIR__."/./model/JuradoProfesionalMapper.php");
 require_once(__DIR__."/./model/Organizador.php");
 require_once(__DIR__."/./model/OrganizadorMapper.php");
 
-$pincho1 = new Pincho("1", "Croquetas", "Croquetas de masa", "2", "0", "0");
+$pincho1 = new Pincho("1", "Croquetas", "Croquetas de masa", "2", "0", "0","44556677E","./images/pincho1.jpg");
 $pinchoMapper = new PinchoMapper();
 
 if (!$pinchoMapper->comprobarPincho($pincho1->getIdPincho())) {
@@ -14,13 +14,13 @@ if (!$pinchoMapper->comprobarPincho($pincho1->getIdPincho())) {
     echo "Pincho insertado <br>";
 }
 
-$pincho2 = new Pincho("1", "Croquetas", "Croquetas congeladas", "5", "0", "0");
+$pincho2 = new Pincho("1", "Croquetas", "Croquetas congeladas", "5", "0", "0","44556677E","./images/pincho1.jpg");
 if ($pinchoMapper->comprobarPincho($pincho2->getIdPincho())) {
     $pinchoMapper->modificar($pincho2);
     echo "Pincho modificado <br>";
 }
-
-/*if($pinchoMapper->comprobarPincho($pincho2->getIdPincho())){
+/*
+if($pinchoMapper->comprobarPincho($pincho2->getIdPincho())){
     $pinchoMapper->eliminar($pincho2);
     echo "Pincho eliminado <br>";
 }*/
@@ -28,7 +28,7 @@ if ($pinchoMapper->comprobarPincho($pincho2->getIdPincho())) {
 $pinchosPropuestos = $pinchoMapper->consultarPinchosPropuestos();
 if ($pinchosPropuestos != null) {
     foreach ($pinchosPropuestos as $pincho) {
-        echo $pincho["idPincho"] . " " . $pincho["nombreP"] . " " . $pincho["concursante"] . "<br>";
+        echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Concursante: " . $pincho["concursante"] . "<br>";
     }
 }
 
@@ -36,7 +36,7 @@ if ($pinchosPropuestos != null) {
 $pinchosAceptados = $pinchoMapper->consultarPinchosAceptados();
 if ($pinchosAceptados != null) {
     foreach ($pinchosAceptados as $pincho) {
-        echo $pincho["idPincho"] . " " . $pincho["nombreP"] . " " . $pincho["concursante"] . "<br>";
+        echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Concursante: " . $pincho["concursante"] . "<br>";
     }
 }
 
@@ -44,20 +44,12 @@ $pinchoMapper->actualizarPropuestaPincho($pincho1->getIdPincho());
 $pinchosAceptados = $pinchoMapper->consultarPinchosAceptados();
 if ($pinchosAceptados != null) {
     foreach ($pinchosAceptados as $pincho) {
-        echo $pincho["idPincho"] . " " . $pincho["nombreP"] . " " . $pincho["concursante"] . "<br>";
+        echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Concursante: " . $pincho["concursante"] . "<br>";
     }
 }
 
-$pinchoMapper->actualizarPinchoFinalista($pincho1->getIdPincho());
+$pinchoMapper->actualizarPinchoFinalista("1");
 $pinchoObtenido = $pinchoMapper->obtenerPincho("1");
-if ($pinchoObtenido != null) {
-    foreach ($pinchoObtenido as $pincho) {
-        echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Finalista: " . $pincho["finalista"] . " Nombre E: " . $pincho["nombreE"] . "<br>";
-    }
-}
-
-$pinchoMapper->actualizarPinchoFinalista("2");
-$pinchoObtenido = $pinchoMapper->obtenerPincho("2");
 if ($pinchoObtenido != null) {
     foreach ($pinchoObtenido as $pincho) {
         echo $pincho["idPincho"] . " Nombre: " . $pincho["nombreP"] . " Finalista: " . $pincho["finalista"] . " Nombre E: " . $pincho["nombreE"] . "<br>";
@@ -84,31 +76,30 @@ if($juradoProfesionalMapper->existeUsuario($juradoProfesional2->getDniJpro())){
     $juradoProfesionalMapper->modificar($juradoProfesional2);
     echo "JPro modificado<br>";
 }
-
-/*if($juradoProfesionalMapper->existeUsuario($juradoProfesional2->getDniJpro())){
+/*
+if($juradoProfesionalMapper->existeUsuario($juradoProfesional2->getDniJpro())){
     $juradoProfesionalMapper->eliminar($juradoProfesional2);
     echo "JPro eliminado<br>";
 }*/
 
-$listadoElegirFinalistas = $juradoProfesionalMapper->listarElegirFinalistas($juradoProfesional->getDniJpro());
+$listadoElegirFinalistas = $juradoProfesionalMapper->listarElegirFinalistas("44998877E");
 if($listadoElegirFinalistas != null){
     foreach($listadoElegirFinalistas as $finalistas){
         echo "Pincho: ".$finalistas["Pincho_idPincho"]." JPro: ".$finalistas["JuradoProfesional_dniJPro"]." Finalista: ".$finalistas["valoracion"]."<br>";
     }
 }
 
-$juradoProfesionalMapper->elegirFinalistas("1","1",$juradoProfesional->getDniJpro());
+$juradoProfesionalMapper->elegirFinalistas("1","1","44998877E");
 
 
-$listadoValorarPinchos = $juradoProfesionalMapper->listarValorarPinchosJpro($juradoProfesional->getDniJpro());
+$listadoValorarPinchos = $juradoProfesionalMapper->listarValorarPinchosJpro("44998877E");
 if($listadoValorarPinchos != null){
     foreach($listadoValorarPinchos as $valorar){
-        echo "Pincho: ".$valorar["Pincho_idPincho"]." JPro: ".$valorar["JuradoProfesional_dniJPro"]." Finalista: ".$valorar["puntuacion"]."<br>";
+        echo "Pincho: ".$valorar["Pincho_idPincho"]." JPro: ".$valorar["JuradoProfesional_dniJPro"]." Puntuacion: ".$valorar["puntuacion"]."<br>";
     }
 }
 
-$juradoProfesionalMapper->valorarPinchosJpro("1","44556677E","Sabor: 10, Color:5");
-
+$juradoProfesionalMapper->valorarPinchosJpro("1","44998877E","Sabor: 10, Color:5");
 
 echo "-----------------------------------<br><br>";
 
