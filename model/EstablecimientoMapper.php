@@ -87,11 +87,19 @@ class EstablecimientoMapper
         }*/
     }
 
+    public function pinchoPresentado($nif){
+	$stmt = $this->db->prepare("SELECT count(*) FROM Pincho WHERE Establecimiento_nif =?");
+        $stmt->execute(array($nif));
+	if($stmt->fetchColumn()>0){
+            return true;
+        }	
+    }
+
     public function generarCodigo($nif)
     {
 
 
-            $characters = '0123456789';
+            $characters = '123456789';
             $charactersLength = strlen($characters);
             $randomString = '';
             for ($i = 0; $i < 9; $i++) {

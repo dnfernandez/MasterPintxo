@@ -1,0 +1,3 @@
+DROP TABLE JuradoProfesional;
+
+INSERT INTO JuradoProfesional (nombreJPro,dniJPro,telefJPro,contrasenhaJPro) VALUES ("Tanek Holloway","44444444F","988309017","abc123"),("Laith Bruce","44454444F","988309117","abc123"),("Adara Diaz","44464444F","988309217","abc123"),("Rylee Vincent","44474444F","988309317","abc123");

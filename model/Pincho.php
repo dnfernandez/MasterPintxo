@@ -10,6 +10,7 @@ class Pincho
     private $finalista;
     private $Establecimiento_nif;
     private $rutaImagen;
+    private $confirmado;
 
     /**
      * Pincho constructor.
@@ -22,7 +23,7 @@ class Pincho
      * @param $rutaImagen
      * @param $Establecimiento_nif
      */
-    public function __construct($idPincho, $nombreP, $descripcionP, $precio, $concursante, $finalista, $Establecimiento_nif, $rutaImagen)
+    public function __construct($idPincho = NULL, $nombreP = NULL, $descripcionP = NULL, $precio = NULL, $concursante = NULL, $finalista = NULL, $Establecimiento_nif = NULL, $rutaImagen = NULL, $confirmado = NULL)
     {
         $this->idPincho = $idPincho;
         $this->nombreP = $nombreP;
@@ -32,6 +33,7 @@ class Pincho
         $this->finalista = $finalista;
         $this->Establecimiento_nif = $Establecimiento_nif;
         $this->rutaImagen = $rutaImagen;
+	$this->confirmado = $confirmado;
     }
 
     /**
@@ -160,6 +162,22 @@ class Pincho
     public function setEstablecimientoNif($Establecimiento_nif)
     {
         $this->Establecimiento_nif = $Establecimiento_nif;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getConfirmado()
+    {
+        return $this->confirmado;
+    }
+
+    /**
+     * @param mixed $confirmado
+     */
+    public function setConfirmado($confirmado)
+    {
+        $this->confirmado = $confirmado;
     }
 
 
