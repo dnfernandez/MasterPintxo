@@ -16,6 +16,15 @@ class PinchoMapper
     }
 
     /**
+     * Metodo que devuelve el idPincho mas alto
+     */
+
+    public function ultimoIdPincho(){
+        $stmt = $this->db->query("select max(idPincho) as maximo from Pincho");
+        return $stmt->fetch(PDO::FETCH_BOTH);
+    }
+
+    /**
      * Comprobar si existe un pincho
      */
 
@@ -123,7 +132,7 @@ class PinchoMapper
      public function verPinchoRechazado($idPincho, $nif){
      	$stmt = $this->db->prepare("select * from Pincho where idPincho=? and Establecimiento_nif=?");
 	$stmt->execute(array($idPincho, $nif));
-	return $stmt->fetchAll(PDO::FETCH_BOTH);
+	return $stmt->fetch(PDO::FETCH_BOTH);
 	
      }
 

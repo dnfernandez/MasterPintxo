@@ -34,6 +34,19 @@ class EstablecimientoMapper
 
     }
 
+    /**
+     * Comprobar usuario establecimiento
+     */
+
+    public function comprobarUsuario($login, $contrasenha)
+    {
+        $stmt = $this->db->prepare("select count(nif) from Establecimiento where nif=? and contrasenhaE=?");
+        $stmt->execute(array($login,$contrasenha));
+        if ($stmt->fetchColumn() > 0) {
+            return true;
+        }
+    }
+
     public function modificar(Establecimiento $establecimiento)
     {
         $stmt = $this->db->prepare("UPDATE  Establecimiento set nombreE=?,direccionE=?,contrasenhaE=?,telfE=? where nif=?");
@@ -146,6 +159,12 @@ class EstablecimientoMapper
         }
 
     }
+	
+	public function listarCodigosDisponibles($nif){
+		$stmt=$this->db->prepare("select * from Codigo where Establecimiento_nif=? and JuradoPopular_dniJP='000000000' and usado='0'");
+        $stmt->execute(array($nif));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
 
 
 }

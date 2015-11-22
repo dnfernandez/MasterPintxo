@@ -180,8 +180,57 @@ class Pincho
         $this->confirmado = $confirmado;
     }
 
+    /**
+     * Método para comprobar si el
+     * objeto  es
+     * válido para el registro
+     * en la base de datos
+     */
 
+    public function validoParaCrear()
+    {
+        $errors = array();
+        if (strlen($this->nombreP) < 1) {
+            $errors["nombreP"] = "El campo nombre no puede estar vacio";
+        }
+        if (strlen($this->descripcionP) < 1) {
+            $errors["descripcionP"] = "El campo descripcion no puede estar vacio";
+        }
+        if (sizeof($this->precio) < 1) {
+            $errors["precioP"] = "El campo precio no puede estar vacio";
+        }
+        if (strpos($this->rutaImagen,'.') == false) {
+            $errors["rutaImagen"] = "El campo imagen no puede estar vacio";
+        }
+        if (sizeof($errors) > 0) {
+            throw new ValidationException ($errors, "pincho no valido");
+        }
+    }
 
+    /**
+     * Método para comprobar si el
+     * objeto  es
+     * válido para modificarse
+     */
 
+    public function validoParaActualizar()
+    {
+        $errors = array();
 
+        if (!isset($this->idPincho)) {
+            $errors["idPincho"] = "idPincho es obligatorio";
+        }
+
+        try {
+            $this->validoParaCrear();
+        } catch (ValidationException $ex) {
+            foreach ($ex->getErrors() as $key => $error) {
+                $errors[$key] = $error;
+            }
+        }
+
+        if (sizeof($errors) > 0) {
+            throw new ValidationException($errors, "pincho no valido");
+        }
+    }
 }

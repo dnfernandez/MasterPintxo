@@ -44,5 +44,36 @@ class ConcursoMapper
         $stmt->execute(array($concurso->getNombreC()));
     }
 
+    /**
+     * Ver concurso
+     */
+
+    public function verDescripcion($nombreC){
+        $stmt = $this->db->prepare("select * from Concurso where nombreC=?");
+        $stmt->execute(array($nombreC));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

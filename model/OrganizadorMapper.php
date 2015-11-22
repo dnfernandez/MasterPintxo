@@ -18,7 +18,20 @@ class OrganizadorMapper
      * Comprobar usuario Organizador
      */
 
-    public function comprobarUsuario($login, $contrasenha)
+    public function comprobarUsuario($login)
+    {
+        $stmt = $this->db->prepare("select count(idOrganizador) from Organizador where idOrganizador=?");
+        $stmt->execute(array($login));
+        if ($stmt->fetchColumn() > 0) {
+            return true;
+        }
+    }
+
+    /**
+     * Existe usuario Organizador
+     */
+
+    public function existeUsuario($login, $contrasenha)
     {
         $stmt = $this->db->prepare("select count(idOrganizador) from Organizador where idOrganizador=? and contrasenhaOrganizador=?");
         $stmt->execute(array($login, $contrasenha));

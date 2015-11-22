@@ -75,7 +75,7 @@ class JuradoProfesionalMapper
      */
     public function listarElegirFinalistas($dniJPro)
     {
-        $stmt = $this->db->prepare("select * from Pincho_Elegido_JP where JuradoProfesional_dniJpro=? and valoracion='0'");
+        $stmt = $this->db->prepare("select * from Pincho_Elegido_JP,Pincho where Pincho_idPincho=idPincho and JuradoProfesional_dniJpro=? and valoracion='0' and confirmado<>'1'");
         $stmt->execute(array($dniJPro));
         $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $lista;
@@ -101,7 +101,7 @@ class JuradoProfesionalMapper
      */
     public function listarValorarPinchosJpro($dniJPro)
     {
-        $stmt = $this->db->prepare("select * from Pincho_Finalista_JuradoProfesional where JuradoProfesional_dniJpro=?");
+        $stmt = $this->db->prepare("select * from Pincho_Finalista_JuradoProfesional, Pincho where Pincho_idPincho=idPincho and JuradoProfesional_dniJpro=?");
         $stmt->execute(array($dniJPro));
         $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $lista;
@@ -116,6 +116,15 @@ class JuradoProfesionalMapper
     {
         $stmt = $this->db->prepare("UPDATE Pincho_Finalista_JuradoProfesional set puntuacion=? where Pincho_idPincho=? and JuradoProfesional_dniJPro=?");
         $stmt->execute(array($puntuacion, $idPincho, $dniJPro));
+    }
+
+    /**
+     * metodo para listar todos los jurados profesionales
+     */
+
+    public function listarJurados(){
+        $stmt = $this->db->query("select * from JuradoProfesional");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }

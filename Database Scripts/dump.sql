@@ -251,7 +251,7 @@ DROP TABLE IF EXISTS `G_31MasterPintxo`.`Pincho_Finalista_JuradoProfesional` ;
 CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Pincho_Finalista_JuradoProfesional` (
   `Pincho_idPincho` INT NOT NULL COMMENT '',
   `JuradoProfesional_dniJPro` VARCHAR(9) NOT NULL COMMENT '',
-  `puntuacion` VARCHAR(45) NULL COMMENT '',
+  `puntuacion` VARCHAR(200) NULL COMMENT '',
   PRIMARY KEY (`Pincho_idPincho`, `JuradoProfesional_dniJPro`)  COMMENT '',
   CONSTRAINT `fk_Pincho_has_JuradoProfesional_Pincho2`
     FOREIGN KEY (`Pincho_idPincho`)
@@ -323,7 +323,7 @@ VALUES ('8', 'Serranito', 'Cogomelos variados e estofados con salchicha e un pet
 
 
 
-
+INSERT INTO JuradoPopular (nombreJP,dniJP,direccion,cp,contrasenhaJP,apellidosJP) VALUES ("necesario","000000000","es necesario","3214","dfga32wsfs23","muy necesario");
 INSERT INTO JuradoPopular (nombreJP,dniJP,direccion,cp,contrasenhaJP,apellidosJP) VALUES ("Bryar","44444444P","Apartado núm.: 580, 8368 Luctus Ctra.","86517","abc123","Bradley"),("Alea","44444445P","Apartado núm.: 369, 1608 Mauris ","89854","abc123","Scott"),("Bell","44444446P","Apartado núm.: 730, 2175 Lectus Ctra.","38174","abc123","Doyle"),("Zelda","44444447P","454-9565 Ut ","00314","abc123","Velasquez"),("Ora","44444448P","446-4973 Cras Avda.","80922","abc123","Soto"),("Vaughan","44444449P","415-671 Fringilla, Carretera","37852","abc123","Ruiz"),("Molly","44444450P","621-9130 Vehicula ","73494","abc123","Navarro"),("Davis","44444451P","Apdo.:690-542 Pede, Ctra.","60156","abc123","Sharpe"),("Fritz","44444452P","Apartado núm.: 430, 6033 Eget Carretera","74067","abc123","Sutton"),("Jack","44444453P","103-8685 Tincidunt Avenida","82604","abc123","Valencia");
 INSERT INTO JuradoPopular (nombreJP,dniJP,direccion,cp,contrasenhaJP,apellidosJP) VALUES ("Maite","44444454P","Apdo.:459-572 Sed Avda.","04422","abc123","Barlow"),("Hillary","44444455P","136-3291 Posuere Av.","79291","abc123","Pollard"),("Jameson","44444456P","Apdo.:839-6018 Urna Avda.","87389","abc123","Ware"),("Hyatt","44444457P","Apartado núm.: 228, 138 Aliquet Ctra.","00042","abc123","Howell"),("Harrison","44444458P","Apdo.:395-4148 Eget C.","73152","abc123","Vasquez"),("Ray","44444459P","Apdo.:612-1347 Eu Av.","20345","abc123","Mckinney"),("Germane","44444460P","4294 Enim Calle","96614","abc123","Velez"),("Price","44444461P","3646 Sem, Avda.","59648","abc123","Foreman"),("Rogan","44444462P","341-5892 Nec Avda.","99244","abc123","Davidson"),("Malcolm","44444463P","566-9354 Risus. C/","21039","abc123","Glass");
 INSERT INTO JuradoPopular (nombreJP,dniJP,direccion,cp,contrasenhaJP,apellidosJP) VALUES ("Alexander","44444464P","782 Augue Carretera","65965","abc123","Frye"),("Tara","44444465P","Apartado núm.: 404, 4287 Etiam C.","79516","abc123","Ramirez"),("Emerald","44444466P","Apartado núm.: 586, 8962 Gravida. C.","81890","abc123","Bird"),("Amaya","44444467P","516-697 Egestas Avenida","40736","abc123","Mckay"),("Fitzgerald","44444468P","Apartado núm.: 845, 5008 Velit ","22680","abc123","Erickson"),("Lance","44444469P","473-9708 Facilisis Avenida","14926","abc123","Salas"),("Daphne","44444470P","Apdo.:886-6767 Purus Av.","61852","abc123","Whitehead"),("Leonard","44444471P","Apdo.:624-7985 A Calle","25258","abc123","Saunders"),("Wang","44444472P","715-4512 Nulla Calle","00355","abc123","Obrien"),("Stacey","44444473P","Apdo.:533-9821 Quam. C/","09655","abc123","Hull");

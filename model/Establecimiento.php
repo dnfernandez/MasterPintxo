@@ -102,6 +102,62 @@ class Establecimiento{
 		$this->telfE = $telfE;
 	}
 
+	/**
+	 * Método para comprobar si el
+	 * objeto  es
+	 * válido para el registro
+	 * en la base de datos
+	 */
+
+	public function validoParaCrear()
+	{
+		$errors = array();
+		if (strlen($this->nombreE) < 1) {
+			$errors["nombreE"] = "El campo nombre no puede estar vacio";
+		}
+		if (strlen($this->contrasenha) < 5) {
+			$errors["contrasenhaE"] = "Contrase&ntilde;a no v&aacute;lida. 5 caracteres m&aicute;nimo";
+		}
+		if (strlen($this->direccionE) < 1) {
+			$errors["direccionE"] = "El campo direccion no puede estar vacio";
+		}
+		if (strlen($this->nif) !=9) {
+			$errors["nifE"] = "Nif no v&aacute;lido";
+		}
+		if (strlen($this->telfE) !=9) {
+			$errors["telE"] = "Tel&eacute;fono no v&aacute;lido";
+		}
+		if (sizeof($errors) > 0) {
+			throw new ValidationException ($errors, "establecimiento no v&aacute;lido");
+		}
+	}
+
+	/**
+	 * Método para comprobar si el
+	 * objeto  es
+	 * válido para modificarse
+	 */
+
+	public function validoParaActualizar()
+	{
+		$errors = array();
+
+		if (!isset($this->nif)) {
+			$errors["nifEM"] = "El nif es obligatorio";
+		}
+
+		try {
+			$this->validoParaCrear();
+		} catch (ValidationException $ex) {
+			foreach ($ex->getErrors() as $key => $error) {
+				$errors[$key] = $error;
+			}
+		}
+
+		if (sizeof($errors) > 0) {
+			throw new ValidationException($errors, "establecimiento no valido");
+		}
+	}
 
 
 }

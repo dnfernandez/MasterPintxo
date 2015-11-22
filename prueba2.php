@@ -40,13 +40,17 @@ if($juradoPopularMapper->existeUsuario($juradoPopular2->getDniJp())){
 }
 */
 
-/*
-$result = $juradoPopularMapper->introducirCodigosJP("305779");
-echo "Pincho: " .$result . "<----";
-*/
+
+$result = $juradoPopularMapper->introducirCodigosJP("916698637","44444444P");
+if(isset($result)){
+    echo "Pincho: " .$result[0] . " ---- Codigo: ".$result[1];
+}else{
+    echo "ya esta usado";
+}
 
 
-$juradoPopularMapper->seleccionarPinchoJP("1","89988998X");
+
+$juradoPopularMapper->seleccionarPinchoJP($result[0],"44444444P",$result[1]);
 
 
 //-----Establecimiento--------
