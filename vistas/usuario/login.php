@@ -38,6 +38,9 @@ $usuario = $view->getVariable("currentusername");
 				<div class="input-group centrador">
 					<input name="pass" type="password" class="contact" placeholder="Contrase&ntilde;a" >
 				</div>
+				<div class="centrador flash">
+					<?php echo $view->popFlash();?>
+				</div>
 				<div class="input-group centrador">
 					<input type="submit" class="contact submit" value="Entrar">
 				</div>	

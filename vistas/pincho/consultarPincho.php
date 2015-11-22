@@ -6,11 +6,17 @@ $usuario = $view->getVariable("currentusername");
 ?>
 
                                     <?php
-                                        if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index">Inicio</a></li>';
-                                        if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index">Login</a></li>';
-                                        if (!isset($usuario)) echo '<li class="menuItem"><a href="#">Registro Establecimiento</a></li>';
-                                        if (!isset($usuario)) echo '<li class="menuItem"><a href="#">Registro Usuario</a></li>';
-                                        if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
+                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>';
+                                            if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionL">Login</a></li>';
+                                            if (!isset($usuario)) echo '
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+                                                    <ul class="dropdown-menu menuOc" role="menu">
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+                                                    </ul>
+                                                </li>';
+                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
                                     ?>
                                     </ul>
                                 </div>

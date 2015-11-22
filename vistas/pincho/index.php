@@ -62,7 +62,7 @@ $usuario = $view->getVariable("currentusername");
                     <?php foreach ($listaPinchosAcep as $pinAcep): ?>
                         <li>
                             <figure>
-                                <img src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
+                                <img class="pinchoPec" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption>
                                     <h3><?php echo $pinAcep["nombreP"]; ?></h3>
 
@@ -81,7 +81,7 @@ $usuario = $view->getVariable("currentusername");
                             <figure id="pinchoAmp">
                                 <img class="imgPinchoAmp" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption class="texImgPinchoAmp">
-                                    <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pinAcep["idPincho"]; ?>">
+                                    <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pinAcep["idPincho"]; ?>#seccionI">
                                         <h3><?php echo $pinAcep["nombreP"]; ?></h3></a>
 
                                     <p><?php echo $pinAcep["descripcionP"]; ?></p>

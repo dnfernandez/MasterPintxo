@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Pincho` (
   `concursante` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `finalista` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `Establecimiento_nif` VARCHAR(9) NOT NULL COMMENT '',
-  `rutaImagen` VARCHAR(50) NULL COMMENT '',
+  `rutaImagen` VARCHAR(100) NULL COMMENT '',
   `confirmado` TINYINT(1) NOT NULL COMMENT '',
   PRIMARY KEY (`idPincho`)  COMMENT '',
   CONSTRAINT `fk_Pincho_Establecimiento1`
@@ -281,6 +281,11 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+INSERT INTO `G_31MasterPintxo`.`Organizador` (`idOrganizador`, `contrasenhaOrganizador`) VALUES ('12345', 'abc123');
+
+INSERT INTO `G_31MasterPintxo`.`Concurso` (`nombreC`, `descripcionC`) VALUES ('MasterPintxo', 'MasterPintxo es un concurso de pinchos cuyo objetivo es ayudar a los establecimientos locales a promocionarse presentando sus propuestas de pinchos, haciendo que voten los usuarios al probar eses pinchos, Son cosas que pasan. De repente un amigo tiene la feliz idea de organizar un concurso de pinchos en su casa y todos los miembros del grupo se ven obligados a llevar un plato si quieren unirse a la velada. ¡Horror! ¿Cómo presentarse con una propuesta digna sin ser un experto en cocina? ¿Qué hacer si queremos ganar?
+
+Tranquilidad. Participar es muy fácil y ganar sin pasar demasiado tiempo entre fogones no resulta tan complicado. Basta con menos de media hora para preparar un pincho aparente con los que asegurarte el podio. Y si no te lo crees, sólo tienes que echar un vistazo a estas 23 propuestas de Cookpad. ');
 
 INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Manolo', 'C. Progreso 32', '41234567A', 'abc123', '988000001');
 INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tasca Jose Luis', 'Praza do Correxidor 12', '41234568A', 'abc123', '988000002');
@@ -296,29 +301,29 @@ INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`
 
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('1', 'Chorizo de la casa', 'Pincho de chorizo sobre un crujiente de almendras ', '1', '0', '0', '41234574A', '', '0');
+VALUES ('1', 'Chorizo de la casa', 'Pincho de chorizo sobre un crujiente de almendras ', '1', '0', '0', '41234574A', './images-pinchos/pincho1.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('2', 'La gula', 'Tempura de makis con froitas de tempada e atún vermello con chuvia de sésamo tricolor e prebe de queixo de Arzúa. Come Ourense / Celíacos ', '2', '0', '0', '41234567A', '', '0');
+VALUES ('2', 'La gula', 'Tempura de makis con froitas de tempada e atún vermello con chuvia de sésamo tricolor e prebe de queixo de Arzúa. Come Ourense / Celíacos ', '2', '0', '0', '41234567A', './images-pinchos/pincho2.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('3', 'El horno', 'Empanadilla enfornada de cogomelos, mestura de vexetais e queixo. Come Ourense ', '1.5', '1', '0', '41234568A', '', '0');
+VALUES ('3', 'El horno', 'Empanadilla enfornada de cogomelos, mestura de vexetais e queixo. Come Ourense ', '1.5', '1', '0', '41234568A', './images-pinchos/pincho3.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('4', 'Duque', 'Pataca, gambas, cogomelos, ovo e queixo fundido. ', '2', '1', '0', '41234569A', '', '0');
+VALUES ('4', 'Duque', 'Pataca, gambas, cogomelos, ovo e queixo fundido. ', '2', '1', '0', '41234569A', './images-pinchos/pincho4.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('5', 'Fuentefria', 'Cazoleta de pan con raxo e queixo con pemento de piquillo e flor de castaña. ', '1', '1', '1', '41234570A', '', '0');
+VALUES ('5', 'Fuentefria', 'Cazoleta de pan con raxo e queixo con pemento de piquillo e flor de castaña. ', '1', '1', '1', '41234570A', './images-pinchos/pincho5.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
 VALUES ('6', 'O Pote', '
-Tortiña de trigo á grella reenchida dun escalfado de cebola, allo porro, allo e pemento verde con champiñóns e un pouco de queixo.', '1.75', '1', '1', '41234571A', '', '0');
+Tortiña de trigo á grella reenchida dun escalfado de cebola, allo porro, allo e pemento verde con champiñóns e un pouco de queixo.', '1.75', '1', '1', '41234571A', './images-pinchos/pincho6.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('7', 'Merys', 'Picaña con crema de castaña, arroz salvaxe e cogomelos. ', '2', '0', '0', '41234572A', '', '1');
+VALUES ('7', 'Merys', 'Picaña con crema de castaña, arroz salvaxe e cogomelos. ', '2', '0', '0', '41234572A', './images-pinchos/pincho7.jpg', '1');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('8', 'Serranito', 'Cogomelos variados e estofados con salchicha e un petisco de mostaza. ', '2', '0', '0', '41234573A', '', '1');
+VALUES ('8', 'Serranito', 'Cogomelos variados e estofados con salchicha e un petisco de mostaza. ', '2', '0', '0', '41234573A', './images-pinchos/pincho8.jpg', '1');
 
 
 

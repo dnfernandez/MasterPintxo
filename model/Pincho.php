@@ -199,7 +199,7 @@ class Pincho
         if (sizeof($this->precio) < 1) {
             $errors["precioP"] = "El campo precio no puede estar vacio";
         }
-        if (strpos($this->rutaImagen,'.') == false) {
+        if (strpos($this->rutaImagen,$this->idPincho.'.') == false) {
             $errors["rutaImagen"] = "El campo imagen no puede estar vacio";
         }
         if (sizeof($errors) > 0) {

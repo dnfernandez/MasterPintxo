@@ -53,7 +53,7 @@ class EstablecimientoController extends BaseController
             $total=strpos($cadena,".");
             $extensionImg = substr($cadena,$total);
             $extensionImg = strtolower($extensionImg);
-            $target_path = "images-pinchos/";
+            $target_path = "./images-pinchos/";
             $target_path = $target_path . "pincho".$idPincho.$extensionImg;
             move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path);
             $pincho->setIdPincho($idPincho);
@@ -87,7 +87,7 @@ class EstablecimientoController extends BaseController
                 $total=strpos($cadena,".");
                 $extensionImg = substr($cadena,$total);
                 $extensionImg = strtolower($extensionImg);
-                $target_path = "images-pinchos/";
+                $target_path = "./images-pinchos/";
                 $target_path = $target_path . "pincho".$_GET["idPincho"].$extensionImg;
                 move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path);
                 $pincho->setIdPincho($_GET["idPincho"]);

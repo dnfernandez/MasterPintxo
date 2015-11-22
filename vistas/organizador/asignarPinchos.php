@@ -44,7 +44,7 @@ $usuario = $view->getVariable("currentusername");
 						<?php foreach($listaPinchos as $pincho):?>
 							<div class="col-md-4 asignar">
 								<div class="form-group">
-									<a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>" class="contact"><?php echo $pincho["nombreP"];?></a>
+									<a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>#seccionI" class="contact"><?php echo $pincho["nombreP"];?></a>
 									<select class="contact submit" name="<?php echo "jurado".$pincho["idPincho"]; ?>">
 										<option value="noAsignar">Sin asignar</option>
 										<?php foreach($listaJurados as $jurado):

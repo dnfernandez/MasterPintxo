@@ -40,7 +40,7 @@ $usuario = $view->getVariable("currentusername");
                     <?php foreach ($listaPinchosVotar as $pincho): ?>
                         <div class="col-md-4">
                             <input type="radio" class="contact" name="pincho" value="<?php echo $pincho["idPincho"]; ?>">
-                            <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>#seccionI"
+                            <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
                                class="contact pincho"><?php echo $pincho["nombreP"]; ?></a>
                             </input>
                             <input type="hidden" name="pinchos[]" value="<?php echo $pincho["idPincho"]; ?>">

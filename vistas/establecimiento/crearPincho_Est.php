@@ -3,7 +3,7 @@ require_once(__DIR__ . "/../../nucleo/ViewManager.php");
 $view = ViewManager::getInstance();
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=establecimiento&amp;action=index">Inicio</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
 <li class="menuItem"><a href="#">Modificar Perfil</a></li>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
 </ul>

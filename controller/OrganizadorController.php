@@ -50,7 +50,7 @@ class OrganizadorController extends BaseController
             }
         }
 
-        $this->view->redirect("organizador","index");
+        $this->view->redirect("organizador","index#seccionI");
     }
 
     /**
@@ -81,7 +81,7 @@ class OrganizadorController extends BaseController
             }
         }
 
-        $this->view->redirect("organizador","index");
+        $this->view->redirect("organizador","index#seccionI");
     }
 
     /**
@@ -98,7 +98,7 @@ class OrganizadorController extends BaseController
 
     public function asignarFinalistas(){
         $this->organizadorMapper->asignarFinalistas();
-        $this->view->redirect("organizador","index");
+        $this->view->redirect("organizador","index#seccionI");
     }
 
 

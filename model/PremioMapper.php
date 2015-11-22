@@ -4,7 +4,7 @@ require_once(__DIR__ . "/../nucleo/PDOConnection.php");
 
 class PremioMapper{
 	
-	private $db
+	private $db;
 		
 	/**
      * PremioMapper constructor.
@@ -32,7 +32,7 @@ class PremioMapper{
     public function modificar(Premio $Pr)
     {
         $stmt = $this->db->prepare("Premio(codigoPremio, tipoPremio, nombrePremio, descripcionPremio, JuradoPopular_dniJP) values (?,?,?,?,?)");
-        $stmt->execute($Pr->getCodigoPremio(), $Pr->getTipoPremio(), $Pr->getNombrePremio(), $Pr->getDescripcionPremio(), $Pr->getJuradoPopular_dniJP()));
+        $stmt->execute($Pr->getCodigoPremio(), $Pr->getTipoPremio(), $Pr->getNombrePremio(), $Pr->getDescripcionPremio(), $Pr->getJuradoPopular_dniJP());
     }
 
     /**
@@ -44,3 +44,4 @@ class PremioMapper{
         $stmt = $this->db->prepare("delete from Premio where codigoPremio=?");
         $stmt->execute(array($Pr->getCodigoPremio()));
     }
+}

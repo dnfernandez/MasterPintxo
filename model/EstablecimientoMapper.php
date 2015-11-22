@@ -26,7 +26,7 @@ class EstablecimientoMapper
 
     public function consultar($nif)
     {
-        $stmt = $this->db->prepare("select count(*) from establecimiento where nif=?");
+        $stmt = $this->db->prepare("select count(*) from Establecimiento where nif=?");
         $stmt->execute(array($nif));
         if ($stmt->fetchColumn() > 0) {
             return true;
@@ -119,7 +119,7 @@ class EstablecimientoMapper
                 $randomString .= $characters[rand(0, $charactersLength - 1)];
             }
 
-        $stmt = $this->db->prepare("select count(*) from codigo where idCodigo=?");
+        $stmt = $this->db->prepare("select count(*) from Codigo where idCodigo=?");
         $stmt->execute(array($randomString));
         if ($stmt->fetchColumn() > 0) {
             $this->generarCodigo();

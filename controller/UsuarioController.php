@@ -61,7 +61,7 @@ class UsuarioController extends BaseController
             if ($this->establecimientoMapper->consultar($login)) {
                 if ($this->establecimientoMapper->comprobarUsuario($login, $pass)) {
                     $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index");
+                    $this->view->redirect("usuario", "index#seccionI");
                     $this->view->setVariable("currentusername", $_POST["login"]);
                 } else {
                     $errors = array();
@@ -71,7 +71,7 @@ class UsuarioController extends BaseController
             } else if ($this->organizadorMapper->comprobarUsuario($login)) {
                 if ($this->organizadorMapper->existeUsuario($login, $pass)) {
                     $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index");
+                    $this->view->redirect("usuario", "index#seccionI");
                     $this->view->setVariable("currentusername", $_POST["login"]);
                 } else {
                     $errors = array();
@@ -81,7 +81,7 @@ class UsuarioController extends BaseController
             } else if ($this->juradoProfesionalMapper->existeUsuario($login)) {
                 if ($this->juradoProfesionalMapper->comprobarUsuario($login, $pass)) {
                     $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index");
+                    $this->view->redirect("usuario", "index#seccionI");
                     $this->view->setVariable("currentusername", $_POST["login"]);
                 } else {
                     $errors = array();
@@ -91,7 +91,7 @@ class UsuarioController extends BaseController
             } else if ($this->juradoPopularMapper->existeUsuario($login)) {
                 if ($this->juradoPopularMapper->comprobarUsuario($login, $pass)) {
                     $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index");
+                    $this->view->redirect("usuario", "index#seccionI");
                     $this->view->setVariable("currentusername", $_POST["login"]);
                 } else {
                     $errors = array();
@@ -100,7 +100,8 @@ class UsuarioController extends BaseController
                 }
             }
         }
-        $this->view->redirect("usuario", "index");
+        $this->view->setFlash("Login incorrecto");
+        $this->view->redirect("usuario", "index#seccionL");
     }
 
     /**
@@ -109,7 +110,7 @@ class UsuarioController extends BaseController
     public function logout()
     {
         session_destroy();
-        $this->view->redirect("pincho", "index");
+        $this->view->redirect("pincho", "index#seccionI");
 
     }
 
@@ -129,7 +130,7 @@ class UsuarioController extends BaseController
     {
         if (isset($_POST["login"])) {
             $login = $_POST["login"];
-            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopuplarMapper->existeUsuario($login)) {
+            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopularMapper->existeUsuario($login)) {
                 $establecimiento = new Establecimiento();
                 $establecimiento->setNif($login);
                 $establecimiento->setNombreE($_POST["name"]);
@@ -148,19 +149,19 @@ class UsuarioController extends BaseController
                     try {
                         $establecimiento->validoParaCrear();
                         $this->establecimientoMapper->crear($establecimiento);
-                        $this->view->redirect("usuario", "index");
+                        $this->view->redirect("usuario", "index#seccionI");
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
                     }
                 }
-                $this->view->redirect("usuario", "registrarEstablecimientoVista");
+                $this->view->redirect("usuario", "registrarEstablecimientoVista#seccionRE");
 
 
             } else {
                 echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
                 echo "<br>Redireccionando...";
-                header("Refresh: 5; index.php?controller=usuario&action=registrarEstablecimientoVista");
+                header("Refresh: 5; index.php?controller=usuario&action=registrarEstablecimientoVista#seccionRE");
 
             }
         }
@@ -182,7 +183,7 @@ class UsuarioController extends BaseController
     {
         if (isset($_POST["login"])) {
             $login = $_POST["login"];
-            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopuplarMapper->existeUsuario($login)) {
+            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopularMapper->existeUsuario($login)) {
                 $popular = new JuradoPopular();
                 $popular->setDniJp($login);
                 $popular->setNombreJp($_POST["name"]);
@@ -202,19 +203,19 @@ class UsuarioController extends BaseController
                     try {
                         $popular->validoParaCrear();
                         $this->juradoPopularMapper->insertar($popular);
-                        $this->view->redirect("usuario", "index");
+                        $this->view->redirect("usuario", "index#seccionI");
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
                     }
                 }
-                $this->view->redirect("usuario", "registrarPopularVista");
+                $this->view->redirect("usuario", "registrarPopularVista#seccionRU");
 
 
             } else {
                 echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
                 echo "<br>Redireccionando...";
-                header("Refresh: 5; index.php?controller=usuario&action=registrarPopularVista");
+                header("Refresh: 5; index.php?controller=usuario&action=registrarPopularVista#seccionRU");
 
             }
         }
@@ -236,7 +237,7 @@ class UsuarioController extends BaseController
     {
         if (isset($_POST["login"])) {
             $login = $_POST["login"];
-            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopuplarMapper->existeUsuario($login)) {
+            if (!$this->organizadorMapper->comprobarUsuario($login) && !$this->establecimientoMapper->consultar($login) && !$this->juradoProfesionalMapper->existeUsuario($login) && !$this->juradoPopularMapper->existeUsuario($login)) {
                 $profesional = new JuradoProfesional();
                 $profesional->setDniJpro($login);
                 $profesional->setNombreJpro($_POST["name"]);
@@ -254,19 +255,19 @@ class UsuarioController extends BaseController
                     try {
                         $profesional->validoParaCrear();
                         $this->juradoProfesionalMapper->insertar($profesional);
-                        $this->view->redirect("usuario", "index");
+                        $this->view->redirect("usuario", "index#seccionI");
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
                     }
                 }
-                $this->view->redirect("usuario", "registrarProfesionalVista");
+                $this->view->redirect("usuario", "registrarProfesionalVista#seccionCJP");
 
 
             } else {
                 echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
                 echo "<br>Redireccionando...";
-                header("Refresh: 5; index.php?controller=usuario&action=registrarProfesionalVista");
+                header("Refresh: 5; index.php?controller=usuario&action=registrarProfesionalVista#seccionCJP");
 
             }
         }
