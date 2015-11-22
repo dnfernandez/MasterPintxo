@@ -31,6 +31,7 @@ class UsuarioController extends BaseController
         $this->organizadorMapper = new OrganizadorMapper();
         $this->juradoPopularMapper = new JuradoPopularMapper();
         $this->juradoProfesionalMapper = new JuradoProfesionalMapper();
+
     }
 
     public function index()
@@ -270,6 +271,232 @@ class UsuarioController extends BaseController
                 header("Refresh: 5; index.php?controller=usuario&action=registrarProfesionalVista#seccionCJP");
 
             }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+    /**
+     * Vista modificar datos Organizador
+     */
+
+    public function modificarOrganizadorVista(){
+        if($this->organizadorMapper->comprobarUsuario($this->username)) {
+            $this->view->render("usuario","modificarOrganizador");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+
+    /**
+     * Modificar datos de Organizador
+     */
+
+    public function modificarOrganizador(){
+        if(isset($this->currentUser)) {
+            if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
+                $pass = $_POST["pass"];
+                $pass2 = $_POST["pass2"];
+                if ($pass != $pass2) {
+                    $errors = array();
+                    $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
+                    $this->view->setVariable("errors", $errors);
+                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                } else {
+                    $organizador = new Organizador();
+                    $organizador->setIdOrganizador($this->currentUser->getIdOrganizador());
+                    $organizador->setContrasenhaOrganizador($pass);
+                    try {
+                        $organizador->validoParaActualizar();
+                        $this->organizadorMapper->modificar($organizador);
+                        $this->view->redirect("usuario", "index#seccionI");
+                    } catch (ValidationException $ex) {
+                        $errors = $ex->getErrors();
+                        $this->view->setVariable("errors", $errors);
+                    }
+
+                }
+                $this->view->redirect("usuario", "modificarOrganizadorVista#seccionMO");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+    /**
+     * Vista modificar datos Establecimiento
+     */
+
+    public function modificarEstablecimientoVista(){
+        if($this->establecimientoMapper->consultar($this->username)) {
+            $establecimiento = $this->establecimientoMapper->consultarDatos($this->currentUser->getNif());
+            $this->view->setVariable("modEstablecimiento", $establecimiento);
+            $this->view->render("usuario", "modificarEstablecimiento");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+    /**
+     * Modificar datos de Establecimiento
+     */
+
+    public function modificarEstablecimiento(){
+        if(isset($this->currentUser)) {
+            if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
+                $pass = $_POST["pass"];
+                $pass2 = $_POST["pass2"];
+                if ($pass != $pass2) {
+                    $errors = array();
+                    $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
+                    $this->view->setVariable("errors", $errors);
+                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                } else {
+                    $establecimiento=new Establecimiento($this->currentUser->getNif());
+                    $establecimiento->setNombreE($_POST["name"]);
+                    $establecimiento->setTelfE($_POST["telef"]);
+                    $establecimiento->setDireccionE($_POST["direccion"]);
+                    $establecimiento->setContrasenha($pass);
+                    try {
+                        $establecimiento->validoParaActualizar();
+                        $this->establecimientoMapper->modificar($establecimiento);
+                        $this->view->redirect("usuario", "index#seccionI");
+                    } catch (ValidationException $ex) {
+                        $errors = $ex->getErrors();
+                        $this->view->setVariable("errors", $errors);
+                        $this->view->setFlash("Datos incorrectos");
+                    }
+
+                }
+                $this->view->redirect("usuario", "modificarEstablecimientoVista#seccionME");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+    /**
+     * Vista modificar datos Profesional
+     */
+
+    public function modificarProfesionalVista(){
+        if($this->juradoProfesionalMapper->existeUsuario($this->username)) {
+            $profesional=$this->juradoProfesionalMapper->comprobarDatos($this->currentUser->getDniJPro());
+            $this->view->setVariable("modProfesional",$profesional);
+            $this->view->render("usuario","modificarProfesional");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+
+    }
+
+    /**
+     * Modificar datos de Profesional
+     */
+
+    public function modificarProfesional(){
+        if(isset($this->currentUser)) {
+            if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
+                $pass = $_POST["pass"];
+                $pass2 = $_POST["pass2"];
+                if ($pass != $pass2) {
+                    $errors = array();
+                    $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
+                    $this->view->setVariable("errors", $errors);
+                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                } else {
+                    $profesional = new JuradoProfesional($this->currentUser->getDniJPro());
+                    $profesional->setNombreJpro($_POST["name"]);
+                    $profesional->setTelefJpro($_POST["telef"]);
+                    $profesional->setContrasenhaJpro($pass);
+                    try {
+                        $profesional->validoParaActualizar();
+                        $this->juradoProfesionalMapper->modificar($profesional);
+                        $this->view->redirect("usuario", "index#seccionI");
+                    } catch (ValidationException $ex) {
+                        $errors = $ex->getErrors();
+                        $this->view->setVariable("errors", $errors);
+                        $this->view->setFlash("Datos incorrectos");
+                    }
+
+                }
+                $this->view->redirect("usuario", "modificarProfesionalVista#seccionMPRO");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+    }
+
+    /**
+     * Vista modificar datos Popular
+     */
+
+    public function modificarUsuarioVista(){
+        if($this->juradoPopularMapper->existeUsuario($this->username)) {
+            $popular=$this->juradoPopularMapper->consultarUsuario($this->currentUser->getDniJp());
+            $this->view->setVariable("modPopular",$popular);
+            $this->view->render("usuario","modificarUsuario");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+
+    }
+
+    /**
+     * Modificar datos de Usuario
+     */
+
+    public function modificarUsuario(){
+        if(isset($this->currentUser)) {
+            if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
+                $pass = $_POST["pass"];
+                $pass2 = $_POST["pass2"];
+                if ($pass != $pass2) {
+                    $errors = array();
+                    $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
+                    $this->view->setVariable("errors", $errors);
+                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                } else {
+                    $popular = new JuradoPopular($this->currentUser->getDniJp());
+                    $popular->setNombreJp($_POST["name"]);
+                    $popular->setApellidosJp($_POST["apellidos"]);
+                    $popular->setDireccionJp($_POST["direccion"]);
+                    $popular->setCp($_POST["cp"]);
+                    $popular->setContrasenhaJp($pass);
+                    try {
+                        $popular->validoParaActualizar();
+                        $this->juradoPopularMapper->modificar($popular);
+                        $this->view->redirect("usuario", "index#seccionI");
+                    } catch (ValidationException $ex) {
+                        $errors = $ex->getErrors();
+                        $this->view->setVariable("errors", $errors);
+                        $this->view->setFlash("Datos incorrectos");
+                    }
+
+                }
+                $this->view->redirect("usuario", "modificarUsuarioVista#seccionMU");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 

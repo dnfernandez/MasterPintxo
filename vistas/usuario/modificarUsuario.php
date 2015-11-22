@@ -1,17 +1,10 @@
 <?php
 require_once(__DIR__ . "/../../nucleo/ViewManager.php");
 $view = ViewManager::getInstance();
+$popular = $view->getVariable("modPopular");
 $usuario = $view->getVariable("currentusername");
 ?>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> + opciones <span class="caret"></span></a>
-	<ul class="dropdown-menu menuOc" role="menu">
-		<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarOrganizadorVista#seccionMO">Modificar perfil</a></li>
-		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=asignarPinchosVista#seccionAP">Asignar pinchos</a></li>
-		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=panelControlVista#seccionPC">Panel de control</a></li>
-	</ul>
-</li>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
 									</ul>
 								</div>
@@ -24,23 +17,24 @@ $usuario = $view->getVariable("currentusername");
 	</div>	
 	</header>
 	
-	<section id="seccionCJP">
+	<section id="seccionMU">
 		<div class="container">
 				<div class="heading">
 					<img class="dividerline" src="img/sep.png" alt="separador">
-					<h2>Crear Jurado Profesional</h2>
+					<h2>Modificar Datos Usuario</h2>
 					<img class="dividerline" src="img/sep.png" alt="separador">
 					<h3><br></h3>
 			</div>
 		</div>
 		<div class="container">
-			<form method="post" action="index.php?controller=usuario&amp;action=registrarProfesional">
+			<form method="post" action="index.php?controller=usuario&action=modificarUsuario">
 				<div class="centrador">
-					<input name="login" type="text" class="contact centrador" placeholder="Dni" >
-					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos" >                                       
+					<input name="name" type="text" class="contact centrador" value="<?php echo $popular["nombreJP"];?>" >
+					<input name="apellidos" type="text" class="contact centrador" value="<?php echo $popular["apellidosJP"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" >
+					<input name="direccion" type="text" class="contact centrador" value="<?php echo $popular["direccion"];?>" >
+					<input name="cp" type="text" class="contact centrador" value="<?php echo $popular["cp"];?>" >
 				</div>
 				<div class="centrador">
 					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" >
@@ -50,7 +44,7 @@ $usuario = $view->getVariable("currentusername");
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="Crear">
+					<input type="submit" class="contact submit" value="Modificar">
 				</div>	
 			</form>
 		</div>

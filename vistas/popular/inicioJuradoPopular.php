@@ -5,7 +5,7 @@ $numCodigos = $view->getVariable("numCodigos");
 $usuario = $view->getVariable("currentusername");
 ?>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="#">Modificar perfil</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarUsuarioVista#seccionMU">Modificar perfil</a></li>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
 </ul>
 </div>

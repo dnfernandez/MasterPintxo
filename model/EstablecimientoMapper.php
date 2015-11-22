@@ -35,6 +35,18 @@ class EstablecimientoMapper
     }
 
     /**
+     * Obtener los datos de un establecimiento
+     */
+
+    public function consultarDatos($nif)
+    {
+        $stmt = $this->db->prepare("select * from Establecimiento where nif=?");
+        $stmt->execute(array($nif));
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+
+    }
+
+    /**
      * Comprobar usuario establecimiento
      */
 

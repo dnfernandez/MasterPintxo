@@ -4,7 +4,7 @@ $view = ViewManager::getInstance();
 $usuario = $view->getVariable("currentusername");
 ?>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="#">Modificar Perfil</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarEstablecimientoVista#seccionME">Modificar Perfil</a></li>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
 </ul>
 </div>

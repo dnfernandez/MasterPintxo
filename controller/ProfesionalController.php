@@ -22,21 +22,27 @@ class ProfesionalController extends BaseController
 
     public function index()
     {
-        $valorarFinalistas = $this->juradoProfesionalMapper->listarValorarPinchosJpro($this->currentUser->getDniJpro());
-        $elegirFinalistas = $this->juradoProfesionalMapper->listarElegirFinalistas($this->currentUser->getDniJpro());
+        if (isset($this->currentUser) && $this->juradoProfesionalMapper->existeUsuario($this->username)) {
+            $valorarFinalistas = $this->juradoProfesionalMapper->listarValorarPinchosJpro($this->currentUser->getDniJpro());
+            $elegirFinalistas = $this->juradoProfesionalMapper->listarElegirFinalistas($this->currentUser->getDniJpro());
 
-        if ($valorarFinalistas == null) {
-            $this->view->setVariable("listaElegir", $elegirFinalistas);
-            $this->view->render("profesional", "inicioJpro");
-        } else {
-            $this->view->setVariable("listaFinalistas", $valorarFinalistas);
-            $this->view->render("profesional", "valorarFinalistas");
+            if ($valorarFinalistas == null) {
+                $this->view->setVariable("listaElegir", $elegirFinalistas);
+                $this->view->render("profesional", "inicioJpro");
+            } else {
+                $this->view->setVariable("listaFinalistas", $valorarFinalistas);
+                $this->view->render("profesional", "valorarFinalistas");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 
     public function elegirFinalistas()
     {
-        if (isset($this->currentUser)) {
+        if (isset($this->currentUser) && $this->juradoProfesionalMapper->existeUsuario($this->username)) {
             foreach ($_POST["pincho"] as $pincho) {
                 $this->juradoProfesionalMapper->elegirFinalistas($pincho, '1', $this->currentUser->getDniJpro());
                 $this->pinchoMapper->actualizarPinchoFinalista($pincho);
@@ -47,7 +53,7 @@ class ProfesionalController extends BaseController
 
     public function valorarFinalistas()
     {
-        if (isset($this->currentUser)) {
+        if (isset($this->currentUser) && $this->juradoProfesionalMapper->existeUsuario($this->username)) {
             $tam = sizeof($_POST["pincho"]);
             $pincho = $_POST["pincho"];
             $presentacion = $_POST["presentacion"];

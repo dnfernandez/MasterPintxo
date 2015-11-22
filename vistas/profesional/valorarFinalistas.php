@@ -5,7 +5,7 @@ $listaFinalistas = $view->getVariable("listaFinalistas");
 $usuario = $view->getVariable("currentusername");
 ?>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="#">Modificar perfil</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarProfesionalVista#seccionMPRO">Modificar perfil</a></li>
 <li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
 </ul>
 </div>

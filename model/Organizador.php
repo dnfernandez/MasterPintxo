@@ -49,6 +49,29 @@ class Organizador
         $this->contrasenhaOrganizador = $contrasenhaOrganizador;
     }
 
+    /**
+     * Método para comprobar si el
+     * objeto  es
+     * válido para modificarse
+     */
+
+    public function validoParaActualizar()
+    {
+        $errors = array();
+
+        if (!isset($this->idOrganizador)) {
+            $errors["idOrganizador"] = "El id es obligatorio";
+        }
+
+        if (strlen($this->contrasenhaOrganizador) < 5) {
+            $errors["contrasenhaOrg"] = "Contrase&ntilde;a no v&aacute;lida. 5 caracteres m&aicute;nimo";
+        }
+
+        if (sizeof($errors) > 0) {
+            throw new ValidationException($errors, "Organizador no valido");
+        }
+    }
+
 
 
 

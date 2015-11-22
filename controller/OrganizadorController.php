@@ -26,10 +26,14 @@ class OrganizadorController extends BaseController
     }
 
     public function index(){
-        if(isset($this->currentUser)) {
+        if(isset($this->currentUser) && $this->organizadorMapper->comprobarUsuario($this->username)) {
             $listaPinProp = $this->pinchoMapper->consultarPinchosPropuestos();
             $this->view->setVariable("listaPinProp",$listaPinProp);
             $this->view->render("organizador","inicioOrganizador");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 
@@ -58,11 +62,17 @@ class OrganizadorController extends BaseController
      */
 
     public function asignarPinchosVista(){
-        $listaPinchos = $this->organizadorMapper->listarNoAsignados();
-        $listaJuradoProfesional = $this->juradoProfesionalMapper->listarJurados();
-        $this->view->setVariable("listaPinchoO",$listaPinchos);
-        $this->view->setVariable("listaJuradoProfesional",$listaJuradoProfesional);
-        $this->view->render("organizador","asignarPinchos");
+        if(isset($this->currentUser) && $this->organizadorMapper->comprobarUsuario($this->username)) {
+            $listaPinchos = $this->organizadorMapper->listarNoAsignados();
+            $listaJuradoProfesional = $this->juradoProfesionalMapper->listarJurados();
+            $this->view->setVariable("listaPinchoO",$listaPinchos);
+            $this->view->setVariable("listaJuradoProfesional",$listaJuradoProfesional);
+            $this->view->render("organizador","asignarPinchos");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
     }
 
     /**
@@ -89,7 +99,14 @@ class OrganizadorController extends BaseController
      */
 
     public function panelControlVista(){
-        $this->view->render("organizador","panelControl");
+        if(isset($this->currentUser) && $this->organizadorMapper->comprobarUsuario($this->username)) {
+            $this->view->render("organizador","panelControl");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
+
     }
 
     /**
@@ -97,8 +114,14 @@ class OrganizadorController extends BaseController
      */
 
     public function asignarFinalistas(){
-        $this->organizadorMapper->asignarFinalistas();
-        $this->view->redirect("organizador","index#seccionI");
+        if(isset($this->currentUser) && $this->organizadorMapper->comprobarUsuario($this->username)) {
+            $this->organizadorMapper->asignarFinalistas();
+            $this->view->redirect("organizador","index#seccionI");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
+        }
     }
 
 

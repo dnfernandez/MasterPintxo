@@ -28,6 +28,17 @@ class JuradoProfesionalMapper
     }
 
     /**
+     * Obtener datos de un jurado profesional
+     */
+
+    public function comprobarDatos($login)
+    {
+        $stmt = $this->db->prepare("select * from JuradoProfesional where dniJPro=?");
+        $stmt->execute(array($login));
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    /**
      * Comprobar usuario JuradoProfesional
      */
 

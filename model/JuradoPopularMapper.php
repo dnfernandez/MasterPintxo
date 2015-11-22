@@ -30,6 +30,16 @@ class JuradoPopularMapper
     }
 
     /**
+     * Obtener datos
+     */
+    public function consultarUsuario($login)
+    {
+        $stmt = $this->db->prepare("select * from JuradoPopular where dniJP=?");
+        $stmt->execute(array($login));
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    /**
      * Comprobar usuario JuradoPopular
      */
 

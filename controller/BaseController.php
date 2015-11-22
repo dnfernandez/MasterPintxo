@@ -24,6 +24,7 @@ class BaseController
      * @var User
      */
     protected $currentUser;
+    protected $username;
 
     private $estMapper;
     private $orgMapper;
@@ -50,15 +51,19 @@ class BaseController
             if ($this->orgMapper->comprobarUsuario($_SESSION["currentuser"])) {
                 $this->currentUser = new Organizador($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getIdOrganizador());
+                $this->username = $this->currentUser->getIdOrganizador();
             } else if ($this->estMapper->consultar($_SESSION["currentuser"])) {
                 $this->currentUser = new Establecimiento($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getNif());
+                $this->username = $this->currentUser->getNif();
             } else if ($this->jurProMapper->existeUsuario($_SESSION["currentuser"])) {
                 $this->currentUser = new JuradoProfesional($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getDniJpro());
+                $this->username = $this->currentUser->getDniJpro();
             } else if ($this->jurPopMapper->existeUsuario($_SESSION["currentuser"])) {
                 $this->currentUser = new JuradoPopular($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getDniJp());
+                $this->username = $this->currentUser->getDniJp();
             }
 
 

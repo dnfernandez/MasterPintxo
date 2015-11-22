@@ -20,20 +20,26 @@ class PopularController extends BaseController
 
     public function index()
     {
-        $numCodigos = $this->juradoPopularMapper->codigosSinUsar($this->currentUser->getDniJp());
-        if (isset($numCodigos) && $numCodigos < 3) {
-            $this->view->setVariable("numCodigos", $numCodigos);
-            $this->view->render("popular", "inicioJuradoPopular");
-        } else {
-            $listaPinchos = $this->juradoPopularMapper->recuperarPinchos($this->currentUser->getDniJp());
-            $this->view->setVariable("listaPinchosVotar", $listaPinchos);
-            $this->view->render("popular", "votar");
+        if (isset($this->currentUser) && $this->juradoPopularMapper->existeUsuario($this->username)) {
+            $numCodigos = $this->juradoPopularMapper->codigosSinUsar($this->currentUser->getDniJp());
+            if (isset($numCodigos) && $numCodigos < 3) {
+                $this->view->setVariable("numCodigos", $numCodigos);
+                $this->view->render("popular", "inicioJuradoPopular");
+            } else {
+                $listaPinchos = $this->juradoPopularMapper->recuperarPinchos($this->currentUser->getDniJp());
+                $this->view->setVariable("listaPinchosVotar", $listaPinchos);
+                $this->view->render("popular", "votar");
+            }
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 
     public function introducirCodigos()
     {
-        if (isset($this->currentUser)) {
+        if (isset($this->currentUser) && $this->juradoPopularMapper->existeUsuario($this->username)) {
             $codigo1 = $_POST["cod1"];
             $codigo2 = $_POST["cod2"];
             $codigo3 = $_POST["cod3"];
@@ -49,12 +55,18 @@ class PopularController extends BaseController
             }
 
             $this->view->redirect("popular", "index#seccionI");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 
+
+
     public function votar()
     {
-        if (isset($this->currentUser)) {
+        if (isset($this->currentUser) && $this->juradoPopularMapper->existeUsuario($this->username)) {
             $listaCodigos = $_POST["codigos"];
             $listaPinchos = $_POST["pinchos"];
             $pinchoVotar = $_POST["pincho"];
@@ -67,6 +79,10 @@ class PopularController extends BaseController
                 }
             }
             $this->view->redirect("popular","index#seccionI");
+        }else{
+            echo "Upss! no deberías estar aquí";
+            echo "<br>Redireccionando...";
+            header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
 }
