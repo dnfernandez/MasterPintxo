@@ -180,9 +180,32 @@ class JuradoPopularMapper
 
     public function recuperarPinchos($dniJP)
     {
-        $stmt = $this->db->prepare("select idCodigo, idPincho, nombreP from Pincho p, Codigo c where JuradoPopular_dniJP=? and p.Establecimiento_nif=c.Establecimiento_nif");
+        $stmt = $this->db->prepare("select idCodigo, idPincho, nombreP from Pincho p, Codigo c where JuradoPopular_dniJP=? and p.Establecimiento_nif=c.Establecimiento_nif and usado='0'");
         $stmt->execute(array($dniJP));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    }
+
+    /**
+     * Comprobar nif codigos
+     */
+
+    public function comprobarNifPinchos($cod1, $cod2, $cod3)
+    {
+
+        $stmt = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt->execute(array($cod1));
+        $stmt2 = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt2->execute(array($cod2));
+        $stmt3 = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt3->execute(array($cod3));
+        $nif1 = $stmt->fetch(PDO::FETCH_BOTH);
+        $nif2 = $stmt2->fetch(PDO::FETCH_BOTH);
+        $nif3 = $stmt3->fetch(PDO::FETCH_BOTH);
+
+
+        if ($nif1[0] != $nif2[0] && $nif1[0]!=$nif3[0] && $nif2[0]!= $nif3[0]){
+            return true;
+        }
     }
 }

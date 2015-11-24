@@ -160,7 +160,7 @@ class UsuarioController extends BaseController
 
 
             } else {
-                echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
+                echo "Ya existe un usuario en el sistema con ese nif, por favor, elija otro";
                 echo "<br>Redireccionando...";
                 header("Refresh: 5; index.php?controller=usuario&action=registrarEstablecimientoVista#seccionRE");
 
@@ -214,7 +214,7 @@ class UsuarioController extends BaseController
 
 
             } else {
-                echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
+                echo "Ya existe un usuario en el sistema con ese dni, por favor, elija otro";
                 echo "<br>Redireccionando...";
                 header("Refresh: 5; index.php?controller=usuario&action=registrarPopularVista#seccionRU");
 
@@ -266,7 +266,7 @@ class UsuarioController extends BaseController
 
 
             } else {
-                echo "Ya existe un usuario en el sistema con ese login, por favor, elija otro";
+                echo "Ya existe un usuario en el sistema con ese dni, por favor, elija otro";
                 echo "<br>Redireccionando...";
                 header("Refresh: 5; index.php?controller=usuario&action=registrarProfesionalVista#seccionCJP");
 
