@@ -43,15 +43,18 @@ class PopularController extends BaseController
             $codigo1 = $_POST["cod1"];
             $codigo2 = $_POST["cod2"];
             $codigo3 = $_POST["cod3"];
-
-            if (isset($codigo1)) {
-                $this->juradoPopularMapper->introducirCodigosJP($codigo1, $this->currentUser->getDniJp());
-            }
-            if (isset($codigo2)) {
-                $this->juradoPopularMapper->introducirCodigosJP($codigo2, $this->currentUser->getDniJp());
-            }
-            if (isset($codigo3)) {
-                $this->juradoPopularMapper->introducirCodigosJP($codigo3, $this->currentUser->getDniJp());
+            if($this->juradoPopularMapper->comprobarNifPinchos($codigo1,$codigo2,$codigo3)){
+                if (isset($codigo1)) {
+                    $this->juradoPopularMapper->introducirCodigosJP($codigo1, $this->currentUser->getDniJp());
+                }
+                if (isset($codigo2)) {
+                    $this->juradoPopularMapper->introducirCodigosJP($codigo2, $this->currentUser->getDniJp());
+                }
+                if (isset($codigo3)) {
+                    $this->juradoPopularMapper->introducirCodigosJP($codigo3, $this->currentUser->getDniJp());
+                }
+            }else{
+                $this->view->setFlash("Debes introducir c&oacute;digos de distintos pinchos");
             }
 
             $this->view->redirect("popular", "index#seccionI");

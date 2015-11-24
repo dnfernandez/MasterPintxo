@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Pincho` (
   `idPincho` INT NOT NULL COMMENT '',
   `nombreP` VARCHAR(45) NOT NULL COMMENT '',
   `descripcionP` LONGTEXT NOT NULL COMMENT '',
-  `precio` VARCHAR(4) NOT NULL COMMENT '',
+  `precio` VARCHAR(5) NOT NULL COMMENT '',
   `concursante` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `finalista` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `Establecimiento_nif` VARCHAR(9) NOT NULL COMMENT '',
@@ -287,87 +287,43 @@ INSERT INTO `G_31MasterPintxo`.`Concurso` (`nombreC`, `descripcionC`) VALUES ('M
 
 Tranquilidad. Participar es muy fácil y ganar sin pasar demasiado tiempo entre fogones no resulta tan complicado. Basta con menos de media hora para preparar un pincho aparente con los que asegurarte el podio. Y si no te lo crees, sólo tienes que echar un vistazo a estas 23 propuestas de Cookpad. ');
 
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Manolo', 'C. Progreso 32', 'A41234567', 'abc123', '988000001');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tasca Jose Luis', 'Praza do Correxidor 12', 'A41234568', 'abc123', '988000002');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La estación de Roman', 'Rua de San Mamede, 4', 'A41234569', 'abc123', '988000003');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Portonovo', 'Praza das Mercedes', 'A41234570', 'abc123', '988000004');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('O comellon', 'Rua Lepanto, 16', 'A41234571', 'abc123', '988000005');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La Gula', 'Rua Perna Corneira, 15', 'A41234572', 'abc123', '988000006');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Titanic', 'Avd. Marín, 23', 'A41234573', 'abc123', '988000007');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Cenas', 'Avd. de Portugal,17', 'A41234574', 'abc123', '988000008');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('El graduado', 'Avd. de Zamora, 46', 'A41234575', 'abc123', '988000009');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Simpson', 'Rua San Miguel, 10', 'A41234576', 'abc123', '988000010');
-
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Ataranza', 'C. Progreso 34', 'A41234577', 'abc123', '988000011');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Barallete', 'Lepanto 12', 'A41234578', 'abc123', '988000012');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Ideas', 'Rua de San Mamede, 20', 'A41234579', 'abc123', '988000013');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Mata-o bicho', 'Praza das Mercedes, 7' , 'A41234580', 'abc123', '988000014');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Serrano de Lepanto', 'Rua Lepanto, 15', 'A41234581', 'abc123', '988000015');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Pincho mas', 'Rua Perna Corneira, 10', 'A41234582', 'abc123', '988000016');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tapería Monterrey', 'Avd. Marín, 27', 'A41234583', 'abc123', '988000017');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Baccus XII', 'Avd. de Portugal,11', 'A41234584', 'abc123', '988000018');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Cervexaría O Moucho', 'Avd. de Zamora, 23', 'A41234585', 'abc123', '988000019');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Casa María Andrea', 'Rua San Miguel, 14', 'A41234586', 'abc123', '988000020');
-
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Manolo', 'C. Progreso 32', '41234567A', 'abc123', '988000001');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tasca Jose Luis', 'Praza do Correxidor 12', '41234568A', 'abc123', '988000002');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La estación de Roman', 'Rua de San Mamede, 4', '41234569A', 'abc123', '988000003');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Portonovo', 'Praza das Mercedes', '41234570A', 'abc123', '988000004');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('O comellon', 'Rua Lepanto, 16', '41234571A', 'abc123', '988000005');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La Gula', 'Rua Perna Corneira, 15', '41234572A', 'abc123', '988000006');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Titanic', 'Avd. Marín, 23', '41234573A', 'abc123', '988000007');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Cenas', 'Avd. de Portugal,17', '41234574A', 'abc123', '988000008');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('El graduado', 'Avd. de Zamora, 46', '41234575A', 'abc123', '988000009');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Simpson', 'Rua San Miguel, 10', '41234576A', 'abc123', '988000010');
 
 
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('1', 'Chorizo de la casa', 'Pincho de chorizo sobre un crujiente de almendras ', '1', '0', '0', 'A41234574', './images-pinchos/pincho1.jpg', '0');
+VALUES ('1', 'Chorizo de la casa', 'Pincho de chorizo sobre un crujiente de almendras ', '1', '0', '0', '41234574A', './images-pinchos/pincho1.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('2', 'La gula', 'Tempura de makis con froitas de tempada e atún vermello con chuvia de sésamo tricolor e prebe de queixo de Arzúa. Come Ourense / Celíacos ', '2', '0', '0', 'A41234567', './images-pinchos/pincho2.jpg', '0');
+VALUES ('2', 'La gula', 'Tempura de makis con froitas de tempada e atún vermello con chuvia de sésamo tricolor e prebe de queixo de Arzúa. Come Ourense / Celíacos ', '2', '0', '0', '41234567A', './images-pinchos/pincho2.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('3', 'El horno', 'Empanadilla enfornada de cogomelos, mestura de vexetais e queixo. Come Ourense ', '1.5', '1', '0', 'A41234568', './images-pinchos/pincho3.jpg', '0');
+VALUES ('3', 'El horno', 'Empanadilla enfornada de cogomelos, mestura de vexetais e queixo. Come Ourense ', '1.5', '1', '0', '41234568A', './images-pinchos/pincho3.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('4', 'Duque', 'Pataca, gambas, cogomelos, ovo e queixo fundido. ', '2', '1', '0', 'A41234569', './images-pinchos/pincho4.jpg', '0');
+VALUES ('4', 'Duque', 'Pataca, gambas, cogomelos, ovo e queixo fundido. ', '2', '1', '0', '41234569A', './images-pinchos/pincho4.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('5', 'Fuentefria', 'Cazoleta de pan con raxo e queixo con pemento de piquillo e flor de castaña. ', '1', '1', '1', 'A41234570', './images-pinchos/pincho5.jpg', '0');
+VALUES ('5', 'Fuentefria', 'Cazoleta de pan con raxo e queixo con pemento de piquillo e flor de castaña. ', '1', '1', '1', '41234570A', './images-pinchos/pincho5.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
 VALUES ('6', 'O Pote', '
-Tortiña de trigo á grella reenchida dun escalfado de cebola, allo porro, allo e pemento verde con champiñóns e un pouco de queixo.', '1.75', '1', '1', 'A41234571', './images-pinchos/pincho6.jpg', '0');
+Tortiña de trigo á grella reenchida dun escalfado de cebola, allo porro, allo e pemento verde con champiñóns e un pouco de queixo.', '1.75', '1', '1', '41234571A', './images-pinchos/pincho6.jpg', '0');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('7', 'Merys', 'Picaña con crema de castaña, arroz salvaxe e cogomelos. ', '2', '0', '0', 'A41234572', './images-pinchos/pincho7.jpg', '1');
+VALUES ('7', 'Merys', 'Picaña con crema de castaña, arroz salvaxe e cogomelos. ', '2', '0', '0', '41234572A', './images-pinchos/pincho7.jpg', '1');
 
 INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('8', 'Serranito', 'Cogomelos variados e estofados con salchicha e un petisco de mostaza. ', '2', '0', '0', 'A41234573', './images-pinchos/pincho8.jpg', '1');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('9', 'Rulo Silvestre', 'Rulo de carne galega sobre cama de berenxena, cuberto de crema de cogomelos silvestres e tortaleta reenchida de mixto de cogomelos e trigueiro. 
-De 10.30 a 15.30 e de 19.30 a 24h', '2', '0', '0', 'A41234576', './images-pinchos/pincho9.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('10', 'Sobremesa de Gofres', 'Gofre feita con cervexa de trigo (apto para celíacos) cuberto de crema doce de castañas e labras de chocolate. 
-Todo o día, excepto de 15 a 18 pechado. ', '2', '0', '0', 'A41234577', './images-pinchos/pincho10.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('11', 'Guiso de Outono', 'Tenreira con setas e castañas, graten de pataca e redución de mencía.
-De 12 a 16 e de 20 a 2h.', '1.5', '1', '0', 'A41234578', './images-pinchos/pincho11.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('12', 'Del monte a la cazuela', 'Albóndegas de cervo con setas.
-De 13 a 16h e de 20h a peche. Martes pechado', '2', '1', '0', 'A41234579', './images-pinchos/pincho12.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('13', 'Empanadilla Perez', 'Empanadilla reenchida de cogomelos con cebola acaramelada e queixo de cabra. 
-De 9 a 16 e de 19 a peche. Martes pechado.', '1', '1', '1', 'A41234580', './images-pinchos/pincho13.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('14', 'Un buen Comienzo', 'Solombo con puré de castañas e cogomelos.
-De 19 a peche.', '1.75', '1', '1', 'A41234581', './images-pinchos/pincho14.jpg', '0');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('15', 'Chulas', 'Chula artesá con crema de boletus e sorpresa de crocante de cabaza.
-De 19.30 a peche. Mércores pechado.', '2', '0', '0', 'A41234582', './images-pinchos/pincho15.jpg', '1');
-
-INSERT INTO `G_31MasterPintxo`.`Pincho` (`idPincho`, `nombreP`, `descripcionP`, `precio`, `concursante`, `finalista`, `Establecimiento_nif`, `rutaImagen`, `confirmado`) 
-VALUES ('16', 'Espetada Fuentefría', 'Espetada de solombo de boi con boletus e marmelada de tomate da casa.
-De 13 a 15.30 e de 20 a peche. ', '2', '0', '0', 'A41234583', './images-pinchos/pincho16.jpg', '1');
+VALUES ('8', 'Serranito', 'Cogomelos variados e estofados con salchicha e un petisco de mostaza. ', '2', '0', '0', '41234573A', './images-pinchos/pincho8.jpg', '1');
 
 
 

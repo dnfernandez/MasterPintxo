@@ -56,6 +56,9 @@ $usuario = $view->getVariable("currentusername");
 									</div>
 								</div>';
                 endif; ?>
+                <div class="centrador flash">
+                    <?php echo $view->popFlash();?>
+                </div>
                 <div class="input-group centrador">
                     <h3><br></h3>
                     <input type="submit" class="contact submit" value="Enviar">
