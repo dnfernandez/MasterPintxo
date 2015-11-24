@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Pincho` (
   `idPincho` INT NOT NULL COMMENT '',
   `nombreP` VARCHAR(45) NOT NULL COMMENT '',
   `descripcionP` LONGTEXT NOT NULL COMMENT '',
-  `precio` VARCHAR(4) NOT NULL COMMENT '',
+  `precio` VARCHAR(5) NOT NULL COMMENT '',
   `concursante` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `finalista` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
   `Establecimiento_nif` VARCHAR(9) NOT NULL COMMENT '',
