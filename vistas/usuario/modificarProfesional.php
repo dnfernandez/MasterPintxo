@@ -27,20 +27,22 @@ $usuario = $view->getVariable("currentusername");
 			</div>
 		</div>
 		<div class="container">
-			<form method="post" action="index.php?controller=usuario&amp;action=modificarProfesional">
+			<form method="post" action="index.php?controller=usuario&amp;action=modificarProfesional" id="modjpro">
 				<div class="centrador">
-					<input name="name" type="text" class="contact centrador" value="<?php echo $profesional["nombreJPro"];?>" >
-					<input name="telef" type="text" class="contact centrador" value="<?php echo $profesional["telefJPro"];?>" >
+					<input name="name" type="text" class="contact centrador" id="modNameJPro" onblur="validateEmpty('modNameJPro')" value="<?php echo $profesional["nombreJPro"];?>" >
+					<input name="telef" type="text" class="contact centrador" id="modTelefJPro" onblur="validateTelefono('modTelefJPro')" value="<?php echo $profesional["telefJPro"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="modPassJPro" >
+					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="modRepeatPassJPro" onblur="validatePassword('modPassJPro','modRepeatPassJPro')" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="Modificar">
+<!--					<input type="submit" class="contact submit" value="Modificar">-->
+					<button id="btn-login" type="button" onclick="validateModJPro('modjpro')" class="contact submit" value="Modificar">Modificar </button>
+
 				</div>	
 			</form>
 		</div>

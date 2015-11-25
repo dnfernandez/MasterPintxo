@@ -27,24 +27,25 @@ $usuario = $view->getVariable("currentusername");
 			</div>
 		</div>
 		<div class="container">
-			<form method="post" action="index.php?controller=usuario&action=modificarUsuario">
+			<form method="post" action="index.php?controller=usuario&action=modificarUsuario" id="modificaruser">
 				<div class="centrador">
-					<input name="name" type="text" class="contact centrador" value="<?php echo $popular["nombreJP"];?>" >
-					<input name="apellidos" type="text" class="contact centrador" value="<?php echo $popular["apellidosJP"];?>" >
+					<input name="name" type="text" class="contact centrador" id="newName"  onblur="validateEmpty('newName')" value="<?php echo $popular["nombreJP"];?>" >
+					<input name="apellidos" type="text" class="contact centrador" id="newApellido"  onblur="validateEmpty('newApellido')" value="<?php echo $popular["apellidosJP"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="direccion" type="text" class="contact centrador" value="<?php echo $popular["direccion"];?>" >
-					<input name="cp" type="text" class="contact centrador" value="<?php echo $popular["cp"];?>" >
+					<input name="direccion" type="text" class="contact centrador" id="newDireccion" onblur="validateEmpty('newDireccion')" value="<?php echo $popular["direccion"];?>" >
+					<input name="cp" type="text" class="contact centrador" id="newCP" onblur="validateCP('newCP')" value="<?php echo $popular["cp"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" id="newPass" placeholder="Contrase&ntilde;a" >
+					<input name="pass2" type="password" class="contact centrador" id="newRepeatPass" placeholder="Repetir contrase&ntilde;a" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="Modificar">
+					<button id="btn-login" type="button" onclick="validateModUser('modificaruser')" class="contact submit" value="Modificar">Modificar</button>
+
 				</div>	
 			</form>
 		</div>

@@ -110,6 +110,9 @@ $view = ViewManager::getInstance();
                                     <script src="js/contact.js"></script>
                                     <script src="js/common.js"></script>
 
+                                    <script src="js/notify.js"></script>
+                                    <script src="js/Validaciones.js"></script>
+
                                     <script type="text/javascript">
                                         jQuery(function ($) {
                                             $(document).ready(function () {

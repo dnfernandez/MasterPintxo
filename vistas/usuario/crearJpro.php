@@ -34,23 +34,25 @@ $usuario = $view->getVariable("currentusername");
 			</div>
 		</div>
 		<div class="container">
-			<form method="post" action="index.php?controller=usuario&amp;action=registrarProfesional">
+			<form method="post" action="index.php?controller=usuario&amp;action=registrarProfesional" id="registerjpro">
 				<div class="centrador">
-					<input name="login" type="text" class="contact centrador" placeholder="Dni" >
-					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos" >                                       
+					<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNIJPro" onblur="validateDNI('DNIJPro')" >
+					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos"  id="NombreJPro" onblur="validateEmpty('NombreJPro')">
 				</div>
 				<div class="centrador">
-					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" >
+					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="TelefJPro" onblur="validateTelefono('TelefJPro')">
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="PassJPro">
+					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="PassRepeatJPro" onblur="validatePassword('PassJPro','PassRepeatJPro')" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="Crear">
+					<button id="btn-login" type="button" onclick="validateNewJPro('registerjpro')" class="contact submit" value="Registrar">Registrar </button>
+
+<!--					<input type="submit" class="contact submit" value="Crear">-->
 				</div>	
 			</form>
 		</div>
