@@ -42,7 +42,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="row">
             <div class="col-md-12">
                 <div class="tamPin">
-                    <div class="papers">
+                    <div class="papers cenConPin">
                         <img src="<?php echo $p["rutaImagen"];?>" alt="imagen"><br/>
 
                         <div class="row">
