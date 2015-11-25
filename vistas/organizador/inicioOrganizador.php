@@ -43,7 +43,7 @@ $usuario = $view->getVariable("currentusername");
 					<?php foreach($listaPinProp as $pincho) :?>
 						<form class="form-vertical" method="POST" action="index.php?controller=organizador&amp;action=validarPropuesta">
 								<div class="col-md-4">
-									<a class="contact pincho" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>">
+									<a class="contact pincho" target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>">
 										<?php echo $pincho["nombreP"]; ?>
 									</a>
 									<div>

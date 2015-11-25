@@ -37,7 +37,7 @@ $usuario = $view->getVariable("currentusername");
 						<?php foreach($listaElegir as $pincho):?>
 							<div class="col-md-4 pinchoElegir">
 								<input type="checkbox" class="contact" name="pincho[]" value="<?php echo $pincho["Pincho_idPincho"]; ?>">
-									<a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["Pincho_idPincho"]; ?>" class="contact pincho"><?php echo $pincho["nombreP"];?></a>
+									<a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["Pincho_idPincho"]; ?>" class="contact pincho"><?php echo $pincho["nombreP"];?></a>
 								</input>
 							</div>
 						<?php endforeach; ?>

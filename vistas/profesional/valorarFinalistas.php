@@ -42,7 +42,7 @@ $usuario = $view->getVariable("currentusername");
                     <?php foreach ($listaFinalistas as $pincho): ?>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
+                                <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
                                    class="pincho"><h4><?php echo $pincho["nombreP"]; ?></h4></a>
 
                                 <div class="inputValoracion">

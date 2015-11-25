@@ -81,7 +81,7 @@ $usuario = $view->getVariable("currentusername");
                             <figure id="pinchoAmp">
                                 <img class="imgPinchoAmp" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption class="texImgPinchoAmp">
-                                    <a href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pinAcep["idPincho"]; ?>#seccionI">
+                                    <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pinAcep["idPincho"]; ?>#seccionI">
                                         <h3><?php echo $pinAcep["nombreP"]; ?></h3></a>
 
                                     <p><?php echo $pinAcep["descripcionP"]; ?></p>
