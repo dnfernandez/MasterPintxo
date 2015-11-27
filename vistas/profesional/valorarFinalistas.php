@@ -43,7 +43,7 @@ $usuario = $view->getVariable("currentusername");
                         <div class="col-md-3">
                             <div class="form-group">
                                 <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
-                                   class="pincho"><h4><?php echo $pincho["nombreP"]; ?></h4></a>
+                                   class="pincho"><h4><?php echo htmlentities($pincho["nombreP"]); ?></h4></a>
 
                                 <div class="inputValoracion">
                                     <?php

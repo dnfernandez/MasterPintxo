@@ -64,9 +64,9 @@ $usuario = $view->getVariable("currentusername");
                             <figure>
                                 <img class="pinchoPec" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption>
-                                    <h3><?php echo $pinAcep["nombreP"]; ?></h3>
+                                    <h3><?php echo htmlentities($pinAcep["nombreP"]); ?></h3>
 
-                                    <p class="texto"><?php echo $pinAcep["descripcionP"]; ?></p>
+                                    <p class="texto"><?php echo htmlentities($pinAcep["descripcionP"]); ?></p>
                                 </figcaption>
                             </figure>
                         </li>
@@ -82,9 +82,9 @@ $usuario = $view->getVariable("currentusername");
                                 <img class="imgPinchoAmp" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption class="texImgPinchoAmp">
                                     <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pinAcep["idPincho"]; ?>#seccionI">
-                                        <h3><?php echo $pinAcep["nombreP"]; ?></h3></a>
+                                        <h3><?php echo htmlentities($pinAcep["nombreP"]); ?></h3></a>
 
-                                    <p><?php echo $pinAcep["descripcionP"]; ?></p>
+                                    <p><?php echo htmlentities($pinAcep["descripcionP"]); ?></p>
                                 </figcaption>
                             </figure>
                         </li>

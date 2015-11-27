@@ -35,11 +35,11 @@ $usuario = $view->getVariable("currentusername");
               action="index.php?controller=establecimiento&amp;action=modificarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
               enctype="multipart/form-data">
             <div class="centrador">
-                <input name="namePin" type="text" class="contact centrador" value="<?php echo $pincho["nombreP"]; ?>">
+                <input name="namePin" type="text" class="contact centrador" value="<?php echo htmlentities($pincho["nombreP"]); ?>">
                 <input name="precioPin" type="text" class="contact centrador" value="<?php echo $pincho["precio"]; ?>">
             </div>
             <div class="centrador">
-                <textarea class="contact textDes" name="descripPin"> <?php echo $pincho["descripcionP"]; ?> </textarea>
+                <textarea class="contact textDes" name="descripPin"> <?php echo htmlentities($pincho["descripcionP"]); ?> </textarea>
             </div>
             <div class="form-group centradorCajFile">
                 <input name="uploadedfile" type="file" style="width: 480px;" class="contact">

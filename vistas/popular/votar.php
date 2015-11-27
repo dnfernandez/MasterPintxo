@@ -41,7 +41,7 @@ $usuario = $view->getVariable("currentusername");
                         <div class="col-md-4">
                             <input type="radio" class="contact" name="pincho" value="<?php echo $pincho["idPincho"]; ?>">
                             <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
-                               class="contact pincho"><?php echo $pincho["nombreP"]; ?></a>
+                               class="contact pincho"><?php echo htmlentities($pincho["nombreP"]); ?></a>
                             </input>
                             <input type="hidden" name="pinchos[]" value="<?php echo $pincho["idPincho"]; ?>">
                             <input type="hidden" name="codigos[]" value="<?php echo $pincho["idCodigo"]; ?>">

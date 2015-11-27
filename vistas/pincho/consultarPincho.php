@@ -35,7 +35,7 @@ $usuario = $view->getVariable("currentusername");
     <div class="container">
         <div class="heading text-center">
             <img class="dividerline" src="img/sep.png" alt="separador">
-            <h2><?php echo $p["nombreP"];?></h2>
+            <h2><?php echo htmlentities($p["nombreP"]);?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
         </div>
 
@@ -50,7 +50,7 @@ $usuario = $view->getVariable("currentusername");
                                 <h5>Descripci&oacute;n</h5>
 
                                 <div>
-                                    <?php echo $p["descripcionP"];?>
+                                    <?php echo htmlentities($p["descripcionP"]);?>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ $usuario = $view->getVariable("currentusername");
                                 <h5>Establecimiento</h5>
 
                                 <div>
-                                    <?php echo $p["nombreE"];?>
+                                    <?php echo htmlentities($p["nombreE"]);?>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ $usuario = $view->getVariable("currentusername");
                                 <h5>Direcci&oacute;n</h5>
 
                                 <div>
-                                    <?php echo $p["direccionE"];?>
+                                    <?php echo htmlentities($p["direccionE"]);?>
                                 </div>
                             </div>
                         </div>
