@@ -4,7 +4,7 @@
 class PDOConnection {
   private static $dbhost = "127.0.0.1";
   private static $dbname = "G_31MasterPintxo";
-  private static $dbuser = "admin";
+  private static $dbuser = "adminG31";
   private static $dbpass = "abc123.";
   private static $db_singleton = null;
   
