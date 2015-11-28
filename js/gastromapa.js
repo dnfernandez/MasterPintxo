@@ -9,7 +9,7 @@ function direcciones(d){
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
+        zoom: 13,
         center: myLatLng,
         scrollwheel: false
     });

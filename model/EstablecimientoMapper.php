@@ -134,7 +134,7 @@ class EstablecimientoMapper
 	}
 
     public function listarDirecciones(){
-        $stmt = $this->db->query("select direccionE from Establecimiento");
+        $stmt = $this->db->query("select direccionE from Establecimiento E, Pincho P where E.nif=P.Establecimiento_nif and P.concursante='1'");
         return $stmt->fetchAll(PDO::FETCH_BOTH);
     }
 
