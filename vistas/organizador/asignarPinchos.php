@@ -39,7 +39,7 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form class="form-vertical" action="index.php?controller=organizador&amp;action=asignarPinchos" method="POST">
 				<div class="form centrador formAsig">
-					<div class="row">
+					<div class="row asigPin">
 						<!--Esto va dentro del bucle-->
 						<?php foreach($listaPinchos as $pincho):?>
 							<div class="col-md-4 asignar">

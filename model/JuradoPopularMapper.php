@@ -180,7 +180,7 @@ class JuradoPopularMapper
 
     public function recuperarPinchos($dniJP)
     {
-        $stmt = $this->db->prepare("select idCodigo, idPincho, nombreP from Pincho p, Codigo c where JuradoPopular_dniJP=? and p.Establecimiento_nif=c.Establecimiento_nif and usado='0'");
+        $stmt = $this->db->prepare("select idCodigo, idPincho, nombreP, rutaImagen from Pincho p, Codigo c where JuradoPopular_dniJP=? and p.Establecimiento_nif=c.Establecimiento_nif and usado='0'");
         $stmt->execute(array($dniJP));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 

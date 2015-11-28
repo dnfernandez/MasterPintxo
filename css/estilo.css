@@ -1,5 +1,6 @@
 .cenConPin{
 	text-align:center;
+	margin-left:32px;
 }
 .imgPinchoAmp{
 	max-width:95%;
@@ -144,4 +145,13 @@
 
 .usuTab{
 	padding-bottom: 5px;
+}
+
+.imgPeq{
+	max-width:50%;
+}
+
+.asigPin{
+	width: 120%;
+	margin-left: -8%;
 }

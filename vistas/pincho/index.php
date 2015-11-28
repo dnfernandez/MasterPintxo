@@ -64,7 +64,7 @@ $usuario = $view->getVariable("currentusername");
                             <figure>
                                 <img class="pinchoPec" src="<?php echo $pinAcep["rutaImagen"]; ?>" alt="Imagen"/>
                                 <figcaption>
-                                    <h3><?php echo htmlentities($pinAcep["nombreP"]); ?></h3>
+                                    <h3 class="texto"><?php echo htmlentities($pinAcep["nombreP"]); ?></h3>
 
                                     <p class="texto"><?php echo htmlentities($pinAcep["descripcionP"]); ?></p>
                                 </figcaption>

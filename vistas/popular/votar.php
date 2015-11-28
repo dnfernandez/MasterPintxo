@@ -39,10 +39,17 @@ $usuario = $view->getVariable("currentusername");
                     <!--Esto va dentro del bucle-->
                     <?php foreach ($listaPinchosVotar as $pincho): ?>
                         <div class="col-md-4">
-                            <input type="radio" class="contact" name="pincho" value="<?php echo $pincho["idPincho"]; ?>">
-                            <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
-                               class="contact pincho"><?php echo htmlentities($pincho["nombreP"]); ?></a>
-                            </input>
+                            <a class="contact pincho" target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>">
+                                <img class="imgPeq" alt="imagen pincho" src="<?php echo $pincho["rutaImagen"];?>"/>
+                            </a>
+                            <br>
+                            <br>
+                            <div>
+                                <input type="radio" class="contact" name="pincho" value="<?php echo $pincho["idPincho"]; ?>">
+                                <a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>"
+                                   class="contact pincho"><?php echo htmlentities($pincho["nombreP"]); ?></a>
+                                </input>
+                            </div>
                             <input type="hidden" name="pinchos[]" value="<?php echo $pincho["idPincho"]; ?>">
                             <input type="hidden" name="codigos[]" value="<?php echo $pincho["idCodigo"]; ?>">
                         </div>

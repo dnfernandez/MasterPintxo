@@ -44,8 +44,13 @@ $usuario = $view->getVariable("currentusername");
 						<form class="form-vertical" method="POST" action="index.php?controller=organizador&amp;action=validarPropuesta">
 								<div class="col-md-4">
 									<a class="contact pincho" target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>">
-										<?php echo htmlentities($pincho["nombreP"]); ?>
+										<img class="imgPeq" alt="imagen pincho" src="<?php echo $pincho["rutaImagen"];?>"/>
 									</a>
+									<div>
+										<a class="contact pincho" target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>">
+											<?php echo htmlentities($pincho["nombreP"]); ?>
+										</a>
+									</div>
 									<div>
 										<input type="hidden" name="idPincho" value="<?php echo $pincho["idPincho"]; ?>">
 										<button type="submit" name="aceptar" class="contact submit">Aceptar</button>
