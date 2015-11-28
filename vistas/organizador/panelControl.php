@@ -39,13 +39,13 @@ $usuario = $view->getVariable("currentusername");
             <a href="index.php?controller=organizador&amp;action=asignarFinalistas"><button class="btnPanel" type="button">Valoraci&oacute;n de finalistas</button></a>
         </span>
         <span class="panel">
-            <a href=""><button class="btnPanel" type="button">Lista de Jurado Popular</button></a><br>
+            <a href="index.php?controller=organizador&amp;action=listarJPop#seccionL"><button class="btnPanel" type="button">Lista de Jurado Popular</button></a><br>
         </span>
         <span class="panel">
-            <a href=""><button class="btnPanel" type="button">Lista de Jurado Profesional</button></a>
+            <a href="index.php?controller=organizador&amp;action=listarJPro#seccionL"><button class="btnPanel" type="button">Lista de Jurado Profesional</button></a>
         </span>
         <span class="panel">
-            <a href=""><button class="btnPanel" type="button">Lista de Establecimientos</button></a>
+            <a href="index.php?controller=organizador&amp;action=listarEst#seccionL"><button class="btnPanel" type="button">Lista de Establecimientos</button></a>
         </span>
     </div>
 </section>

@@ -269,6 +269,17 @@ CREATE INDEX `fk_Pincho_has_JuradoProfesional_JuradoProfesional2_idx` ON `G_31Ma
 
 CREATE INDEX `fk_Pincho_has_JuradoProfesional_Pincho2_idx` ON `G_31MasterPintxo`.`Pincho_Finalista_JuradoProfesional` (`Pincho_idPincho` ASC)  COMMENT '';
 
+-- -----------------------------------------------------
+-- Table `G_31MasterPintxo`.`Baneos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `G_31MasterPintxo`.`Baneos` ;
+
+CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Baneos` (
+  `idUsuario` VARCHAR(9) NOT NULL COMMENT '',
+  PRIMARY KEY (`idUsuario`)  COMMENT '')
+ENGINE = InnoDB;
+
+
 SET SQL_MODE = '';
 GRANT USAGE ON *.* TO adminG31;
  DROP USER adminG31;

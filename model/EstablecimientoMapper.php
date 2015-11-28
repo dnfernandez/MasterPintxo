@@ -2,12 +2,7 @@
 
 require_once(__DIR__ . "/../nucleo/PDOConnection.php");
 
-/**
- * Created by PhpStorm.
- * User: MARCOGP
- * Date: 17/11/2015
- * Time: 15:49
- */
+
 class EstablecimientoMapper
 {
     private $db;
@@ -78,15 +73,7 @@ class EstablecimientoMapper
         $stmt = $this->db->query("SELECT * FROM Establecimiento");
         $esta_db = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $esta_db;
-        /*
-        $establecimientos = array();
 
-        foreach ($esta_db as $establecimiento) {
-            array_push($establecimientos, new Establecimiento($establecimiento["nombreE"], $establecimiento["direccionE"], $establecimiento["nif"], $establecimiento["contrasenha"], $establecimiento["telefE"]));
-        }
-
-        return $establecimientos;
-        */
     }
 
 
@@ -96,20 +83,7 @@ class EstablecimientoMapper
         $stmt->execute(array($nif));
         $pincho = $stmt->fetch(PDO::FETCH_ASSOC);
         return $pincho;
-        /*   $aux = $stmt->rowCount();
-        if(aux!=0) {
-            return new Pincho(
-                $pincho["idPincho"],
-                $pincho["nombreP"],
-                $pincho["descripcionP"],
-                $pincho["precio"],
-                $pincho["concursante"],
-                $pincho["finalista"]
 
-			);
-        } else {
-            return NULL;
-        }*/
     }
 
     public function pinchoPresentado($nif){
@@ -141,25 +115,6 @@ class EstablecimientoMapper
             $stmt_2->execute(array($randomString, 0, "000000000", $nif));
         }
 
-        /*
-        $stmt = $this->db->prepare("SELECT MAX(idCodigo) as idCodigo FROM Codigo WHERE Establecimiento_nif=?");
-        $stmt->execute(array($nif));
-        $codigo = $stmt->fetch(PDO::FETCH_ASSOC);
-        //$aux = $stmt->rowCount();
-        if ($stmt->fetchColumn() > 0) {
-            $codigo["idCodigo"] += 100000000;
-            $stmt_2 = $this->db->prepare("INSERT INTO Codigo(idCodigo, usado, JuradoPopular_dniJP, Establecimiento_nif) values (?,?,?,?)");
-            $stmt_2->execute(array($codigo["idCodigo"], 0, "000000000", $nif));
-           // $codigo = $stmt_2->fetch(PDO::FETCH_ASSOC);
-        } else {
-            $rest = substr($nif, 0, -1);
-            $rest = "1000" . $rest;
-            $stmt_2 = $this->db->prepare("INSERT INTO Codigo(idCodigo, usado, JuradoPopular_dniJP, Establecimiento_nif) values (?,?,?,?)");
-            $stmt_2->execute(array($rest, 0, "000000000", $nif));
-         //   $codigo = $stmt_2->fetch(PDO::FETCH_ASSOC);
-        }
-      //  return $codigo;
-        */
     }
 
 

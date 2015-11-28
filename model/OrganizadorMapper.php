@@ -108,4 +108,37 @@ class OrganizadorMapper
 
 
     }
+
+    /**
+     * Buscar baneados
+     */
+
+    public function buscarBaneo($id){
+        $stmt = $this->db->prepare("select count(*) from Baneos where idUsuario=?");
+        $stmt->execute(array($id));
+
+        if($stmt->fetchColumn()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * Banear
+     */
+
+    public function banear($id){
+        $stmt = $this->db->prepare("insert into Baneos(idUsuario) values(?)");
+        $stmt->execute(array($id));
+    }
+
+    /**
+     * Desbanear
+     */
+
+    public function desBanear($id){
+        $stmt = $this->db->prepare("delete from Baneos where idUsuario=?");
+        $stmt->execute(array($id));
+    }
 }

@@ -57,47 +57,52 @@ class UsuarioController extends BaseController
     public function login()
     {
         if (isset($_POST["login"])) {
-            $login = $_POST["login"];
-            $pass = $_POST["pass"];
-            if ($this->establecimientoMapper->consultar($login)) {
-                if ($this->establecimientoMapper->comprobarUsuario($login, $pass)) {
-                    $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index#seccionI");
-                    $this->view->setVariable("currentusername", $_POST["login"]);
-                } else {
-                    $errors = array();
-                    $errors["general"] = "Usuario no valido";
-                    $this->view->setVariable("errors", $errors);
-                }
-            } else if ($this->organizadorMapper->comprobarUsuario($login)) {
-                if ($this->organizadorMapper->existeUsuario($login, $pass)) {
-                    $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index#seccionI");
-                    $this->view->setVariable("currentusername", $_POST["login"]);
-                } else {
-                    $errors = array();
-                    $errors["general"] = "Usuario no valido";
-                    $this->view->setVariable("errors", $errors);
-                }
-            } else if ($this->juradoProfesionalMapper->existeUsuario($login)) {
-                if ($this->juradoProfesionalMapper->comprobarUsuario($login, $pass)) {
-                    $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index#seccionI");
-                    $this->view->setVariable("currentusername", $_POST["login"]);
-                } else {
-                    $errors = array();
-                    $errors["general"] = "Usuario no valido";
-                    $this->view->setVariable("errors", $errors);
-                }
-            } else if ($this->juradoPopularMapper->existeUsuario($login)) {
-                if ($this->juradoPopularMapper->comprobarUsuario($login, $pass)) {
-                    $_SESSION["currentuser"] = $_POST["login"];
-                    $this->view->redirect("usuario", "index#seccionI");
-                    $this->view->setVariable("currentusername", $_POST["login"]);
-                } else {
-                    $errors = array();
-                    $errors["general"] = "Usuario no valido";
-                    $this->view->setVariable("errors", $errors);
+            if ($this->organizadorMapper->buscarBaneo($_POST["login"])) {
+                $this->view->setFlash("Usuario baneado");
+                $this->view->redirect("usuario", "index#seccionL");
+            } else {
+                $login = $_POST["login"];
+                $pass = $_POST["pass"];
+                if ($this->establecimientoMapper->consultar($login)) {
+                    if ($this->establecimientoMapper->comprobarUsuario($login, $pass)) {
+                        $_SESSION["currentuser"] = $_POST["login"];
+                        $this->view->redirect("usuario", "index#seccionI");
+                        $this->view->setVariable("currentusername", $_POST["login"]);
+                    } else {
+                        $errors = array();
+                        $errors["general"] = "Usuario no valido";
+                        $this->view->setVariable("errors", $errors);
+                    }
+                } else if ($this->organizadorMapper->comprobarUsuario($login)) {
+                    if ($this->organizadorMapper->existeUsuario($login, $pass)) {
+                        $_SESSION["currentuser"] = $_POST["login"];
+                        $this->view->redirect("usuario", "index#seccionI");
+                        $this->view->setVariable("currentusername", $_POST["login"]);
+                    } else {
+                        $errors = array();
+                        $errors["general"] = "Usuario no valido";
+                        $this->view->setVariable("errors", $errors);
+                    }
+                } else if ($this->juradoProfesionalMapper->existeUsuario($login)) {
+                    if ($this->juradoProfesionalMapper->comprobarUsuario($login, $pass)) {
+                        $_SESSION["currentuser"] = $_POST["login"];
+                        $this->view->redirect("usuario", "index#seccionI");
+                        $this->view->setVariable("currentusername", $_POST["login"]);
+                    } else {
+                        $errors = array();
+                        $errors["general"] = "Usuario no valido";
+                        $this->view->setVariable("errors", $errors);
+                    }
+                } else if ($this->juradoPopularMapper->existeUsuario($login)) {
+                    if ($this->juradoPopularMapper->comprobarUsuario($login, $pass)) {
+                        $_SESSION["currentuser"] = $_POST["login"];
+                        $this->view->redirect("usuario", "index#seccionI");
+                        $this->view->setVariable("currentusername", $_POST["login"]);
+                    } else {
+                        $errors = array();
+                        $errors["general"] = "Usuario no valido";
+                        $this->view->setVariable("errors", $errors);
+                    }
                 }
             }
         }

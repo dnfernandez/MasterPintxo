@@ -208,4 +208,13 @@ class JuradoPopularMapper
             return true;
         }
     }
+
+    /**
+     * Listar jurado popular
+     */
+
+    public function listarJurados(){
+        $stmt = $this->db->query("select * from JuradoPopular");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

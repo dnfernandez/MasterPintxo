@@ -131,3 +131,17 @@
 	max-block-size: 143.433px;
 	max-height: 143.433px;
 }
+
+.tabla{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.tituloTab{
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.usuTab{
+	padding-bottom: 5px;
+}
