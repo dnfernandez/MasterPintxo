@@ -326,27 +326,27 @@ INSERT INTO `G_31MasterPintxo`.`Concurso` (`nombreC`, `descripcionC`) VALUES ('M
 
 Tranquilidad. Participar es muy fácil y ganar sin pasar demasiado tiempo entre fogones no resulta tan complicado. Basta con menos de media hora para preparar un pincho aparente con los que asegurarte el podio. Y si no te lo crees, sólo tienes que echar un vistazo a estas 23 propuestas de Cookpad. ');
 
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Manolo', 'C. Progreso 32', 'A41234567', 'abc123', '988000001');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tasca Jose Luis', 'Praza do Correxidor 12', 'A41234568', 'abc123', '988000002');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La estación de Roman', 'Rua de San Mamede, 4', 'A41234569', 'abc123', '988000003');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Portonovo', 'Praza das Mercedes', 'A41234570', 'abc123', '988000004');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('O comellon', 'Rua Lepanto, 16', 'A41234571', 'abc123', '988000005');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La Gula', 'Rua Perna Corneira, 15', 'A41234572', 'abc123', '988000006');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Titanic', 'Avd. Marín, 23', 'A41234573', 'abc123', '988000007');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Cenas', 'Avd. de Portugal,17', 'A41234574', 'abc123', '988000008');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('El graduado', 'Avd. de Zamora, 46', 'A41234575', 'abc123', '988000009');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Simpson', 'Rua San Miguel, 10', 'A41234576', 'abc123', '988000010');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Manolo', 'C. Progreso, 32, Ourense', 'A41234567', 'abc123', '988000001');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tasca Jose Luis', 'Praza do Correxidor, 12, Ourense', 'A41234568', 'abc123', '988000002');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La estación de Roman', 'Rua de San Mamede, 4, Ourense', 'A41234569', 'abc123', '988000003');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Portonovo', 'Praza das Mercedes, Ourense', 'A41234570', 'abc123', '988000004');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('O comellon', 'Rua Lepanto, 16, Ourense', 'A41234571', 'abc123', '988000005');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('La Gula', 'Rua Perna Corneira, 15, Ourense', 'A41234572', 'abc123', '988000006');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Titanic', 'Avd. Marín, 23, Ourense', 'A41234573', 'abc123', '988000007');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Cenas', 'Avd. de Portugal,17, Ourense', 'A41234574', 'abc123', '988000008');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('El graduado', 'Avd. de Zamora, 46, Ourense', 'A41234575', 'abc123', '988000009');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Simpson', 'Rua San Miguel, 10, Ourense', 'A41234576', 'abc123', '988000010');
 
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Ataranza', 'C. Progreso 34', 'A41234577', 'abc123', '988000011');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Barallete', 'Lepanto 12', 'A41234578', 'abc123', '988000012');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Ideas', 'Rua de San Mamede, 20', 'A41234579', 'abc123', '988000013');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Mata-o bicho', 'Praza das Mercedes, 7' , 'A41234580', 'abc123', '988000014');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Serrano de Lepanto', 'Rua Lepanto, 15', 'A41234581', 'abc123', '988000015');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Pincho mas', 'Rua Perna Corneira, 10', 'A41234582', 'abc123', '988000016');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tapería Monterrey', 'Avd. Marín, 27', 'A41234583', 'abc123', '988000017');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Baccus XII', 'Avd. de Portugal,11', 'A41234584', 'abc123', '988000018');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Cervexaría O Moucho', 'Avd. de Zamora, 23', 'A41234585', 'abc123', '988000019');
-INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Casa María Andrea', 'Rua San Miguel, 14', 'A41234586', 'abc123', '988000020');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Ataranza', 'C. Progreso 34, Ourense', 'A41234577', 'abc123', '988000011');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Barallete', 'Lepanto, 12, Ourense', 'A41234578', 'abc123', '988000012');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Bar Ideas', 'Rua de San Mamede, 20, Ourense', 'A41234579', 'abc123', '988000013');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Mata-o bicho', 'Praza das Mercedes, 7, Ourense' , 'A41234580', 'abc123', '988000014');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Serrano de Lepanto', 'Rua Lepanto, 15, Ourense', 'A41234581', 'abc123', '988000015');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Pincho mas', 'Rua Perna Corneira, 10, Ourense', 'A41234582', 'abc123', '988000016');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Tapería Monterrey', 'Avd. Marín, 27, Ourense', 'A41234583', 'abc123', '988000017');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Baccus XII', 'Avd. de Portugal,11, Ourense', 'A41234584', 'abc123', '988000018');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Cervexaría O Moucho', 'Avd. de Zamora, 23, Ourense', 'A41234585', 'abc123', '988000019');
+INSERT INTO `G_31MasterPintxo`.`Establecimiento` (`nombreE`, `direccionE`, `nif`, `contrasenhaE`, `telfE`) VALUES ('Casa María Andrea', 'Rua San Miguel, 14, Ourense', 'A41234586', 'abc123', '988000020');
 
 
 

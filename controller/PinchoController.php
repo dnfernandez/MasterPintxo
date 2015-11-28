@@ -3,6 +3,8 @@ require_once(__DIR__ . "/../model/Pincho.php");
 require_once(__DIR__ . "/../model/PinchoMapper.php");
 require_once(__DIR__ . "/../model/Concurso.php");
 require_once(__DIR__ . "/../model/ConcursoMapper.php");
+require_once(__DIR__ . "/../model/Establecimiento.php");
+require_once(__DIR__ . "/../model/EstablecimientoMapper.php");
 
 require_once(__DIR__ . "/../controller/BaseController.php");
 require_once(__DIR__ . "/../nucleo/ViewManager.php");
@@ -11,6 +13,7 @@ class PinchoController extends BaseController
 {
     private $pinchoMapper;
     private $concursoMapper;
+    private $establecimientoMapper;
 
     /**
      * PinchoController constructor.
@@ -21,6 +24,7 @@ class PinchoController extends BaseController
 
         $this->pinchoMapper = new PinchoMapper();
         $this->concursoMapper = new ConcursoMapper();
+        $this->establecimientoMapper = new EstablecimientoMapper();
     }
 
     public function index()
@@ -51,6 +55,16 @@ class PinchoController extends BaseController
         }else{
             $this->index();
         }
+    }
+
+    /**
+     * Mostrar Gastromapa
+     */
+
+    public function gastromapa(){
+        $direcciones = $this->establecimientoMapper->listarDirecciones();
+        $this->view->setVariable("direcciones",$direcciones);
+        $this->view->render("pincho","gastromapa");
     }
 
 

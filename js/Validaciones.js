@@ -1,7 +1,3 @@
-/**
- * Created by MARCOGP on 25/11/2015.
- */
-
 
 function validateEmpty(id){
     var name = document.getElementById(id).value;

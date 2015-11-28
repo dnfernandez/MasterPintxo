@@ -39,7 +39,7 @@ $view = ViewManager::getInstance();
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
+<body onload="direcciones(arrayDirecc)">
 <!--wrapper start-->
 <div class="wrapper" id="wrapper">
 
@@ -70,11 +70,18 @@ $view = ViewManager::getInstance();
                                     <div class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
                                             <li class="menuItem"><a href="index.php">MasterPintxo</a></li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> + informaci&oacute;n <span class="caret"></span></a>
+                                                <ul class="dropdown-menu menuOc" role="menu">
+                                                    <li class="menuItem"><a href="index.php?controller=pincho&amp;action=gastromapa#seccionG">Gastromapa</a></li>
+                                                </ul>
+                                            </li>
 
 
                                             <!------------------------------------- Se añade el contenido ------------------------------------------->
                                             <?= $view->getFragment(ViewManager::DEFAULT_FRAGMENT) ?>
                                             <!------------------------------------------------------------------------------------------------------->
+
 
 
                                             <!--footer-->
@@ -109,9 +116,12 @@ $view = ViewManager::getInstance();
                                     <script src="js/gridscroll.js"></script>
                                     <script src="js/contact.js"></script>
                                     <script src="js/common.js"></script>
-
                                     <script src="js/notify.js"></script>
                                     <script src="js/Validaciones.js"></script>
+                                    <script src="js/gastromapa.js"></script>
+                                    <script async defer
+                                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJTjtoTHR0kgmC22A1bfQ4qPPI6MOUizU&callback=initMap">
+                                    </script>
 
                                     <script type="text/javascript">
                                         jQuery(function ($) {

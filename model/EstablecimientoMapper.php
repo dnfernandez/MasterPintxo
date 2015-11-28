@@ -133,5 +133,10 @@ class EstablecimientoMapper
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+    public function listarDirecciones(){
+        $stmt = $this->db->query("select direccionE from Establecimiento");
+        return $stmt->fetchAll(PDO::FETCH_BOTH);
+    }
+
 
 }

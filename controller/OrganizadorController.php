@@ -255,5 +255,4 @@ class OrganizadorController extends BaseController
         }
     }
 
-
 }
