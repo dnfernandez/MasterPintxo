@@ -2,6 +2,7 @@
 require_once(__DIR__ . "/../../nucleo/ViewManager.php");
 $view = ViewManager::getInstance();
 $pincho = $view->getVariable("datosPincho");
+$organizador = $view->getVariable("organizador");
 $usuario = $view->getVariable("currentusername");
 ?>
 
@@ -38,7 +39,6 @@ $usuario = $view->getVariable("currentusername");
             <h2><?php echo htmlentities($p["nombreP"]);?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="tamPin">
@@ -86,6 +86,18 @@ $usuario = $view->getVariable("currentusername");
                                 </div>
                             </div>
                         </div>
+                        <?php if(isset($organizador)): ?>
+                            <div class="row text-center">
+                            <br>
+                                <form class="form-vertical" method="POST" action="index.php?controller=organizador&amp;action=validarPropuesta">
+                                    <div class="col-md-12">
+                                        <button type="submit" name="aceptar" class="contact submit">Aceptar</button>
+                                        <button type="submit" name="denegar" class="contact submit">Denegar</button>
+                                    </div>
+                                    <input type="hidden" name="idPincho" value="<?php echo $p["idPincho"]; ?>">
+                                </form>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

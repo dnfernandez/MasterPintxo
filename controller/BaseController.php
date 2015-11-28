@@ -51,6 +51,7 @@ class BaseController
             if ($this->orgMapper->comprobarUsuario($_SESSION["currentuser"])) {
                 $this->currentUser = new Organizador($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getIdOrganizador());
+                $this->view->setVariable("organizador", $this->currentUser->getIdOrganizador());
                 $this->username = $this->currentUser->getIdOrganizador();
             } else if ($this->estMapper->consultar($_SESSION["currentuser"])) {
                 $this->currentUser = new Establecimiento($_SESSION["currentuser"]);
