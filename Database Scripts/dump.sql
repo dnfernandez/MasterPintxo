@@ -285,11 +285,12 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `G_31MasterPintxo`.`Comentario` ;
 
 CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Comentario` (
+  `idComentario` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `JuradoPopular_dniJP` VARCHAR(9) NOT NULL COMMENT '',
   `Pincho_idPincho` INT NOT NULL COMMENT '',
   `nombreJP` VARCHAR(20) NOT NULL COMMENT '',
   `comentario` TEXT NOT NULL COMMENT '',
-  PRIMARY KEY (`JuradoPopular_dniJP`, `Pincho_idPincho`)  COMMENT '',
+  PRIMARY KEY (`idComentario`)  COMMENT '',
   CONSTRAINT `fk_JuradoPopular_has_Pincho_JuradoPopular2`
     FOREIGN KEY (`JuradoPopular_dniJP`)
     REFERENCES `G_31MasterPintxo`.`JuradoPopular` (`dniJP`)
@@ -305,6 +306,7 @@ ENGINE = InnoDB;
 CREATE INDEX `fk_JuradoPopular_has_Pincho_Pincho2_idx` ON `G_31MasterPintxo`.`Comentario` (`Pincho_idPincho` ASC)  COMMENT '';
 
 CREATE INDEX `fk_JuradoPopular_has_Pincho_JuradoPopular2_idx` ON `G_31MasterPintxo`.`Comentario` (`JuradoPopular_dniJP` ASC)  COMMENT '';
+
 
 
 

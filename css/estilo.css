@@ -162,3 +162,46 @@
 	height:600px;
 	border:1px solid black;
 }
+
+.centrador3{
+	margin: 0 auto;
+	text-align:center;
+	margin-left:-36px;
+}
+
+.textCom{
+	width: 80%;
+	height: 100px;
+	color: #555;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+.btnCom{
+	text-align:right;
+	margin-top: 10px;
+	margin-right: 10%;
+	margin-bottom: 50px;
+}
+
+.nombCom{
+	color: #2f32ca;
+	text-align: left;
+}
+
+.comCom{
+	text-align: left;
+}
+
+.cajaComentarios{
+	width: 80%;
+	margin:0 auto;
+	margin-top: 20px;
+
+}
+
+.linCom{
+	border-bottom: 1px solid #CCC;
+	padding-top: 5px;
+}

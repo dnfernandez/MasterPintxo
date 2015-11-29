@@ -64,6 +64,7 @@ class BaseController
             } else if ($this->jurPopMapper->existeUsuario($_SESSION["currentuser"])) {
                 $this->currentUser = new JuradoPopular($_SESSION["currentuser"]);
                 $this->view->setVariable("currentusername", $this->currentUser->getDniJp());
+                $this->view->setVariable("popular", $this->currentUser->getDniJp());
                 $this->username = $this->currentUser->getDniJp();
             }
 

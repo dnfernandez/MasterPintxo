@@ -46,9 +46,7 @@ if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=us
                     var arrayDirecc= new Array();
                     arrayDirecc=<?php echo json_encode($direcciones);?>
                 </script>
-                <!--<button onclick="direcciones(arrayDirecc)">Ver marcas</button>-->
                 <div id="map"></div>
-
             </div>
         </div>
     </div>

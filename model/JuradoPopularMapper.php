@@ -217,4 +217,23 @@ class JuradoPopularMapper
         $stmt = $this->db->query("select * from JuradoPopular");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    /**
+     * Listar comentarios
+     */
+
+    public function listarComentarios($idPincho){
+        $stmt = $this->db->prepare("select * from Comentario where Pincho_idPincho=?");
+        $stmt->execute(array($idPincho));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Insertar comentarios
+     */
+
+    public function insertarComentarios($idPincho, $dniJP, $nombreJP, $comentario){
+        $stmt = $this->db->prepare("insert into Comentario(JuradoPopular_dniJP, Pincho_idPincho, nombreJP, comentario) values (?,?,?,?)");
+        $stmt->execute(array($dniJP,$idPincho,$nombreJP,$comentario));
+    }
 }

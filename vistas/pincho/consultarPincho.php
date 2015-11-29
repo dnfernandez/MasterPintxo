@@ -3,7 +3,9 @@ require_once(__DIR__ . "/../../nucleo/ViewManager.php");
 $view = ViewManager::getInstance();
 $pincho = $view->getVariable("datosPincho");
 $organizador = $view->getVariable("organizador");
+$popular = $view->getVariable("popular");
 $usuario = $view->getVariable("currentusername");
+$comentarios = $view->getVariable("comentarios");
 ?>
 
                                     <?php
@@ -105,3 +107,48 @@ $usuario = $view->getVariable("currentusername");
     </div>
 </section>
 <?php endforeach; ?>
+<section id="seccionCom">
+    <div class="container">
+        <div class="heading text-center">
+            <img class="dividerline" src="img/sep.png" alt="separador">
+            <h2>Comentarios</h2>
+            <img class="dividerline" src="img/sep.png" alt="separador">
+        </div>
+        <div class="comentarios centrador3">
+            <?php if(isset($popular)):?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="index.php?controller=pincho&amp;action=insertarComentario" method="post">
+                            <textarea name="comentario" class="textCom" placeholder="Escribe aqu&iacute; tu comentario p&uacute;blico"></textarea>
+                            <input type="hidden" name="idPincho" value="<?php echo $_GET["idPincho"];?>">
+                            <div class="btnCom">
+                                <button type="submit">Comentar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <!--Bucle-->
+            <?php foreach($comentarios as $c):?>
+            <div class="row cajaComentarios">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 nombCom">
+                            <?php echo $c["nombreJP"];?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 comCom">
+                            <?php echo $c["comentario"];?>
+                        </div>
+                    </div>
+                    <div class="linCom">
+
+                    </div>
+                </div>
+            </div>
+            <?php endforeach;?>
+            <!--->
+        </div>
+    </div>
+</section>
