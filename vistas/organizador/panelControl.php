@@ -47,6 +47,9 @@ $usuario = $view->getVariable("currentusername");
         <span class="panel">
             <a href="index.php?controller=organizador&amp;action=listarEst#seccionL"><button class="btnPanel" type="button">Lista de Establecimientos</button></a>
         </span>
+        <span class="panel">
+            <a href="index.php?controller=premio&amp;action=calcularPremio"><button class="btnPanel" type="button">Repartir premios</button></a>
+        </span>
     </div>
 </section>
 

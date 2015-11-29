@@ -146,5 +146,15 @@ class PinchoMapper
         $stmt->execute(array($idPincho, $idPincho));
     }
 
+    /**
+     * Listar pinchos finalistas
+     */
+
+    public function listarPinchosFinalistas(){
+        $stmt = $this->db->query("select * from Pincho where concursante='1' and finalista='1'");
+        $pincho = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $pincho;
+    }
+
 
 }

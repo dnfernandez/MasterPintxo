@@ -1,0 +1,94 @@
+<?php
+require_once(__DIR__ . "/../../nucleo/ViewManager.php");
+$view = ViewManager::getInstance();
+$usuario = $view->getVariable("currentusername");
+$premios = $view->getVariable("premios");
+?>
+<?php
+if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>';
+if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionL">Login</a></li>';
+if (!isset($usuario)) echo '
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+                                                    <ul class="dropdown-menu menuOc" role="menu">
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+                                                    </ul>
+                                                </li>';
+if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
+?>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<section id="seccionPreJP" name="crearPincho">
+    <div class="container">
+        <div class="heading">
+            <img class="dividerline" src="img/sep.png" alt="separador">
+            <h2>Premios</h2>
+            <img class="dividerline" src="img/sep.png" alt="separador">
+            <h3><br></h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="restmenuwrap">
+                    <h3 class="maincat notopmarg text-center">1º PREMIO</h3>
+                    <?php foreach($premios as $p):
+                        if(stristr($p["nombrePremio"],"1")!=false):
+                            ?>
+                            <div class="restitem clearfix">
+                                <h4><?php echo $p["nombreJP"]." ".$p["apellidosJP"]; ?></h4>
+                                <p>
+                                    <?php echo $p["descripcionPremio"]; ?>
+                                </p>
+                            </div>
+                            <?php
+                        endif;
+                    endforeach;?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="restmenuwrap">
+                    <h3 class="maincat notopmarg text-center">2º PREMIO</h3>
+                    <?php foreach($premios as $p):
+                        if(stristr($p["nombrePremio"],"2")!=false):
+                            ?>
+                            <div class="restitem clearfix">
+                                <h4><?php echo $p["nombreJP"]." ".$p["apellidosJP"]; ?></h4>
+                                <p>
+                                    <?php echo $p["descripcionPremio"]; ?>
+                                </p>
+                            </div>
+                            <?php
+                        endif;
+                    endforeach;?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="restmenuwrap">
+                    <h3 class="maincat notopmarg text-center">3º PREMIO</h3>
+                    <?php foreach($premios as $p):
+                        if(stristr($p["nombrePremio"],"3")!=false):
+                            ?>
+                            <div class="restitem clearfix">
+                                <h4><?php echo $p["nombreJP"]." ".$p["apellidosJP"]; ?></h4>
+                                <p>
+                                    <?php echo $p["descripcionPremio"]; ?>
+                                </p>
+                            </div>
+                            <?php
+                        endif;
+                    endforeach;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

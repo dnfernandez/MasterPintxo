@@ -93,7 +93,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `G_31MasterPintxo`.`Premio` ;
 
 CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Premio` (
-  `codigoPremio` INT NOT NULL COMMENT '',
+  `codigoPremio` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `tipoPremio` VARCHAR(45) NOT NULL COMMENT '',
   `nombrePremio` VARCHAR(45) NOT NULL COMMENT '',
   `descripcionPremio` LONGTEXT NOT NULL COMMENT '',
@@ -107,6 +107,8 @@ CREATE TABLE IF NOT EXISTS `G_31MasterPintxo`.`Premio` (
 ENGINE = InnoDB;
 
 CREATE INDEX `fk_Premio_JuradoPopular1_idx` ON `G_31MasterPintxo`.`Premio` (`JuradoPopular_dniJP` ASC)  COMMENT '';
+
+CREATE UNIQUE INDEX `nombrePremio_UNIQUE` ON `G_31MasterPintxo`.`Premio` (`nombrePremio` ASC)  COMMENT '';
 
 
 -- -----------------------------------------------------

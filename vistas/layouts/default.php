@@ -74,6 +74,8 @@ $view = ViewManager::getInstance();
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> + informaci&oacute;n <span class="caret"></span></a>
                                                 <ul class="dropdown-menu menuOc" role="menu">
                                                     <li class="menuItem"><a href="index.php?controller=pincho&amp;action=gastromapa#seccionG">Gastromapa</a></li>
+                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=index#seccionPre">Premios pinchos</a></li>
+                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=premioJP#seccionPreJP">Premios jurado popular</a></li>
                                                 </ul>
                                             </li>
 

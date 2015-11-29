@@ -17,7 +17,7 @@ class Premio {
 	 * @param $descripcionPremio
 	 * @param $JuradoPopular_dniJP
 	 */
-	public function __construct($codigoPremio, $tipoPremio, $nombrePremio, $descripcionPremio, $JuradoPopular_dniJP)
+	public function __construct($codigoPremio = NULL, $tipoPremio = NULL, $nombrePremio=NULL, $descripcionPremio=NULL, $JuradoPopular_dniJP=NULL)
 	{
 		$this->codigoPremio = $codigoPremio;
 		$this->tipoPremio = $tipoPremio;
