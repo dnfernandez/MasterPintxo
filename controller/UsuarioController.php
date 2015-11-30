@@ -8,7 +8,7 @@ require_once(__DIR__ . "/../model/JuradoPopular.php");
 require_once(__DIR__ . "/../model/JuradoPopularMapper.php");
 require_once(__DIR__ . "/../model/JuradoProfesional.php");
 require_once(__DIR__ . "/../model/JuradoProfesionalMapper.php");
-
+require_once(__DIR__ . "/../nucleo/I18n.php");
 require_once(__DIR__ . "/../controller/BaseController.php");
 require_once(__DIR__ . "/../nucleo/ViewManager.php");
 

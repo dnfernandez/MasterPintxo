@@ -9,6 +9,7 @@ require_once(__DIR__ . "/../model/JuradoPopular.php");
 require_once(__DIR__ . "/../model/JuradoPopularMapper.php");
 require_once(__DIR__ . "/../model/Organizador.php");
 require_once(__DIR__ . "/../model/OrganizadorMapper.php");
+require_once(__DIR__ . "/../nucleo/I18n.php");
 
 class BaseController
 {

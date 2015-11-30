@@ -54,8 +54,7 @@ $view = ViewManager::getInstance();
 
                         <h1 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">MasterPintxo</h1>
 
-                        <h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">Concurso de
-                            pinchos</h2>
+                        <h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">Concurso de pinchos</h2>
                     </div>
                 </div>
             </div>
@@ -78,8 +77,11 @@ $view = ViewManager::getInstance();
                                                     <li class="menuItem"><a href="index.php?controller=premio&amp;action=premioJP#seccionPreJP">Premios jurado popular</a></li>
                                                 </ul>
                                             </li>
-
-
+											<li>
+											<?php
+													include(__DIR__."/language_select_element.php");
+												?>
+											</li>
                                             <!------------------------------------- Se añade el contenido ------------------------------------------->
                                             <?= $view->getFragment(ViewManager::DEFAULT_FRAGMENT) ?>
                                             <!------------------------------------------------------------------------------------------------------->
