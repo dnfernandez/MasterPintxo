@@ -89,7 +89,6 @@
   "Modificar Datos Organizador" => "Modificar Datos Organizador",
   "Modificar Datos Jurado Profesional" => "Modificar Datos Jurado Profesional",
   "Modificar Datos Usuario" => "Modificar Datos Usuario",
-  "Nombre establecimiento" => "Nome Establecemento",
   "Registrar" => "Rexistrar",
   "DireccionEstablecimiento" => "DireccionEstablecemento",
   "PassEstablecimiento" => "PassEstablecemento",

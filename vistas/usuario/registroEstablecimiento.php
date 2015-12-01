@@ -28,16 +28,16 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form method="post" action="index.php?controller=usuario&amp;action=registrarEstablecimiento" id="registerestablishmentform">
 				<div class="centrador">
-										<input name="name" type="text" class="contact centrador" placeholder="<?php echo i18n("Nombre establecimiento"); ?>" id="NombreEstablecimiento" onblur="validateEmpty('NombreEstablecimiento')">
+										<input name="name" type="text" class="contact centrador" placeholder="<?php echo i18n("Nombre"); ?>" id="NombreEstablecimiento" onblur="validateEmpty('NombreEstablecimiento')">
 					<input name="login" type="text" class="contact centrador" placeholder="Nif" id="NIF" onblur="validateNIF()" >
 				</div>
 				<div class="centrador">
-					<input name="direccion" type="text" class="contact centrador" placeholder="Direcci&oacute;n" id="<?php echo i18n("DireccionEstablecimiento"); ?>" onblur="validateEmpty('DireccionEstablecimiento')">
+					<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="DireccionEstablecimiento" onblur="validateEmpty('DireccionEstablecimiento')">
 					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="Telefono" onblur="validateTelefono('Telefono')">
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="<?php echo i18n("PassEstablecimiento"); ?>" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="RepeatPassEstablecimiento" onblur="validatePassword('PassEstablecimiento','RepeatPassEstablecimiento')">
+					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="PassEstablecimiento" >
+					<input name="pass2" type="password" class="contact centrador" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="RepeatPassEstablecimiento" onblur="validatePassword('PassEstablecimiento','RepeatPassEstablecimiento')">
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
