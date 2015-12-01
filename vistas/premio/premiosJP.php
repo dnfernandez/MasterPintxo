@@ -5,17 +5,17 @@ $usuario = $view->getVariable("currentusername");
 $premios = $view->getVariable("premios");
 ?>
 <?php
-if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>';
+if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">'.i18n("Inicio").'</a></li>';
 if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionL">Login</a></li>';
 if (!isset($usuario)) echo '
                                                 <li class="dropdown">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> '.i18n("Registro").' <span class="caret"></span></a>
                                                     <ul class="dropdown-menu menuOc" role="menu">
-                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
-                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">'.i18n("Registro Usuario").'</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">'.i18n("Registro Establecimiento").'</a></li>
                                                     </ul>
                                                 </li>';
-if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
+if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">'.i18n("Cerrar sesi&oacute;n").'</a></li>';
 ?>
 </ul>
 </div>
@@ -32,7 +32,7 @@ if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=us
     <div class="container">
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
-            <h2>Premios</h2>
+            <h2><?= i18n("Premios")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
             <h3><br></h3>
         </div>
@@ -40,7 +40,7 @@ if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=us
         <div class="row">
             <div class="col-md-4">
                 <div class="restmenuwrap">
-                    <h3 class="maincat notopmarg text-center">1º PREMIO</h3>
+                    <h3 class="maincat notopmarg text-center"><?= i18n("1º PREMIO")?></h3>
                     <?php foreach($premios as $p):
                         if(stristr($p["nombrePremio"],"1")!=false):
                             ?>
@@ -57,7 +57,7 @@ if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=us
             </div>
             <div class="col-md-4">
                 <div class="restmenuwrap">
-                    <h3 class="maincat notopmarg text-center">2º PREMIO</h3>
+                    <h3 class="maincat notopmarg text-center"><?= i18n("2º PREMIO")?></h3>
                     <?php foreach($premios as $p):
                         if(stristr($p["nombrePremio"],"2")!=false):
                             ?>
@@ -74,7 +74,7 @@ if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=us
             </div>
             <div class="col-md-4">
                 <div class="restmenuwrap">
-                    <h3 class="maincat notopmarg text-center">3º PREMIO</h3>
+                    <h3 class="maincat notopmarg text-center"><?= i18n("3º PREMIO")?></h3>
                     <?php foreach($premios as $p):
                         if(stristr($p["nombrePremio"],"3")!=false):
                             ?>

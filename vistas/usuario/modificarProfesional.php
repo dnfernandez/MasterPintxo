@@ -4,8 +4,8 @@ $view = ViewManager::getInstance();
 $profesional = $view->getVariable("modProfesional");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 									</ul>
 								</div>
 							</div>
@@ -21,7 +21,7 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 				<div class="heading">
 					<img class="dividerline" src="img/sep.png" alt="separador">
-					<h2>Modificar Datos Jurado Profesional</h2>
+					<h2><?= i18n("Modificar Datos Jurado Profesional")?></h2>
 					<img class="dividerline" src="img/sep.png" alt="separador">
 					<h3><br></h3>
 			</div>
@@ -33,15 +33,15 @@ $usuario = $view->getVariable("currentusername");
 					<input name="telef" type="text" class="contact centrador" id="modTelefJPro" onblur="validateTelefono('modTelefJPro')" value="<?php echo $profesional["telefJPro"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="modPassJPro" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="modRepeatPassJPro" onblur="validatePassword('modPassJPro','modRepeatPassJPro')" >
+					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="modPassJPro" >
+					<input name="pass2" type="password" class="contact centrador" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="modRepeatPassJPro" onblur="validatePassword('modPassJPro','modRepeatPassJPro')" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
 <!--					<input type="submit" class="contact submit" value="Modificar">-->
-					<button id="btn-login" type="button" onclick="validateModJPro('modjpro')" class="contact submit" value="Modificar">Modificar </button>
+					<button id="btn-login" type="button" onclick="validateModJPro('modjpro')" class="contact submit" value="Modificar"><?= i18n("Modificar")?> </button>
 
 				</div>	
 			</form>

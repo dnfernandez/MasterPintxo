@@ -4,9 +4,9 @@ $view = ViewManager::getInstance();
 $pincho = $view->getVariable("pinchoEst");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarEstablecimientoVista#seccionME">Modificar Perfil</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarEstablecimientoVista#seccionME"><?= i18n("Modificar Perfil")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 </ul>
 </div>
 </div>
@@ -24,7 +24,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Modificar pincho</h2>
+            <h2><?= i18n("Modificar pincho")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><br></h3>
@@ -45,7 +45,7 @@ $usuario = $view->getVariable("currentusername");
                 <input name="uploadedfile" type="file" style="width: 480px;" class="contact">
             </div>
             <div class="input-group centrador">
-                <input type="submit" class="contact submit" value="Modificar">
+                <input type="submit" class="contact submit" value="<?php echo i18n("Modificar"); ?>">
             </div>
         </form>
     </div>

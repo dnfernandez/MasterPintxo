@@ -4,10 +4,10 @@ $view = ViewManager::getInstance();
 $usuario = $view->getVariable("currentusername");
 ?>
 									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?= i18n("Registro")?> <span class="caret"></span></a>
 										<ul class="dropdown-menu menuOc" role="menu">
-											<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
-											<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+											<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU"><?= i18n("Registro Usuario")?></a></li>
+											<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE"><?= i18n("Registro Establecimiento")?></a></li>
 										</ul>
 									</li>
 									</ul>
@@ -36,13 +36,13 @@ $usuario = $view->getVariable("currentusername");
 					<input name="login" type="text" class="contact" placeholder="Dni/Nif" >                                       
 				</div>
 				<div class="input-group centrador">
-					<input name="pass" type="password" class="contact" placeholder="Contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="Entrar">
+					<input type="submit" class="contact submit" value="<?php echo i18n("Iniciar sesi&oacute;n"); ?>">
 				</div>	
 			</form>
 		</div>

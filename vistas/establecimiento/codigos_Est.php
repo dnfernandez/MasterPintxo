@@ -4,9 +4,9 @@ $view = ViewManager::getInstance();
 $codigos = $view->getVariable("codigosEst");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarEstablecimientoVista#seccionME">Modificar Perfil</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarEstablecimientoVista#seccionME"><?= i18n("Modificar Perfil")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 </ul>
 </div>
 </div>
@@ -24,7 +24,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Generar c&oacute;digos</h2>
+            <h2><?= i18n("Generar c&oacute;digos")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><br></h3>
@@ -36,7 +36,7 @@ $usuario = $view->getVariable("currentusername");
         <form method="post" action="index.php?controller=establecimiento&amp;action=generarCodigos"
               class="form-vertical">
             <div class="form-group">
-                <label>N&uacute;mero de c&oacutedigos:</label>
+                <label><?= i18n("N&uacute;mero de c&oacute;digos:")?></label>
 
                 <div class="btn-group">
                     <select class="contact submit" name="cantidad">
@@ -47,12 +47,12 @@ $usuario = $view->getVariable("currentusername");
                     </select>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="contact submit">Generar</button>
+                    <button type="submit" class="contact submit"><?= i18n("Generar")?></button>
                 </div>
             </div>
         </form>
         <div>
-            <label>Códigos generados:</label>
+            <label><?= i18n("Códigos generados:")?></label>
 
             <div class="form-control cajaCodigos">
                 <div class="row centrador">

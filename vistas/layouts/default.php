@@ -54,7 +54,7 @@ $view = ViewManager::getInstance();
 
                         <h1 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">MasterPintxo</h1>
 
-                        <h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">Concurso de pinchos</h2>
+                        <h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s"><?= i18n("Concurso de pinchos")?></h2>
                     </div>
                 </div>
             </div>
@@ -70,11 +70,11 @@ $view = ViewManager::getInstance();
                                         <ul class="nav navbar-nav">
                                             <li class="menuItem"><a href="index.php">MasterPintxo</a></li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> + informaci&oacute;n <span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= i18n("+ informaci&oacute;n")?>  <span class="caret"></span></a>
                                                 <ul class="dropdown-menu menuOc" role="menu">
                                                     <li class="menuItem"><a href="index.php?controller=pincho&amp;action=gastromapa#seccionG">Gastromapa</a></li>
-                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=index#seccionPre">Premios pinchos</a></li>
-                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=premioJP#seccionPreJP">Premios jurado popular</a></li>
+                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=index#seccionPre"><?= i18n("Premios pinchos")?></a></li>
+                                                    <li class="menuItem"><a href="index.php?controller=premio&amp;action=premioJP#seccionPreJP"><?= i18n("Premios jurado popular")?></a></li>
                                                 </ul>
                                             </li>
 											<li>
@@ -97,7 +97,7 @@ $view = ViewManager::getInstance();
 
                                                 <div class="container">
                                                     <p>
-                                                        &copy; 2015 Copyright Aprendizaje basado en proyectos<br>
+                                                        &copy; 2015 Copyright Aprendizaxe basado en proxectos<br>
                                                     </p>
                                                 </div>
                                             </section>
