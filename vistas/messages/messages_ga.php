@@ -7,5 +7,6 @@
   "Espa&ntilde;ol" => "Espa&ntilde;ol",
   "Ingl&eacute;s" => "Ingl&eacute;s",
   "Gallego" => "Galego",
+  "Portugues" => "Portugu&eacute;s",
   )
 ?>

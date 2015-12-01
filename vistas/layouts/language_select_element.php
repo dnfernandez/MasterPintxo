@@ -8,5 +8,6 @@
 		<li class="menuItem"><a href="index.php?controller=language&amp;action=change&amp;lang=es"><?= i18n("Espa&ntilde;ol")?></a></li>
 		<li class="menuItem"><a href="index.php?controller=language&amp;action=change&amp;lang=en"><?= i18n("Ingl&eacute;s")?></a></li>
 		<li class="menuItem"><a href="index.php?controller=language&amp;action=change&amp;lang=ga"><?= i18n("Gallego")?></a></li>
+		<li class="menuItem"><a href="index.php?controller=language&amp;action=change&amp;lang=pt"><?= i18n("Portugu&eacute;s")?></a></li>
 	</ul>
 </li>
