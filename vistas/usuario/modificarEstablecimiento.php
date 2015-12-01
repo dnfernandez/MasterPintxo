@@ -29,14 +29,19 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form method="post" action="index.php?controller=usuario&amp;action=modificarEstablecimiento" id="modestablishmentform" >
 				<div class="centrador">
-					<input name="name" type="text" class="contact centrador" id="newNameEsta" onblur="validateEmpty('newNameEsta')" value="<?php echo $establecimiento["nombreE"];?>" >
-					<input name="telef" type="text" class="contact centrador" id="newTelefEsta" onblur="validateTelefono('newTelefEsta')" value="<?php echo $establecimiento["telfE"];?>" >
+					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
+					<input name="name" type="text" class="contact centrador" id="newNameEsta" onblur="validateEmpty('newNameEsta',<?php echo $trad ;?>)" value="<?php echo $establecimiento["nombreE"];?>" >
+					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
+					<input name="telef" type="text" class="contact centrador" id="newTelefEsta" onblur="validateTelefono('newTelefEsta',<?php echo $trad ;?>)" value="<?php echo $establecimiento["telfE"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="direccion" type="text" class="contact centrador" id="newDirEsta" onfocus="ayudaDir()" onblur="validateDir('newDirEsta')" value="<?php echo $establecimiento["direccionE"];?>"" >
+					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00lida") ?>
+					<?php $trad1 = i18n("La dirección debe ser Calle, Numero, Ciudad") ?>
+					<input name="direccion" type="text" class="contact centrador" id="newDirEsta" onfocus="ayudaDir(<?php echo $trad1 ;?>)" onblur="validateDir('newDirEsta',<?php echo $trad ;?>)" value="<?php echo $establecimiento["direccionE"];?>"" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" id="newPassEsta" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>"  onfocus="ayudaPass()">
+					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>
+					<input name="pass" type="password" class="contact centrador" id="newPassEsta" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>"  onfocus="ayudaPass(<?php echo $trad ;?>')">
 					<input name="pass2" type="password" class="contact centrador" id="newRePassEsta" onblur="validatePassword('newPassEsta','newRePassEsta')" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" >
 
 				</div>

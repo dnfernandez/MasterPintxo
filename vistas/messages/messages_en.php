@@ -96,5 +96,12 @@
   "C&oacute;digo postal" => "Postal code",
   "Nombre pincho" => "Pincho name",
   "Escribe aqu&iacute; tu comentario p&uacute;blico" => "Write here your public comment",
+  "Tienes un campo vac\u00edo" => "The field cannot be empty",
+  "Introduzca un DNI v\u00E1lido" => "Insert a valid DNI",
+  "Introduzca un CP v\u00E1lido" => "Insert a valid CP",
+  "Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres" => "The passwords does not match, they must have a number, a letter and between 6 and 15 characters",
+  "Introduzca un NIF v\u00lido" => "Insert a valid NIF",
+  "Introduzca una Direcci\u00F3n v\u00lida" => "Inser a valid address",
+  "La dirección debe ser Calle, Numero, Ciudad" => "The address must have an Street, Number, City", 
   )
 ?>

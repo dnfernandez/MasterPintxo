@@ -96,5 +96,12 @@
   "C&oacute;digo postal" => "C&oacute;digo postal",
   "Nombre pincho" => "Nome pincho",
   "Escribe aqu&iacute; tu comentario p&uacute;blico" => "Escribe aqu&iacute; o teu comentario p&uacute;blico",
+  "Tienes un campo vac\u00edo" => "Tes un campo baleiro",
+  "Introduzca un DNI v\u00E1lido" => "Inserte un DNI v\u00E1lido",
+  "Introduzca un CP v\u00E1lido" => "Inserte un CP v\u00E1lido",
+  "Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres" => "Os contrasinais deben coincidir e ter un numero, unha letra e entre 6 and 15 caracteres",
+  "Introduzca un NIF v\u00lido" => "Inserte un NIF v\u00E1lido",
+  "Introduzca una Direcci\u00F3n v\u00lida" => "Inserte unha direcci\u00F3n v\u00lida",
+  "La dirección debe ser Calle, Numero, Ciudad" => "A dirección debe ser Calle, Numero, Ciudad",
   )
 ?>

@@ -36,15 +36,19 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form method="post" action="index.php?controller=usuario&amp;action=registrarProfesional" id="registerjpro">
 				<div class="centrador">
-					<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNIJPro" onblur="validateDNI('DNIJPro')" >
-					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos"  id="NombreJPro" onblur="validateEmpty('NombreJPro')">
+					<?php $trad = i18n("Introduzca un DNI v\u00E1lido") ?>
+					<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNIJPro" onblur="validateDNI('DNIJPro','<?php echo $trad ;?>')" >
+					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
+					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos"  id="NombreJPro" onblur="validateEmpty('NombreJPro','<?php echo $trad ;?>')">
 				</div>
 				<div class="centrador">
-					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="TelefJPro" onblur="validateTelefono('TelefJPro')">
+					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
+					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="TelefJPro" onblur="validateTelefono('TelefJPro','<?php echo $trad ;?>)">
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="PassJPro" onfocus="ayudaPass()">
-					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="PassRepeatJPro" onblur="validatePassword('PassJPro','PassRepeatJPro')" >
+					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>
+					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="PassJPro" onfocus="ayudaPass(<?php echo i18n("Contrase&ntilde;a"); ?>)">
+					<input name="pass2" type="password" class="contact centrador" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="PassRepeatJPro" onblur="validatePassword('PassJPro','PassRepeatJPro')" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>

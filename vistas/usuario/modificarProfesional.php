@@ -29,12 +29,15 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form method="post" action="index.php?controller=usuario&amp;action=modificarProfesional" id="modjpro">
 				<div class="centrador">
-					<input name="name" type="text" class="contact centrador" id="modNameJPro" onblur="validateEmpty('modNameJPro')" value="<?php echo $profesional["nombreJPro"];?>" >
-					<input name="telef" type="text" class="contact centrador" id="modTelefJPro" onblur="validateTelefono('modTelefJPro')" value="<?php echo $profesional["telefJPro"];?>" >
+					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
+					<input name="name" type="text" class="contact centrador" id="modNameJPro" onblur="validateEmpty('modNameJPro','<?php echo $trad ;?>')" value="<?php echo $profesional["nombreJPro"];?>" >
+					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
+					<input name="telef" type="text" class="contact centrador" id="modTelefJPro" onblur="validateTelefono('modTelefJPro','<?php echo $trad ;?>')" value="<?php echo $profesional["telefJPro"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="modPassJPro" onfocus="ayudaPass2()" >
-					<input name="pass2" type="password" class="contact centrador" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="modRepeatPassJPro" onblur="validatePassword('modPassJPro','modRepeatPassJPro')" >
+					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>
+					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="modPassJPro" onfocus="ayudaPass2('<?php echo $trad ;?>')" >
+					<input name="pass2" type="password" class="contact centrador" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="modRepeatPassJPro" onblur="validatePassword('modPassJPro','modRepeatPassJPro','<?php echo $trad ;?>')" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>

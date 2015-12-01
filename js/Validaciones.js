@@ -1,10 +1,10 @@
 
-function validateEmpty(id){
+function validateEmpty(id,traduccion){
     var name = document.getElementById(id).value;
 
     //Comprobaciones de "nombre", no se puede registrar nadie sin nombre.
     if (name.length == 0) {
-        $.notify("Tienes un campo vacio", "error");
+        $.notify(traduccion, "error");
 
         return false;
     }
@@ -14,7 +14,7 @@ function validateEmpty(id){
     }
 }
 
-function validateDir(id){
+function validateDir(id,traduccion){
     valor = document.getElementById(id).value;
     if ((/[\w ]+\, *[\d]+\, *[\w ]+/.test(valor))) {
         //$("#div-DNI").removeClass("has-success");
@@ -26,7 +26,7 @@ function validateDir(id){
     else {
         //$("#div-DNI").removeClass("has-error");
         //$("#div-DNI").addClass("has-success");
-        $.notify("Introduzca un Dirección válida", "error");
+        $.notify(traduccion, "error");
         return false;
 
     }
@@ -52,14 +52,14 @@ function validateName() {
     }
 }
 
-function validateSurName() {
+function validateSurName(traduccion) {
     var surName = document.getElementById("Apellidos").value;
 
     //Comprobaciones de "apellido", no se puede registrar nadie sin nombre.
     if (surName.length == 0) {
         //$("#div-surname").removeClass("has-success");
         //$("#div-surname").addClass("has-error");
-        $.notify("El campo apellido no puede estar vacío", "error");
+        $.notify(traduccion, "error");
 
         return false;
     }
@@ -71,7 +71,7 @@ function validateSurName() {
     }
 }
 
-function validateDNI(id) {
+function validateDNI(id,traduccion) {
     valor = document.getElementById(id).value;
     valor = valor.toUpperCase();
 
@@ -80,7 +80,7 @@ function validateDNI(id) {
     if ((!(/^\d{8}[A-Z]$/.test(valor))) || (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23])) {
         //$("#div-DNI").removeClass("has-success");
         //$("#div-DNI").addClass("has-error");
-        $.notify("Introduzca un DNI válido", "error");
+        $.notify(traduccion, "error");
 
         return false;
     }
@@ -92,13 +92,13 @@ function validateDNI(id) {
     }
 }
 
-function validateNIF() {
+function validateNIF(traduccion) {
     valor = document.getElementById("NIF").value;
     valor = valor.toUpperCase();
    if (!(/^[A-Z]\d{8}$/.test(valor))) {
         //$("#div-DNI").removeClass("has-success");
         //$("#div-DNI").addClass("has-error");
-        $.notify("Introduzca un NIF válido", "error");
+        $.notify(traduccion, "error");
 
         return false;
     }
@@ -110,7 +110,7 @@ function validateNIF() {
     }
 }
 
-function validateCP(id){
+function validateCP(id,traduccion){
     valor = document.getElementById(id).value;
     if ((/^\d{5}$/.test(valor))) {
         //$("#div-DNI").removeClass("has-success");
@@ -122,13 +122,13 @@ function validateCP(id){
     else {
         //$("#div-DNI").removeClass("has-error");
         //$("#div-DNI").addClass("has-success");
-        $.notify("Introduzca un CP válido", "error");
+        $.notify(traduccion, "error");
         return false;
 
     }
 }
 
-function validateTelefono(id){
+function validateTelefono(id,traduccion){
     valor = document.getElementById(id).value;
     if ((/^\d{9}$/.test(valor))) {
         //$("#div-DNI").removeClass("has-success");
@@ -140,14 +140,14 @@ function validateTelefono(id){
     else {
         //$("#div-DNI").removeClass("has-error");
         //$("#div-DNI").addClass("has-success");
-        $.notify("Introduzca un Telefono válido", "error");
+        $.notify(traduccion, "error");
         return false;
 
     }
 }
 
 
-function validatePassword(id, id2) {
+function validatePassword(id, id2, traduccion) {
     //var cont = /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/;
     var cont = /(?=.*\d)(?=.*[a-z]){6,15}/;
     var password = document.getElementById(id).value;
@@ -161,7 +161,7 @@ function validatePassword(id, id2) {
          $("#div-password").addClass("has-error");
          $("#div-repeatPassword").removeClass("has-success");
          $("#div-repeatPassword").addClass("has-error"); */
-        $.notify("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres", "error");
+        $.notify(traduccion, "error");
 
         return false;
     }
@@ -238,16 +238,16 @@ function validateModJPro(form){
     }
 }
 
-function ayudaPass() {
-    $.notify("Las contraseñas deben tener un número ,una letra y entre 6 y 15 caracteres", "info");
+function ayudaPass(traduccion) {
+    $.notify(traduccion, "info");
 }
 
-function ayudaPass2() {
-    $.notify("Las contraseñas deben tener un número ,una letra y entre 6 y 15 caracteres, si no introducen contraseñas, no se modifcaran", "info");
+function ayudaPass2(traduccion) {
+    $.notify(traduccion, "info");
 }
 
-function ayudaDir() {
-    $.notify("La dirección debe ser Calle, Numero, Ciudad", "info");
+function ayudaDir(traduccion) {
+    $.notify(traduccion, "info");
 }
 
 function validatelogin(form){
@@ -255,4 +255,6 @@ function validatelogin(form){
     document.forms[form].submit();
 
 }
+
+
 

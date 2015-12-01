@@ -28,17 +28,22 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 			<form method="post" action="index.php?controller=usuario&amp;action=registrarEstablecimiento" id="registerestablishmentform">
 				<div class="centrador">
-										<input name="name" type="text" class="contact centrador" placeholder="<?php echo i18n("Nombre"); ?>" id="NombreEstablecimiento" onblur="validateEmpty('NombreEstablecimiento')">
-					<input name="login" type="text" class="contact centrador" placeholder="Nif" id="NIF" onblur="validateNIF()" >
+					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
+					<input name="name" type="text" class="contact centrador" placeholder="<?php echo i18n("Nombre"); ?>" id="NombreEstablecimiento" onblur="validateEmpty('NombreEstablecimiento','<?php echo $trad ;?>')">
+					<?php $trad = i18n("Introduzca un NIF v\u00lido") ?>
+					<input name="login" type="text" class="contact centrador" placeholder="Nif" id="NIF" onblur="validateNIF('<?php echo $trad ;?>')" >
 				</div>
 				<div class="centrador">
-
-					<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="DireccionEstablecimiento" onfocus="ayudaDir()" onblur="validateDir('DireccionEstablecimiento')">
-					<input name="telf" type="text" class="contact centrador"  placeholder="<?php echo i18n("Telef&oacute;no"); ?>" id="Telefono" onblur="validateTelefono('Telefono')">
+					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00lida") ?>
+					<?php $trad1 = i18n("La dirección debe ser Calle, Numero, Ciudad") ?>
+					<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="DireccionEstablecimiento" onfocus="ayudaDir('<?php echo $trad1 ;?>')" onblur="validateDir('DireccionEstablecimiento','<?php echo $trad ;?>')">
+					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
+					<input name="telf" type="text" class="contact centrador"  placeholder="<?php echo i18n("Telef&oacute;no"); ?>" id="Telefono" onblur="validateTelefono('Telefono','<?php echo $trad ;?>')">
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="PassEstablecimiento" onfocus="ayudaPass()">
-					<input name="pass2" type="password" class="contact centrador"  placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="RepeatPassEstablecimiento" onblur="validatePassword('PassEstablecimiento','RepeatPassEstablecimiento')">
+					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>
+					<input name="pass" type="password" class="contact centrador" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" id="PassEstablecimiento" onfocus="ayudaPass('<?php echo $trad ;?>')">
+					<input name="pass2" type="password" class="contact centrador"  placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>" id="RepeatPassEstablecimiento" onblur="validatePassword('PassEstablecimiento','RepeatPassEstablecimiento','<?php echo $trad ;?>')">
 
 				</div>
 				<div class="centrador flash">
