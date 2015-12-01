@@ -4,8 +4,8 @@ $view = ViewManager::getInstance();
 $popular = $view->getVariable("modPopular");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 									</ul>
 								</div>
 							</div>
@@ -21,7 +21,7 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 				<div class="heading">
 					<img class="dividerline" src="img/sep.png" alt="separador">
-					<h2>Modificar Datos Usuario</h2>
+					<h2><?= i18n("Modificar Datos Usuario")?></h2>
 					<img class="dividerline" src="img/sep.png" alt="separador">
 					<h3><br></h3>
 			</div>
@@ -37,14 +37,15 @@ $usuario = $view->getVariable("currentusername");
 					<input name="cp" type="text" class="contact centrador" id="newCP" onblur="validateCP('newCP')" value="<?php echo $popular["cp"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" id="newPass" placeholder="Contrase&ntilde;a" onfocus="ayudaPass2()">
-					<input name="pass2" type="password" class="contact centrador" id="newRepeatPass" placeholder="Repetir contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" id="newPass"  placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>"  onfocus="ayudaPass2()">
+					<input name="pass2" type="password" class="contact centrador" id="newRepeatPass" placeholder="<?php echo i18n("Repetir contrase&ntilde;a"); ?>"" >
+
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<button id="btn-login" type="button" onclick="validateModUser('modificaruser')" class="contact submit" value="Modificar">Modificar</button>
+					<button id="btn-login" type="button" onclick="validateModUser('modificaruser')" class="contact submit" value="Modificar"><?= i18n("Modificar")?></button>
 
 				</div>	
 			</form>

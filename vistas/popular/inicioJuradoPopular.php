@@ -4,9 +4,9 @@ $view = ViewManager::getInstance();
 $numCodigos = $view->getVariable("numCodigos");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarUsuarioVista#seccionMU">Modificar perfil</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarUsuarioVista#seccionMU"><?= i18n("Modificar perfil")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 </ul>
 </div>
 </div>
@@ -24,7 +24,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Introducir c&oacute;digos</h2>
+            <h2><?= i18n("Introducir c&oacute;digos")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><br></h3>
@@ -37,21 +37,21 @@ $usuario = $view->getVariable("currentusername");
             <div class="form centrador">
                 <div class="row">
                     <div class="col-md-12">
-                        <input type="text" class="contact" size="40" placeholder="Introducir primer c&oacute;digo"
+                        <input type="text" class="contact" size="40" placeholder="<?php echo i18n("Introducir primer c&oacute;digo"); ?>"
                                name="cod1">
                     </div>
                 </div>
                 <?php if ($numCodigos <= 1):
                     echo '	<div class="row">
 									<div class="col-md-12">
-										<input type="text" class="contact" size="40" placeholder="Introducir segundo c&oacute;digo" name="cod2">
+										<input type="text" class="contact" size="40" placeholder="'.i18n("Introducir segundo c&oacute;digo").'" name="cod2">
 									</div>
 								</div>';
                 endif; ?>
                 <?php if ($numCodigos == 0):
                     echo '	<div class="row">
 										<div class="col-md-12">
-											<input type="text" class="contact" size="40" placeholder="Introducir tercer c&oacute;digo" name="cod3">
+											<input type="text" class="contact" size="40" placeholder="'.i18n("Introducir segundo c&oacute;digo").'" name="cod3">
 										</div>
 									</div>
 								</div>';
@@ -61,7 +61,7 @@ $usuario = $view->getVariable("currentusername");
                 </div>
                 <div class="input-group centrador">
                     <h3><br></h3>
-                    <input type="submit" class="contact submit" value="Enviar">
+                    <input type="submit" class="contact submit" value="<?php echo i18n("Enviar"); ?>">
                 </div>
         </form>
     </div>

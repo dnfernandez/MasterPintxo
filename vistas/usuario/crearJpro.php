@@ -3,16 +3,16 @@ require_once(__DIR__ . "/../../nucleo/ViewManager.php");
 $view = ViewManager::getInstance();
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> + opciones <span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?= i18n("+ opciones")?> <span class="caret"></span></a>
 	<ul class="dropdown-menu menuOc" role="menu">
-		<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarOrganizadorVista#seccionMO">Modificar perfil</a></li>
-		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=asignarPinchosVista#seccionAP">Asignar pinchos</a></li>
-		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=panelControlVista#seccionPC">Panel de control</a></li>
+		<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarOrganizadorVista#seccionMO"><?= i18n("Modificar perfil")?></a></li>
+		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=asignarPinchosVista#seccionAP"><?= i18n("Asignar pinchos")?></a></li>
+		<li class="menuItem"><a href="index.php?controller=organizador&amp;action=panelControlVista#seccionPC"><?= i18n("Panel de control")?></a></li>
 	</ul>
 </li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 									</ul>
 								</div>
 							</div>
@@ -28,7 +28,7 @@ $usuario = $view->getVariable("currentusername");
 		<div class="container">
 				<div class="heading">
 					<img class="dividerline" src="img/sep.png" alt="separador">
-					<h2>Crear Jurado Profesional</h2>
+					<h2><?= i18n("Crear Jurado Profesional")?></h2>
 					<img class="dividerline" src="img/sep.png" alt="separador">
 					<h3><br></h3>
 			</div>
@@ -50,7 +50,7 @@ $usuario = $view->getVariable("currentusername");
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<button id="btn-login" type="button" onclick="validateNewJPro('registerjpro')" class="contact submit" value="Registrar">Registrar </button>
+					<button id="btn-login" type="button" onclick="validateNewJPro('registerjpro')" class="contact submit" value="Registrar"><?= i18n("Enviar")?> </button>
 
 <!--					<input type="submit" class="contact submit" value="Crear">-->
 				</div>	

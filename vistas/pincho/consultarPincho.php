@@ -9,17 +9,17 @@ $comentarios = $view->getVariable("comentarios");
 ?>
 
                                     <?php
-                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>';
+                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">'.i18n("Inicio").'</a></li>';
                                             if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionL">Login</a></li>';
                                             if (!isset($usuario)) echo '
                                                 <li class="dropdown">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> '.i18n("Registro").' <span class="caret"></span></a>
                                                     <ul class="dropdown-menu menuOc" role="menu">
-                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
-                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">'.i18n("Registro Usuario").'</a></li>
+                                                        <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">'.i18n("Registro Establecimiento").'</a></li>
                                                     </ul>
                                                 </li>';
-                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
+                                            if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">'.i18n("Cerrar sesi&oacute;n").'</a></li>';
                                     ?>
                                     </ul>
                                 </div>
@@ -49,7 +49,7 @@ $comentarios = $view->getVariable("comentarios");
 
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h5>Descripci&oacute;n</h5>
+                                <h5><?= i18n("Descripci&oacute;n")?></h5>
 
                                 <div>
                                     <?php echo htmlentities($p["descripcionP"]);?>
@@ -58,7 +58,7 @@ $comentarios = $view->getVariable("comentarios");
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h5>Precio</h5>
+                                <h5><?= i18n("Precio")?></h5>
 
                                 <div>
                                     <?php echo $p["precio"];?> euros
@@ -67,7 +67,7 @@ $comentarios = $view->getVariable("comentarios");
                         </div>
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h5>Establecimiento</h5>
+                                <h5><?= i18n("Establecimiento")?></h5>
 
                                 <div>
                                     <?php echo htmlentities($p["nombreE"]);?>
@@ -76,12 +76,12 @@ $comentarios = $view->getVariable("comentarios");
                         </div>
                         <div class="row text-center">
                             <div class="col-md-12">
-                                <h5>Tel&eacute;fono</h5>
+                                <h5><?= i18n("Tel&eacute;fono")?></h5>
 
                                 <div>
                                     <?php echo $p["telfE"];?>
                                 </div>
-                                <h5>Direcci&oacute;n</h5>
+                                <h5><?= i18n("Direcci&oacute;n")?></h5>
 
                                 <div>
                                     <?php echo htmlentities($p["direccionE"]);?>
@@ -93,8 +93,8 @@ $comentarios = $view->getVariable("comentarios");
                             <br>
                                 <form class="form-vertical" method="POST" action="index.php?controller=organizador&amp;action=validarPropuesta">
                                     <div class="col-md-12">
-                                        <button type="submit" name="aceptar" class="contact submit">Aceptar</button>
-                                        <button type="submit" name="denegar" class="contact submit">Denegar</button>
+                                        <button type="submit" name="aceptar" class="contact submit"><?= i18n("Aceptar")?></button>
+                                        <button type="submit" name="denegar" class="contact submit"><?= i18n("Denegar")?></button>
                                     </div>
                                     <input type="hidden" name="idPincho" value="<?php echo $p["idPincho"]; ?>">
                                 </form>
@@ -111,7 +111,7 @@ $comentarios = $view->getVariable("comentarios");
     <div class="container">
         <div class="heading text-center">
             <img class="dividerline" src="img/sep.png" alt="separador">
-            <h2>Comentarios</h2>
+            <h2><?= i18n("Comentarios")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
         </div>
         <div class="comentarios centrador3">
@@ -119,10 +119,10 @@ $comentarios = $view->getVariable("comentarios");
                 <div class="row">
                     <div class="col-md-12">
                         <form action="index.php?controller=pincho&amp;action=insertarComentario" method="post">
-                            <textarea name="comentario" class="textCom" placeholder="Escribe aqu&iacute; tu comentario p&uacute;blico"></textarea>
+                            <textarea name="comentario" class="textCom" placeholder="<?php echo i18n("Escribe aqu&iacute; tu comentario p&uacute;blico"); ?>"></textarea>
                             <input type="hidden" name="idPincho" value="<?php echo $_GET["idPincho"];?>">
                             <div class="btnCom">
-                                <button type="submit">Comentar</button>
+                                <button type="submit"><?= i18n("Comentar")?></button>
                             </div>
                         </form>
                     </div>

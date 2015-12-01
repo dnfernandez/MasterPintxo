@@ -4,9 +4,9 @@ $view = ViewManager::getInstance();
 $listaPinchosVotar = $view->getVariable("listaPinchosVotar");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarUsuarioVista#seccionMU">Modificar perfil</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarUsuarioVista#seccionMU"><?= i18n("Modificar perfil")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 </ul>
 </div>
 </div>
@@ -24,7 +24,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Votar pincho</h2>
+            <h2><?= i18n("Votar pincho")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><br></h3>
@@ -59,7 +59,7 @@ $usuario = $view->getVariable("currentusername");
             </div>
             <div class="input-group centrador">
                 <h3><br></h3>
-                <input type="submit" class="contact submit" value="Votar">
+                <input type="submit" class="contact submit" value="<?php echo i18n("Votar"); ?>">
             </div>
         </form>
     </div>

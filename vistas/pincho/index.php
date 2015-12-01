@@ -6,17 +6,17 @@ $descripcionC = $view->getVariable("descripcionC");
 $usuario = $view->getVariable("currentusername");
 ?>
 <?php
-    if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>';
+    if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">'.i18n("Inicio").'</a></li>';
     if (!isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionL">Login</a></li>';
         if (!isset($usuario)) echo '
                                         <li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Registro <span class="caret"></span></a>
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> '.i18n("Registro").' <span class="caret"></span></a>
 											<ul class="dropdown-menu menuOc" role="menu">
-                                                <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">Registro Usuario</a></li>
-												<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">Registro Establecimiento</a></li>
+                                                <li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarPopularVista#seccionRU">'.i18n("Registro Usuario").'</a></li>
+												<li class="menuItem"><a href="index.php?controller=usuario&amp;action=registrarEstablecimientoVista#seccionRE">'.i18n("Registro Establecimiento").'</a></li>
 											</ul>
 										</li>';
-    if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesión</a></li>';
+    if (isset($usuario)) echo '<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">'.i18n("Cerrar sesi&oacute;n").'</a></li>';
 ?>
 </ul>
 </div>
@@ -35,7 +35,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading text-center">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Acerca de MasterPintxo</h2>
+            <h2><?= i18n("Acerca de MasterPintxo")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><?php foreach ($descripcionC as $des) {
@@ -51,7 +51,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading text-center">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Lista de pinchos concursantes</h2>
+            <h2><?= i18n("Lista de pinchos concursantes")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
         </div>
         <div id="grid-gallery" class="grid-gallery">

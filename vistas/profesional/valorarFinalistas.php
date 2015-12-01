@@ -4,9 +4,9 @@ $view = ViewManager::getInstance();
 $listaFinalistas = $view->getVariable("listaFinalistas");
 $usuario = $view->getVariable("currentusername");
 ?>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI">Inicio</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarProfesionalVista#seccionMPRO">Modificar perfil</a></li>
-<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout">Cerrar sesi&oacute;n</a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarProfesionalVista#seccionMPRO"><?= i18n("Modificar perfil")?></a></li>
+<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 </ul>
 </div>
 </div>
@@ -25,7 +25,7 @@ $usuario = $view->getVariable("currentusername");
         <div class="heading">
             <img class="dividerline" src="img/sep.png" alt="separador">
 
-            <h2>Valorar pinchos finalistas</h2>
+            <h2><?= i18n("Valorar pinchos finalistas")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
 
             <h3><br></h3>
@@ -59,7 +59,7 @@ $usuario = $view->getVariable("currentusername");
                                            value="<?php if (isset($pincho["puntuacion"])) {
                                                echo $descripcion;
                                            } ?>">
-                                    Presentaci&oacute;n
+                                    <?= i18n("Presentaci&oacute;n")?>
                                 </div>
                                 <div class="inputValoracion">
                                     <?php
@@ -75,7 +75,7 @@ $usuario = $view->getVariable("currentusername");
                                            value="<?php if (isset($pincho["puntuacion"])) {
                                                echo $sabor;
                                            } ?>">
-                                    Sabor
+                                    <?= i18n("Sabor")?>
                                 </div>
                                 <div class="inputValoracion">
                                     <?php
@@ -91,7 +91,7 @@ $usuario = $view->getVariable("currentusername");
                                            value="<?php if (isset($pincho["puntuacion"])) {
                                                echo $textura;
                                            } ?>">
-                                    Textura
+                                    <?= i18n("Textura")?>
                                 </div>
                                 <div class="inputValoracion">
                                     <?php
@@ -107,7 +107,7 @@ $usuario = $view->getVariable("currentusername");
                                            value="<?php if (isset($pincho["puntuacion"])) {
                                                echo $originalidad;
                                            } ?>">
-                                    Originalidad
+                                    <?= i18n("Originalidad")?>
                                 </div>
                                 <input type="hidden" name="pincho[]" value="<?php echo $pincho["idPincho"]; ?>">
                             </div>
@@ -118,7 +118,7 @@ $usuario = $view->getVariable("currentusername");
             </div>
             <div class="input-group centrador">
                 <h3><br></h3>
-                <input type="submit" class="contact submit" value="Valorar">
+                <input type="submit" class="contact submit" value="<?php echo i18n("Valorar"); ?>">
             </div>
         </form>
     </div>
