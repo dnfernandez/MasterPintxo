@@ -68,8 +68,14 @@ class JuradoPopularMapper
 
     public function modificar(JuradoPopular $Jp)
     {
-        $stmt = $this->db->prepare("UPDATE JuradoPopular SET contrasenhaJP=?, nombreJP=?, apellidosJP=?, direccion=?, cp=? WHERE dniJP=?");
-        $stmt->execute(array($Jp->getContrasenhaJp(), $Jp->getNombreJp(), $Jp->getApellidosJp(), $Jp->getDireccionJp(), $Jp->getCp(), $Jp->getDniJp()));
+       if($Jp->getContrasenhaJp()!=""){
+            $stmt = $this->db->prepare("UPDATE JuradoPopular SET contrasenhaJP=?, nombreJP=?, apellidosJP=?, direccion=?, cp=? WHERE dniJP=?");
+            $stmt->execute(array($Jp->getContrasenhaJp(), $Jp->getNombreJp(), $Jp->getApellidosJp(), $Jp->getDireccionJp(), $Jp->getCp(), $Jp->getDniJp()));
+        } else{
+            $stmt = $this->db->prepare("UPDATE JuradoPopular SET  nombreJP=?, apellidosJP=?, direccion=?, cp=? WHERE dniJP=?");
+            $stmt->execute(array( $Jp->getNombreJp(), $Jp->getApellidosJp(), $Jp->getDireccionJp(), $Jp->getCp(), $Jp->getDniJp()));
+
+       }
     }
 
     /**

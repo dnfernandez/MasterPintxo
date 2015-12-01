@@ -115,7 +115,27 @@ class JuradoPopular {
 		}
 
 		try {
-			$this->validoParaCrear();
+			if (strlen($this->nombreJP) < 1) {
+				$errors["nombreJP"] = "El campo nombre no puede estar vacio";
+			}
+			if (strlen($this->contrasenhaJP) < 5 && strlen($this->contrasenhaJP) > 0 ) {
+				$errors["contrasenhaJP"] = "Contrase&ntilde;a no v&aacute;lida. 5 caracteres m&aicute;nimo";
+			}
+			if (strlen($this->direccion) < 1) {
+				$errors["direccionJP"] = "El campo direccion no puede estar vacio";
+			}
+			if (strlen($this->dniJP) !=9) {
+				$errors["dniJP"] = "Dni no v&aacute;lido";
+			}
+			if (strlen($this->apellidosJP) <1) {
+				$errors["apellidosJP"] = "El campo apellidos no puede estar vacio";
+			}
+			if (strlen($this->cp) <1) {
+				$errors["cpJP"] = "El campo codigo postal no puede estar vacio";
+			}
+			if (sizeof($errors) > 0) {
+				throw new ValidationException ($errors, "Jpopular no v&aacute;lido");
+			}
 		} catch (ValidationException $ex) {
 			foreach ($ex->getErrors() as $key => $error) {
 				$errors[$key] = $error;

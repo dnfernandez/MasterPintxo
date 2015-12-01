@@ -39,7 +39,8 @@ $usuario = $view->getVariable("currentusername");
 				<input name="cp" type="text" class="contact centrador" placeholder="C&oacute;digo postal" id="CP" onblur="validateCP('CP')" >
 			</div>
 			<div class="centrador">
-				<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="Password" >
+				<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="Password" onfocus="ayudaPass()">
+				<!--<span class="contact centrador" onClick="ayudaPass()"><i class="glyphicon glyphicon-info-sign"></i></span>-->
 				<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="RepeatPassword"  onblur="validatePassword('Password','RepeatPassword')">
 			</div>
 			<div class="centrador flash">

@@ -33,10 +33,10 @@ $usuario = $view->getVariable("currentusername");
 					<input name="telef" type="text" class="contact centrador" id="newTelefEsta" onblur="validateTelefono('newTelefEsta')" value="<?php echo $establecimiento["telfE"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="direccion" type="text" class="contact centrador" id="newDirEsta" onblur="validateEmpty('newDirEsta')" value="<?php echo $establecimiento["direccionE"];?>"" >
+					<input name="direccion" type="text" class="contact centrador" id="newDirEsta" onfocus="ayudaDir()" onblur="validateDir('newDirEsta')" value="<?php echo $establecimiento["direccionE"];?>"" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" id="newPassEsta" placeholder="Contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" id="newPassEsta" placeholder="Contrase&ntilde;a" onfocus="ayudaPass()">
 					<input name="pass2" type="password" class="contact centrador" id="newRePassEsta" onblur="validatePassword('newPassEsta','newRePassEsta')" placeholder="Repetir contrase&ntilde;a" >
 				</div>
 				<div class="centrador flash">

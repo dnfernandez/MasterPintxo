@@ -37,7 +37,7 @@ $usuario = $view->getVariable("currentusername");
 					<input name="cp" type="text" class="contact centrador" id="newCP" onblur="validateCP('newCP')" value="<?php echo $popular["cp"];?>" >
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" id="newPass" placeholder="Contrase&ntilde;a" >
+					<input name="pass" type="password" class="contact centrador" id="newPass" placeholder="Contrase&ntilde;a" onfocus="ayudaPass2()">
 					<input name="pass2" type="password" class="contact centrador" id="newRepeatPass" placeholder="Repetir contrase&ntilde;a" >
 				</div>
 				<div class="centrador flash">

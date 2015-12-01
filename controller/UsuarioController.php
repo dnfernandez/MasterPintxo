@@ -496,7 +496,8 @@ class UsuarioController extends BaseController
                     }
 
                 }
-                $this->view->redirect("usuario", "modificarUsuarioVista#seccionMU");
+
+               $this->view->redirect("usuario", "modificarUsuarioVista#seccionMU");
             }
         }else{
             echo "Upss! no deberías estar aquí";

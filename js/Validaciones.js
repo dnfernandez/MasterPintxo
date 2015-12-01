@@ -14,6 +14,25 @@ function validateEmpty(id){
     }
 }
 
+function validateDir(id){
+    valor = document.getElementById(id).value;
+    if ((/[\w ]+\, *[\d]+\, *[\w ]+/.test(valor))) {
+        //$("#div-DNI").removeClass("has-success");
+        //$("#div-DNI").addClass("has-error");
+
+
+        return true;
+    }
+    else {
+        //$("#div-DNI").removeClass("has-error");
+        //$("#div-DNI").addClass("has-success");
+        $.notify("Introduzca un Dirección válida", "error");
+        return false;
+
+    }
+}
+
+
 function validateName() {
     var name = document.getElementById("Nombre").value;
 
@@ -157,6 +176,13 @@ function validatePassword(id, id2) {
     }
 }
 
+function validateOldPass(id, id2){
+    var password = document.getElementById(id).value;
+    var pass2 = document.getElementById(id2).value
+    if(password.length == 0 && pass2.length == 0) return true;
+    else return false;
+}
+
 function validateNewUser(form) {
     if(validateEmpty('Nombre') && validateCP('CP') && validateEmpty('Apellidos') && validateEmpty('Direccion') && validateDNI('DNI') && validatePassword('Password','RepeatPassword')) {
         //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
@@ -166,7 +192,7 @@ function validateNewUser(form) {
 }
 
 function validateModUser(form) {
-    if(validateEmpty('newName') && validateCP('newCP') && validateEmpty('newApellido') && validateEmpty('newDireccion') && validatePassword('newPass','newRepeatPass')) {
+    if(validateEmpty('newName') && validateCP('newCP') && validateEmpty('newApellido') && validateEmpty('newDireccion') && (validatePassword('newPass','newRepeatPass') || validateOldPass('newPass','newRepeatPass'))) {
         //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
 
         document.forms[form].submit();
@@ -183,7 +209,7 @@ function validateNewEstablishment(form) {
 }
 
 function validateModEstablishment(form) {
-    if(validateEmpty('newNameEsta') && validateEmpty('newDirEsta') && validateTelefono('newTelefEsta') &&  validatePassword('newPassEsta','newRePassEsta')) {
+    if(validateEmpty('newNameEsta') && validateEmpty('newDirEsta') && validateTelefono('newTelefEsta') &&   (validatePassword('newPassEsta','newRePassEsta') || validateOldPass('newPassEsta','newRePassEsta'))) {
         //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
 
         document.forms[form].submit();
@@ -199,11 +225,23 @@ function validateNewJPro(form){
 }
 
 function validateModJPro(form){
-    if(validateEmpty('modNameJPro') &&  validatePassword('modPassJPro','modRepeatPassJPro') && validateTelefono('modTelefJPro')) {
+    if(validateEmpty('modNameJPro') &&  (validatePassword('modPassJPro','modRepeatPassJPro') || validateOldPass('modPassJPro','modRepeatPassJPro'))  && validateTelefono('modTelefJPro')) {
         //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
 
         document.forms[form].submit();
     }
+}
+
+function ayudaPass() {
+    $.notify("Las contraseñas deben tener un número ,una letra y entre 6 y 15 caracteres", "info");
+}
+
+function ayudaPass2() {
+    $.notify("Las contraseñas deben tener un número ,una letra y entre 6 y 15 caracteres, si no introducen contraseñas, no se modifcaran", "info");
+}
+
+function ayudaDir() {
+    $.notify("La dirección debe ser Calle, Numero, Ciudad", "info");
 }
 
 

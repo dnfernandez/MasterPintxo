@@ -147,7 +147,24 @@ class Establecimiento{
 		}
 
 		try {
-			$this->validoParaCrear();
+			if (strlen($this->nombreE) < 1) {
+				$errors["nombreE"] = "El campo nombre no puede estar vacio";
+			}
+			if (strlen($this->contrasenha) < 5 && strlen($this->contrasenha) >0) {
+				$errors["contrasenhaE"] = "Contrase&ntilde;a no v&aacute;lida. 5 caracteres m&aicute;nimo";
+			}
+			if (strlen($this->direccionE) < 1) {
+				$errors["direccionE"] = "El campo direccion no puede estar vacio";
+			}
+			if (strlen($this->nif) !=9) {
+				$errors["nifE"] = "Nif no v&aacute;lido";
+			}
+			if (strlen($this->telfE) !=9) {
+				$errors["telE"] = "Tel&eacute;fono no v&aacute;lido";
+			}
+			if (sizeof($errors) > 0) {
+				throw new ValidationException ($errors, "establecimiento no v&aacute;lido");
+			}
 		} catch (ValidationException $ex) {
 			foreach ($ex->getErrors() as $key => $error) {
 				$errors[$key] = $error;

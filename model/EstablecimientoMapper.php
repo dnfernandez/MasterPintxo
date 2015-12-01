@@ -56,9 +56,13 @@ class EstablecimientoMapper
 
     public function modificar(Establecimiento $establecimiento)
     {
-        $stmt = $this->db->prepare("UPDATE  Establecimiento set nombreE=?,direccionE=?,contrasenhaE=?,telfE=? where nif=?");
-        $stmt->execute(array($establecimiento->getNombreE(), $establecimiento->getDireccionE(), $establecimiento->getContrasenha(), $establecimiento->getTelfE(), $establecimiento->getNif()));
-
+        if($establecimiento->getContrasenha()!="") {
+            $stmt = $this->db->prepare("UPDATE  Establecimiento set nombreE=?,direccionE=?,contrasenhaE=?,telfE=? where nif=?");
+            $stmt->execute(array($establecimiento->getNombreE(), $establecimiento->getDireccionE(), $establecimiento->getContrasenha(), $establecimiento->getTelfE(), $establecimiento->getNif()));
+        }else{
+            $stmt = $this->db->prepare("UPDATE  Establecimiento set nombreE=?,direccionE=?,telfE=? where nif=?");
+            $stmt->execute(array($establecimiento->getNombreE(), $establecimiento->getDireccionE(), $establecimiento->getTelfE(), $establecimiento->getNif()));
+        }
     }
 
     public function eliminar(Establecimiento $establecimiento)

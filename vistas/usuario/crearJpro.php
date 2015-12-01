@@ -43,7 +43,7 @@ $usuario = $view->getVariable("currentusername");
 					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="TelefJPro" onblur="validateTelefono('TelefJPro')">
 				</div>
 				<div class="centrador">
-					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="PassJPro">
+					<input name="pass" type="password" class="contact centrador" placeholder="Contrase&ntilde;a" id="PassJPro" onfocus="ayudaPass()">
 					<input name="pass2" type="password" class="contact centrador" placeholder="Repetir contrase&ntilde;a" id="PassRepeatJPro" onblur="validatePassword('PassJPro','PassRepeatJPro')" >
 				</div>
 				<div class="centrador flash">

@@ -67,8 +67,13 @@ class JuradoProfesionalMapper
 
     public function modificar(JuradoProfesional $Jpro)
     {
-        $stmt = $this->db->prepare("update JuradoProfesional set nombreJPro=?, contrasenhaJPro=?, telefJPro=? where dniJPro=?");
-        $stmt->execute(array($Jpro->getNombreJpro(), $Jpro->getContrasenhaJpro(), $Jpro->getTelefJpro(), $Jpro->getDniJpro()));
+        if($Jpro->getContrasenhaJpro()!="") {
+            $stmt = $this->db->prepare("update JuradoProfesional set nombreJPro=?, contrasenhaJPro=?, telefJPro=? where dniJPro=?");
+            $stmt->execute(array($Jpro->getNombreJpro(), $Jpro->getContrasenhaJpro(), $Jpro->getTelefJpro(), $Jpro->getDniJpro()));
+        }else{
+            $stmt = $this->db->prepare("update JuradoProfesional set nombreJPro=?,  telefJPro=? where dniJPro=?");
+            $stmt->execute(array($Jpro->getNombreJpro(), $Jpro->getTelefJpro(), $Jpro->getDniJpro()));
+        }
     }
 
     /**

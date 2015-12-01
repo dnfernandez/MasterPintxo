@@ -130,7 +130,21 @@ class JuradoProfesional
         }
 
         try {
-            $this->validoParaCrear();
+            if (strlen($this->nombreJpro) < 1) {
+                $errors["nombreJpro"] = "El campo nombre no puede estar vacio";
+            }
+            if (strlen($this->contrasenhaJpro) < 5 && strlen($this->contrasenhaJpro) > 0){
+                $errors["contrasenhaJpro"] = "Contrase&ntilde;a no v&aacute;lida. 5 caracteres m&aicute;nimo";
+            }
+            if (strlen($this->dniJpro) !=9) {
+                $errors["dniJpro"] = "Dni no v&aacute;lido";
+            }
+            if (strlen($this->telefJpro) !=9) {
+                $errors["telefonoJpro"] = "Tel&eacute;fono no v&aacute;lido";
+            }
+            if (sizeof($errors) > 0) {
+                throw new ValidationException ($errors, "Jprofesional no v&aacute;lido");
+            }
         } catch (ValidationException $ex) {
             foreach ($ex->getErrors() as $key => $error) {
                 $errors[$key] = $error;
