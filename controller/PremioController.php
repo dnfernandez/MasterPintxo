@@ -121,12 +121,12 @@ class PremioController extends BaseController
                         $premio["segundoP"] = $premio["primerP"];
                         $valorPremio["primerP"] = $array["sumP"];
                         $premio["primerP"] = $array["idPincho"];
-                    } elseif ($array["sumP"] < $valorPremio["primerP"] && $array["sumP"] > $valorPremio["segundoP"]) {
+                    } elseif ($array["sumP"] <= $valorPremio["primerP"] && $array["sumP"] > $valorPremio["segundoP"]) {
                         $valorPremio["terceroP"] = $valorPremio["segundoP"];
                         $premio["terceroP"] = $premio["segundoP"];
                         $valorPremio["segundoP"] = $array["sumP"];
                         $premio["segundoP"] = $array["idPincho"];
-                    } elseif ($array["sumP"] < $valorPremio["segundoP"] && $array["sumP"] > $valorPremio["terceroP"]) {
+                    } elseif ($array["sumP"] <= $valorPremio["segundoP"] && $array["sumP"] > $valorPremio["terceroP"]) {
                         $valorPremio["terceroP"] = $array["sumP"];
                         $premio["terceroP"] = $array["idPincho"];
                     }
@@ -140,12 +140,12 @@ class PremioController extends BaseController
                         $premio["segundoS"] = $premio["primerS"];
                         $valorPremio["primerS"] = $array["sumS"];
                         $premio["primerS"] = $array["idPincho"];
-                    } elseif ($array["sumS"] < $valorPremio["primerS"] && $array["sumS"] > $valorPremio["segundoS"]) {
+                    } elseif ($array["sumS"] <= $valorPremio["primerS"] && $array["sumS"] > $valorPremio["segundoS"]) {
                         $valorPremio["terceroS"] = $valorPremio["segundoS"];
                         $premio["terceroS"] = $premio["segundoS"];
                         $valorPremio["segundoS"] = $array["sumS"];
                         $premio["segundoS"] = $array["idPincho"];
-                    } elseif ($array["sumS"] < $valorPremio["segundoS"] && $array["sumS"] > $valorPremio["terceroS"]) {
+                    } elseif ($array["sumS"] <= $valorPremio["segundoS"] && $array["sumS"] > $valorPremio["terceroS"]) {
                         $valorPremio["terceroS"] = $array["sumS"];
                         $premio["terceroS"] = $array["idPincho"];
                     }
@@ -158,12 +158,12 @@ class PremioController extends BaseController
                         $premio["segundoT"] = $premio["primerT"];
                         $valorPremio["primerT"] = $array["sumT"];
                         $premio["primerT"] = $array["idPincho"];
-                    } elseif ($array["sumT"] < $valorPremio["primerT"] && $array["sumT"] > $valorPremio["segundoT"]) {
+                    } elseif ($array["sumT"] <= $valorPremio["primerT"] && $array["sumT"] > $valorPremio["segundoT"]) {
                         $valorPremio["terceroT"] = $valorPremio["segundoT"];
                         $premio["terceroT"] = $premio["segundoT"];
                         $valorPremio["segundoT"] = $array["sumT"];
                         $premio["segundoT"] = $array["idPincho"];
-                    } elseif ($array["sumT"] < $valorPremio["segundoT"] && $array["sumT"] > $valorPremio["terceroT"]) {
+                    } elseif ($array["sumT"] <= $valorPremio["segundoT"] && $array["sumT"] > $valorPremio["terceroT"]) {
                         $valorPremio["terceroT"] = $array["sumT"];
                         $premio["terceroT"] = $array["idPincho"];
                     }
@@ -176,12 +176,12 @@ class PremioController extends BaseController
                         $premio["segundoO"] = $premio["primerO"];
                         $valorPremio["primerO"] = $array["sumO"];
                         $premio["primerO"] = $array["idPincho"];
-                    } elseif ($array["sumO"] < $valorPremio["primerO"] && $array["sumO"] > $valorPremio["segundoO"]) {
+                    } elseif ($array["sumO"] <= $valorPremio["primerO"] && $array["sumO"] > $valorPremio["segundoO"]) {
                         $valorPremio["terceroO"] = $valorPremio["segundoO"];
                         $premio["terceroO"] = $premio["segundoO"];
                         $valorPremio["segundoO"] = $array["sumO"];
                         $premio["segundoO"] = $array["idPincho"];
-                    } elseif ($array["sumO"] < $valorPremio["segundoO"] && $array["sumO"] > $valorPremio["terceroO"]) {
+                    } elseif ($array["sumO"] <= $valorPremio["segundoO"] && $array["sumO"] > $valorPremio["terceroO"]) {
                         $valorPremio["terceroO"] = $array["sumO"];
                         $premio["terceroO"] = $array["idPincho"];
                     }

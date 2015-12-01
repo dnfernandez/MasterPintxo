@@ -108,7 +108,7 @@ class PremioMapper{
      */
 
     public function listarPremios(){
-        $stmt = $this->db->query("select * from Premio, Premio_Entrega_Pincho, Pincho where codigoPremio=Premio_codigoPremio and Pincho_idPincho=idPincho");
+        $stmt = $this->db->query("select * from Premio, Premio_Entrega_Pincho, Pincho where codigoPremio=Premio_codigoPremio and Pincho_idPincho=idPincho ORDER BY codigoPremio");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
