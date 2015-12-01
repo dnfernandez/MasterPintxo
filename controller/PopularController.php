@@ -54,7 +54,7 @@ class PopularController extends BaseController
                     $this->juradoPopularMapper->introducirCodigosJP($codigo3, $this->currentUser->getDniJp());
                 }
             }else{
-                $this->view->setFlash("Debes introducir c&oacute;digos de distintos pinchos");
+                $this->view->setFlash("Debes introducir c&oacute;digos de distintos pinchos y que no esten usados");
             }
 
             $this->view->redirect("popular", "index#seccionI");

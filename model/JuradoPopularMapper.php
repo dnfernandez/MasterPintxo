@@ -193,19 +193,21 @@ class JuradoPopularMapper
     public function comprobarNifPinchos($cod1, $cod2, $cod3)
     {
 
-        $stmt = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt = $this->db->prepare("select Establecimiento_nif, usado from Codigo where idCodigo=?");
         $stmt->execute(array($cod1));
-        $stmt2 = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt2 = $this->db->prepare("select Establecimiento_nif, usado from Codigo where idCodigo=?");
         $stmt2->execute(array($cod2));
-        $stmt3 = $this->db->prepare("select Establecimiento_nif from Codigo where idCodigo=?");
+        $stmt3 = $this->db->prepare("select Establecimiento_nif, usado from Codigo where idCodigo=?");
         $stmt3->execute(array($cod3));
         $nif1 = $stmt->fetch(PDO::FETCH_BOTH);
         $nif2 = $stmt2->fetch(PDO::FETCH_BOTH);
         $nif3 = $stmt3->fetch(PDO::FETCH_BOTH);
 
 
-        if ($nif1[0] != $nif2[0] && $nif1[0]!=$nif3[0] && $nif2[0]!= $nif3[0]){
-            return true;
+        if ($nif1[0] != $nif2[0] && $nif1[0]!=$nif3[0] && $nif2[0]!= $nif3[0] ){
+            if($nif1[1]==0 && $nif2[1]==0 && $nif3[1]==0) {
+                return true;
+            }
         }
     }
 

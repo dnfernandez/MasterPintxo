@@ -111,7 +111,7 @@ class PremioController extends BaseController
 
                 while (!empty($mediaPinchos)) {
                     $array = array_pop($mediaPinchos);
-                    echo $array["idPincho"] . " ------- " . $array["sumP"] . " ------- " . $array["sumS"] . " ------- " . $array["sumT"] . " ------- " . $array["sumO"] . "<br>";
+                    //echo $array["idPincho"] . " ------- " . $array["sumP"] . " ------- " . $array["sumS"] . " ------- " . $array["sumT"] . " ------- " . $array["sumO"] . "<br>";
 
                     //Presentacion
                     if ($valorPremio["primerP"] < $array["sumP"]) {
@@ -265,34 +265,25 @@ class PremioController extends BaseController
 
     public function calcularPremioJP()
     {
-        $premio = array("primer" => 0, "segundo" => 0, "tercero" => 0);
-        $dniJP = array("primer" => "", "segundo" => "", "tercero" => "");
+
         $jurados=$this->premioMapper->contarVotos();
-        foreach($jurados as $jp){
-            if ($jp["sumaTotal"] > $premio["primer"]) {
-                $premio["tercero"] = $premio["segundo"];
-                $dniJP["tercero"] = $dniJP["segundo"];
-                $premio["segundo"] = $premio["primer"];
-                $dniJP["segundo"] = $dniJP["primer"];
-                $premio["primer"] = $jp["sumaTotal"];
-                $dniJP["primer"] = $jp["dniJP"];
-            } elseif ($jp["sumaTotal"] < $premio["primer"] && $jp["sumaTotal"] > $premio["segundo"]) {
-                $premio["tercero"] = $premio["segundo"];
-                $dniJP["tercero"] = $dniJP["segundo"];
-                $premio["segundo"] = $jp["sumaTotal"];
-                $dniJP["segundo"] = $jp["dniJP"];
-            } elseif ($jp["sumaTotal"] < $premio["segundo"] && $jp["sumaTotal"] > $premio["tercero"]) {
-                $premio["tercero"] = $jp["sumaTotal"];
-                $dniJP["tercero"] = $jp["dniJP"];
+        $i=0;
+        if(isset($jurados)) {
+           foreach ($jurados as $jp) {
+                if($i==0) {
+                    $premioOBJ = new Premio(null, "Popular", "1º Premio", "1º premio por mayor numero de votos", $jp["dniJP"]);
+                    $this->premioMapper->insertarPopular($premioOBJ);
+                }
+                elseif($i==1) {
+                    $premioOBJ = new Premio(null, "Popular", "2º Premio", "2º premio por mayor numero de votos", $jp["dniJP"]);
+                    $this->premioMapper->insertarPopular($premioOBJ);
+                }
+                else{
+                    $premioOBJ = new Premio(null, "Popular", "3º Premio", "3º premio por mayor numero de votos", $jp["dniJP"]);
+                    $this->premioMapper->insertarPopular($premioOBJ);
+                }
+                $i++;
             }
-        }
-        if (!$this->premioMapper->existenPremiosJP()) {
-            $premioOBJ = new Premio(null, "Popular", "1º Premio", "1º premio por mayor numero de votos", $dniJP["primer"]);
-            $this->premioMapper->insertarPopular($premioOBJ);
-            $premioOBJ = new Premio(null, "Popular", "2º Premio", "2º premio por mayor numero de votos", $dniJP["segundo"]);
-            $this->premioMapper->insertarPopular($premioOBJ);
-            $premioOBJ = new Premio(null, "Popular", "3º Premio", "3º premio por mayor numero de votos", $dniJP["tercero"]);
-            $this->premioMapper->insertarPopular($premioOBJ);
         }
     }
 }

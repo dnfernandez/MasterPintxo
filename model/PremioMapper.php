@@ -117,7 +117,11 @@ class PremioMapper{
      */
 
     public function contarVotos(){
-        $stmt = $this->db->query("select sum(numVotos) as sumaTotal, dniJP, nombreJP, apellidosJP from JuradoPopular, JuradoPopular_Vota_Pincho where dniJP=JuradoPopular_dniJP  group by JuradoPopular_dniJP");
+        $stmt = $this->db->query("select sum(numVotos) as sumaTotal, dniJP, nombreJP, apellidosJP from JuradoPopular, JuradoPopular_Vota_Pincho where dniJP=JuradoPopular_dniJP  group by JuradoPopular_dniJP ORDER BY sumaTotal DESC LIMIT 3");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
     }
 }
