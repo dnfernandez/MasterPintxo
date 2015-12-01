@@ -121,6 +121,7 @@ $view = ViewManager::getInstance();
                                     <script src="js/contact.js"></script>
                                     <script src="js/common.js"></script>
                                     <script src="js/notify.js"></script>
+                                    <script src="js/md5.js"></script>
                                     <script src="js/Validaciones.js"></script>
                                     <script src="js/gastromapa.js"></script>
                                     <script async defer

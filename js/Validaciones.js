@@ -185,16 +185,18 @@ function validateOldPass(id, id2){
 
 function validateNewUser(form) {
     if(validateEmpty('Nombre') && validateCP('CP') && validateEmpty('Apellidos') && validateEmpty('Direccion') && validateDNI('DNI') && validatePassword('Password','RepeatPassword')) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+        document.forms[form].elements['Password'].value = (hex_md5(document.forms[form].elements['Password'].value));
+        document.forms[form].elements['RepeatPassword'].value = (hex_md5(document.forms[form].elements['RepeatPassword'].value));
         document.forms[form].submit();
     }
 }
 
 function validateModUser(form) {
     if(validateEmpty('newName') && validateCP('newCP') && validateEmpty('newApellido') && validateEmpty('newDireccion') && (validatePassword('newPass','newRepeatPass') || validateOldPass('newPass','newRepeatPass'))) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+        if(!validateOldPass('newPass','newRepeatPass')) {
+            document.forms[form].elements['newPass'].value = (hex_md5(document.forms[form].elements['newPass'].value));
+            document.forms[form].elements['newRepeatPass'].value = (hex_md5(document.forms[form].elements['newRepeatPass'].value));
+        }
         document.forms[form].submit();
     }
 }
@@ -202,32 +204,36 @@ function validateModUser(form) {
 
 function validateNewEstablishment(form) {
     if(validateEmpty('NombreEstablecimiento') && validateEmpty('DireccionEstablecimiento') && validateTelefono('Telefono') && validateNIF() && validatePassword('PassEstablecimiento','RepeatPassEstablecimiento')) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+        document.forms[form].elements['PassEstablecimiento'].value = (hex_md5(document.forms[form].elements['PassEstablecimiento'].value));
+        document.forms[form].elements['RepeatPassEstablecimiento'].value = (hex_md5(document.forms[form].elements['RepeatPassEstablecimiento'].value));
         document.forms[form].submit();
     }
 }
 
 function validateModEstablishment(form) {
     if(validateEmpty('newNameEsta') && validateEmpty('newDirEsta') && validateTelefono('newTelefEsta') &&   (validatePassword('newPassEsta','newRePassEsta') || validateOldPass('newPassEsta','newRePassEsta'))) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+       if(!validateOldPass('newPassEsta','newRePassEsta')){
+           document.forms[form].elements['newPassEsta'].value = (hex_md5(document.forms[form].elements['newPassEsta'].value));
+           document.forms[form].elements['newRePassEsta'].value = (hex_md5(document.forms[form].elements['newRePassEsta'].value));
+        }
         document.forms[form].submit();
     }
 }
 
 function validateNewJPro(form){
     if(validateEmpty('NombreJPro') && validateDNI('DNIJPro') && validatePassword('PassJPro','PassRepeatJPro') && validateTelefono('TelefJPro')) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+        document.forms[form].elements['PassJPro'].value = (hex_md5(document.forms[form].elements['PassJPro'].value));
+        document.forms[form].elements['PassRepeatJPro'].value = (hex_md5(document.forms[form].elements['PassRepeatJPro'].value));
         document.forms[form].submit();
     }
 }
 
 function validateModJPro(form){
     if(validateEmpty('modNameJPro') &&  (validatePassword('modPassJPro','modRepeatPassJPro') || validateOldPass('modPassJPro','modRepeatPassJPro'))  && validateTelefono('modTelefJPro')) {
-        //document.forms["registerform"].elements["register-password"].value = (hex_md5(document.forms["registerform"].elements["register-password"].value));
-
+        if (!validateOldPass('modPassJPro','modRepeatPassJPro')) {
+            document.forms[form].elements['modPassJPro'].value = (hex_md5(document.forms[form].elements['modPassJPro'].value));
+            document.forms[form].elements['modRepeatPassJPro'].value = (hex_md5(document.forms[form].elements['modRepeatPassJPro'].value));
+        }
         document.forms[form].submit();
     }
 }
@@ -244,5 +250,9 @@ function ayudaDir() {
     $.notify("La dirección debe ser Calle, Numero, Ciudad", "info");
 }
 
+function validatelogin(form){
+    document.forms[form].elements['PasswordLogin'].value = (hex_md5(document.forms[form].elements['PasswordLogin'].value));
+    document.forms[form].submit();
 
+}
 

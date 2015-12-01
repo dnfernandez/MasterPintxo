@@ -31,19 +31,19 @@ $usuario = $view->getVariable("currentusername");
 			</div>
 		</div>
 		<div class="container">
-			<form method="post" action="index.php?controller=usuario&amp;action=login" >
+			<form method="post" action="index.php?controller=usuario&amp;action=login" id="loginform" >
 				<div class="input-group centrador">
 					<input name="login" type="text" class="contact" placeholder="Dni/Nif" >                                       
 				</div>
 				<div class="input-group centrador">
-					<input name="pass" type="password" class="contact" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" >
+					<input name="pass" type="password" class="contact" id="PasswordLogin" placeholder="<?php echo i18n("Contrase&ntilde;a"); ?>" >
 				</div>
 				<div class="centrador flash">
 					<?php echo $view->popFlash();?>
 				</div>
 				<div class="input-group centrador">
-					<input type="submit" class="contact submit" value="<?php echo i18n("Iniciar sesi&oacute;n"); ?>">
-				</div>	
+					<button id="btn-login" type="button" onclick="validatelogin('loginform')" class="contact submit" value="Entrar"><?= i18n("Iniciar sesi&oacute;n")?></button>
+				</div>
 			</form>
 		</div>
 	</section>
