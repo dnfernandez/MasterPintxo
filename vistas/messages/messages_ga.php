@@ -105,5 +105,10 @@
   "La dirección debe ser Calle, Numero, Ciudad" => "A dirección debe ser Calle, Numero, Ciudad",
   "Introduzca un Telefono v\u00E1lido" => "Inserte un telefono v\u00E1lido ",
   "Nombre y apellidos" => "Nome e apelidos",
+  "Usuario baneado" => "Usuario baneado",
+  "Login incorrecto" => "Login incorrecto",
+  "Las contrase&ntilde;as no coinciden" => "Os contrasinais non coinciden",
+  "Datos incorrectos" => "Datos incorrectos",
+  "Debes introducir c&oacute;digos de distintos pinchos y que no esten usados" => "Debes introducir c&oacute;digos de distintos pinchos e que non esten usados",
   )
 ?>

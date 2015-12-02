@@ -104,6 +104,11 @@
   "Introduzca una Direcci\u00F3n v\u00lida" => "Inser a valid address",
   "La dirección debe ser Calle, Numero, Ciudad" => "The address must have an Street, Number, City",
   "Introduzca un Telefono v\u00E1lido" => "Inserte a valid phone number ",
-  "Nombre y apellidos" => "Name and surname",
+  "Nombre y apellidos" => "Name and surname", 
+  "Usuario baneado" => "Banned user",
+  "Login incorrecto" => "Incorrect login",
+  "Las contrase&ntilde;as no coinciden" => "The passwords does not match",
+  "Datos incorrectos" => "Incorrect data",
+  "Debes introducir c&oacute;digos de distintos pinchos y que no esten usados" => "You must insert different pincho codes as well as not used ", 
   )
 ?>

@@ -58,7 +58,7 @@ class UsuarioController extends BaseController
     {
         if (isset($_POST["login"])) {
             if ($this->organizadorMapper->buscarBaneo($_POST["login"])) {
-                $this->view->setFlash("Usuario baneado");
+                $this->view->setFlash(i18n("Usuario baneado"));
                 $this->view->redirect("usuario", "index#seccionL");
             } else {
                 $login = $_POST["login"];
@@ -106,7 +106,7 @@ class UsuarioController extends BaseController
                 }
             }
         }
-        $this->view->setFlash("Login incorrecto");
+        $this->view->setFlash(i18n("Login incorrecto"));
         $this->view->redirect("usuario", "index#seccionL");
     }
 
@@ -148,7 +148,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintas"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $establecimiento->setContrasenha($pass);
 
@@ -202,7 +202,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPop"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $popular->setContrasenhaJp($pass);
 
@@ -254,7 +254,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $profesional->setContrasenhaJpro($pass);
 
@@ -311,7 +311,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $organizador = new Organizador();
                     $organizador->setIdOrganizador($this->currentUser->getIdOrganizador());
@@ -364,7 +364,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $establecimiento=new Establecimiento($this->currentUser->getNif());
                     $establecimiento->setNombreE($_POST["name"]);
@@ -378,7 +378,7 @@ class UsuarioController extends BaseController
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
-                        $this->view->setFlash("Datos incorrectos");
+                        $this->view->setFlash(i18n("Datos incorrectos"));
                     }
 
                 }
@@ -421,7 +421,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $profesional = new JuradoProfesional($this->currentUser->getDniJPro());
                     $profesional->setNombreJpro($_POST["name"]);
@@ -434,7 +434,7 @@ class UsuarioController extends BaseController
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
-                        $this->view->setFlash("Datos incorrectos");
+                        $this->view->setFlash(i18n("Datos incorrectos"));
                     }
 
                 }
@@ -477,7 +477,7 @@ class UsuarioController extends BaseController
                     $errors = array();
                     $errors["contrasenhaDistintasPro"] = "Las contrase&ntilde;as no coinciden";
                     $this->view->setVariable("errors", $errors);
-                    $this->view->setFlash("Las contrase&ntilde;as no coinciden");
+                    $this->view->setFlash(i18n("Las contrase&ntilde;as no coinciden"));
                 } else {
                     $popular = new JuradoPopular($this->currentUser->getDniJp());
                     $popular->setNombreJp($_POST["name"]);
@@ -492,7 +492,7 @@ class UsuarioController extends BaseController
                     } catch (ValidationException $ex) {
                         $errors = $ex->getErrors();
                         $this->view->setVariable("errors", $errors);
-                        $this->view->setFlash("Datos incorrectos");
+                        $this->view->setFlash(i18n("Datos incorrectos"));
                     }
 
                 }
