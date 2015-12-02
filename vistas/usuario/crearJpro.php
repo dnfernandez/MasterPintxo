@@ -39,11 +39,11 @@ $usuario = $view->getVariable("currentusername");
 					<?php $trad = i18n("Introduzca un DNI v\u00E1lido") ?>
 					<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNIJPro" onblur="validateDNI('DNIJPro','<?php echo $trad ;?>')" >
 					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
-					<input name="name" type="text" class="contact centrador" placeholder="Nombre y apellidos"  id="NombreJPro" onblur="validateEmpty('NombreJPro','<?php echo $trad ;?>')">
+					<input name="name" type="text" class="contact centrador" placeholder="<?= i18n("Nombre y apellidos")?>"  id="NombreJPro" onblur="validateEmpty('NombreJPro','<?php echo $trad ;?>')">
 				</div>
 				<div class="centrador">
-					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
-					<input name="telf" type="text" class="contact centrador" placeholder="Tel&eacute;fono" id="TelefJPro" onblur="validateTelefono('TelefJPro','<?php echo $trad ;?>)">
+					<?php $trad = i18n("Introduzca un Telefono v\u00E1lido") ?>
+					<input name="telf" type="text" class="contact centrador" placeholder="<?= i18n("Tel&eacute;fono")?>" id="TelefJPro" onblur="validateTelefono('TelefJPro','<?php echo $trad ;?>')" >
 				</div>
 				<div class="centrador">
 					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>

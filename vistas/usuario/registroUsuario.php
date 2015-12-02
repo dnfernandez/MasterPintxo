@@ -33,8 +33,8 @@ $usuario = $view->getVariable("currentusername");
 				<input name="apellidos" type="text" class="contact centrador" placeholder="<?php echo i18n("Apellidos"); ?>" id="Apellidos"  onblur="validateEmpty('Apellidos','<?php echo $trad ;?>')">
 			</div>
 			<div class="centrador">
-				<?php $trad = i18n("Introduzca un DNI v\u00E1lido") ?>
-				<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNI"  onblur="validateDNI('DNI')">
+				<?php $trad2 = i18n("Introduzca un DNI v\u00E1lido") ?>
+				<input name="login" type="text" class="contact centrador" placeholder="Dni" id="DNI"  onblur="validateDNI('DNI','<?php echo $trad2 ;?>')">
 				<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="Direccion" onblur="validateEmpty('Direccion','<?php echo $trad ;?>')" >
 			</div>
 			<div class="input-group centrador">

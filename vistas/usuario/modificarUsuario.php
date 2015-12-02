@@ -36,7 +36,7 @@ $usuario = $view->getVariable("currentusername");
 				<div class="centrador">
 					<input name="direccion" type="text" class="contact centrador" id="newDireccion" onblur="validateEmpty('newDireccion','<?php echo $trad ;?>')" value="<?php echo $popular["direccion"];?>" >
 					<?php $trad = i18n("Introduzca un CP v\u00E1lido") ?>
-					<input name="cp" type="text" class="contact centrador" id="newCP" onblur="validateCP('newCP',<?php echo $trad ;?>')" value="<?php echo $popular["cp"];?>" >
+					<input name="cp" type="text" class="contact centrador" id="newCP" onblur="validateCP('newCP','<?php echo $trad ;?>')" value="<?php echo $popular["cp"];?>" >
 				</div>
 				<div class="centrador">
 					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>

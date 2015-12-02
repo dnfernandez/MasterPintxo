@@ -103,5 +103,7 @@
   "Introduzca un NIF v\u00lido" => "Inserte un NIF v\u00E1lido",
   "Introduzca una Direcci\u00F3n v\u00lida" => "Inserte unha direcci\u00F3n v\u00lida",
   "La dirección debe ser Calle, Numero, Ciudad" => "A dirección debe ser Calle, Numero, Ciudad",
+  "Introduzca un Telefono v\u00E1lido" => "Inserte un telefono v\u00E1lido ",
+  "Nombre y apellidos" => "Nome e apelidos",
   )
 ?>

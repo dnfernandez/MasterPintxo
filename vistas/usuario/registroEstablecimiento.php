@@ -37,8 +37,8 @@ $usuario = $view->getVariable("currentusername");
 					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00lida") ?>
 					<?php $trad1 = i18n("La dirección debe ser Calle, Numero, Ciudad") ?>
 					<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="DireccionEstablecimiento" onfocus="ayudaDir('<?php echo $trad1 ;?>')" onblur="validateDir('DireccionEstablecimiento','<?php echo $trad ;?>')">
-					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
-					<input name="telf" type="text" class="contact centrador"  placeholder="<?php echo i18n("Telef&oacute;no"); ?>" id="Telefono" onblur="validateTelefono('Telefono','<?php echo $trad ;?>')">
+					<?php $trad = i18n("Introduzca un Telefono v\u00E1lido") ?>
+					<input name="telf" type="text" class="contact centrador"  placeholder="<?php echo i18n("Tel&eacute;fono"); ?>" id="Telefono" onblur="validateTelefono('Telefono','<?php echo $trad ;?>')">
 				</div>
 				<div class="centrador">
 					<?php $trad = i18n("Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres") ?>

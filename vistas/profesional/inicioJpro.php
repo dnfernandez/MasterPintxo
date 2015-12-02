@@ -4,7 +4,7 @@ $view = ViewManager::getInstance();
 $listaElegir = $view->getVariable("listaElegir");
 $usuario = $view->getVariable("currentusername");
 ?>
-										<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></</a></li>
+										<li class="menuItem"><a href="index.php?controller=usuario&amp;action=index#seccionI"><?= i18n("Inicio")?></a></li>
 										<li class="menuItem"><a href="index.php?controller=usuario&amp;action=modificarProfesionalVista#seccionMPRO"><?= i18n("Modificar perfil")?></a></li>
 										<li class="menuItem"><a href="index.php?controller=usuario&amp;action=logout"><?= i18n("Cerrar sesi&oacute;n")?></a></li>
 									</ul>

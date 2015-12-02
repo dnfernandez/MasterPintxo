@@ -102,6 +102,8 @@
   "Las contraseñas deben coincidir y tener un número ,una letra y entre 6 y 15 caracteres" => "The passwords does not match, they must have a number, a letter and between 6 and 15 characters",
   "Introduzca un NIF v\u00lido" => "Insert a valid NIF",
   "Introduzca una Direcci\u00F3n v\u00lida" => "Inser a valid address",
-  "La dirección debe ser Calle, Numero, Ciudad" => "The address must have an Street, Number, City", 
+  "La dirección debe ser Calle, Numero, Ciudad" => "The address must have an Street, Number, City",
+  "Introduzca un Telefono v\u00E1lido" => "Inserte a valid phone number ",
+  "Nombre y apellidos" => "Name and surname",
   )
 ?>

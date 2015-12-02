@@ -31,7 +31,7 @@ $usuario = $view->getVariable("currentusername");
 				<div class="centrador">
 					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
 					<input name="name" type="text" class="contact centrador" id="modNameJPro" onblur="validateEmpty('modNameJPro','<?php echo $trad ;?>')" value="<?php echo $profesional["nombreJPro"];?>" >
-					<?php $trad = i18n("Introduzca un Telefono v\u00lido") ?>
+					<?php $trad = i18n("Introduzca un Telefono v\u00E1lido") ?>
 					<input name="telef" type="text" class="contact centrador" id="modTelefJPro" onblur="validateTelefono('modTelefJPro','<?php echo $trad ;?>')" value="<?php echo $profesional["telefJPro"];?>" >
 				</div>
 				<div class="centrador">

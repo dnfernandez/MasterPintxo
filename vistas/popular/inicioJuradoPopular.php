@@ -51,7 +51,7 @@ $usuario = $view->getVariable("currentusername");
                 <?php if ($numCodigos == 0):
                     echo '	<div class="row">
 										<div class="col-md-12">
-											<input type="text" class="contact" size="40" placeholder="'.i18n("Introducir segundo c&oacute;digo").'" name="cod3">
+											<input type="text" class="contact" size="40" placeholder="'.i18n("Introducir tercero c&oacute;digo").'" name="cod3">
 										</div>
 									</div>
 								</div>';
