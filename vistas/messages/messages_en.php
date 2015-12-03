@@ -109,6 +109,11 @@
   "Login incorrecto" => "Incorrect login",
   "Las contrase&ntilde;as no coinciden" => "The passwords does not match",
   "Datos incorrectos" => "Incorrect data",
-  "Debes introducir c&oacute;digos de distintos pinchos y que no esten usados" => "You must insert different pincho codes as well as not used ", 
+  "Debes introducir c&oacute;digos de distintos pinchos y que no esten usados" => "You must insert different pincho codes as well as not used ",
+      "MasterPintxo ha llegado a su fin.<br>
+                En la secci&oacute;n + informaci&oacute;n est&aacute; disponible el reparto de premios.<br>
+                Muchas gracias por participar." => "MasterPintxo has come to an end. <br> In the + information section are the prize distribution.<br>
+                Thank you very much for participating",
+  "Fin de concurso" => "Competition closure",
   )
 ?>

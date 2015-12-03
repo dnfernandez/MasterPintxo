@@ -254,5 +254,4 @@ class OrganizadorController extends BaseController
             header("Refresh: 5; index.php?controller=pincho&action=index");
         }
     }
-
 }

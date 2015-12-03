@@ -8,6 +8,7 @@ require_once(__DIR__ . "/../model/JuradoPopular.php");
 require_once(__DIR__ . "/../model/JuradoPopularMapper.php");
 require_once(__DIR__ . "/../model/JuradoProfesional.php");
 require_once(__DIR__ . "/../model/JuradoProfesionalMapper.php");
+require_once(__DIR__."/../model/PremioMapper.php");
 require_once(__DIR__ . "/../nucleo/I18n.php");
 require_once(__DIR__ . "/../controller/BaseController.php");
 require_once(__DIR__ . "/../nucleo/ViewManager.php");
@@ -19,6 +20,7 @@ class UsuarioController extends BaseController
     private $organizadorMapper;
     private $juradoPopularMapper;
     private $juradoProfesionalMapper;
+    private $premioMapper;
 
     /**
      * UsuarioController constructor.
@@ -31,6 +33,7 @@ class UsuarioController extends BaseController
         $this->organizadorMapper = new OrganizadorMapper();
         $this->juradoPopularMapper = new JuradoPopularMapper();
         $this->juradoProfesionalMapper = new JuradoProfesionalMapper();
+        $this->premioMapper = new PremioMapper();
 
     }
 
@@ -40,11 +43,23 @@ class UsuarioController extends BaseController
             if ($this->organizadorMapper->comprobarUsuario($_SESSION["currentuser"])) {
                 $this->view->redirect("organizador", "index#seccionI");
             } else if ($this->establecimientoMapper->consultar($_SESSION["currentuser"])) {
-                $this->view->redirect("establecimiento", "index#seccionI");
+                if($this->premioMapper->existenPremios()){
+                    $this->view->redirect("premio","fin_concurso#seccionMen");
+                }else {
+                    $this->view->redirect("establecimiento", "index#seccionI");
+                }
             } else if ($this->juradoProfesionalMapper->existeUsuario($_SESSION["currentuser"])) {
-                $this->view->redirect("profesional", "index#seccionI");
+                if($this->premioMapper->existenPremios()){
+                    $this->view->redirect("premio","fin_concurso#seccionMen");
+                }else {
+                    $this->view->redirect("profesional", "index#seccionI");
+                }
             } else if ($this->juradoPopularMapper->existeUsuario($_SESSION["currentuser"])) {
-                $this->view->redirect("popular", "index#seccionI");
+                if($this->premioMapper->existenPremios()){
+                    $this->view->redirect("premio","fin_concurso#seccionMen");
+                }else {
+                    $this->view->redirect("popular", "index#seccionI");
+                }
             }
         }
         $this->view->render("usuario", "login");

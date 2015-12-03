@@ -286,4 +286,8 @@ class PremioController extends BaseController
             }
         }
     }
+
+    public function fin_concurso(){
+        $this->view->render("premio","fin_concurso");
+    }
 }

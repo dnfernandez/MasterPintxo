@@ -110,5 +110,10 @@
   "Las contrase&ntilde;as no coinciden" => "Os contrasinais non coinciden",
   "Datos incorrectos" => "Datos incorrectos",
   "Debes introducir c&oacute;digos de distintos pinchos y que no esten usados" => "Debes introducir c&oacute;digos de distintos pinchos e que non esten usados",
+      "MasterPintxo ha llegado a su fin.<br>
+                En la secci&oacute;n + informaci&oacute;n est&aacute; disponible el reparto de premios.<br>
+                Muchas gracias por participar." => "MasterPintxo rematou.<br> Na secci&oacute;n de + informaci&oacute;n est&aacute; disponible o reparto de premios.<br>
+                Moitas gracias por participar",
+  "Fin de concurso" => "Fin do concurso",
   )
 ?>
