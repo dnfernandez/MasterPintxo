@@ -35,7 +35,7 @@ $usuario = $view->getVariable("currentusername");
 					<input name="telef" type="text" class="contact centrador" id="newTelefEsta" onblur="validateTelefono('newTelefEsta','<?php echo $trad ;?>')" value="<?php echo $establecimiento["telfE"];?>" >
 				</div>
 				<div class="centrador">
-					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00lida") ?>
+					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00E1lida") ?>
 					<?php $trad1 = i18n("La dirección debe ser Calle, Numero, Ciudad") ?>
 					<input name="direccion" type="text" class="contact centrador" id="newDirEsta" onfocus="ayudaDir('<?php echo $trad1 ;?>')" onblur="validateDir('newDirEsta','<?php echo $trad ;?>')" value="<?php echo $establecimiento["direccionE"];?>"" >
 				</div>

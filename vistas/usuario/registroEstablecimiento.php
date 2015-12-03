@@ -30,11 +30,11 @@ $usuario = $view->getVariable("currentusername");
 				<div class="centrador">
 					<?php $trad = i18n("Tienes un campo vac\u00edo") ?>
 					<input name="name" type="text" class="contact centrador" placeholder="<?php echo i18n("Nombre"); ?>" id="NombreEstablecimiento" onblur="validateEmpty('NombreEstablecimiento','<?php echo $trad ;?>')">
-					<?php $trad = i18n("Introduzca un NIF v\u00lido") ?>
+					<?php $trad = i18n("Introduzca un NIF v\u00E1lido") ?>
 					<input name="login" type="text" class="contact centrador" placeholder="Nif" id="NIF" onblur="validateNIF('<?php echo $trad ;?>')" >
 				</div>
 				<div class="centrador">
-					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00lida") ?>
+					<?php $trad = i18n("Introduzca una Direcci\u00F3n v\u00E1lida") ?>
 					<?php $trad1 = i18n("La dirección debe ser Calle, Numero, Ciudad") ?>
 					<input name="direccion" type="text" class="contact centrador" placeholder="<?php echo i18n("Direcci&oacute;n"); ?>" id="DireccionEstablecimiento" onfocus="ayudaDir('<?php echo $trad1 ;?>')" onblur="validateDir('DireccionEstablecimiento','<?php echo $trad ;?>')">
 					<?php $trad = i18n("Introduzca un Telefono v\u00E1lido") ?>
