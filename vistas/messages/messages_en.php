@@ -22,9 +22,8 @@
   "Códigos generados:" => "Generated codes",
   "Crear pincho" => "Create pincho",
   "Información para establecimiento" => "Information for the establishment",
-  "El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>
-                Por favor, tenga paciencia, disculpe las molestias." => "The pincho is waiting to be accepted on the competition.<br>
-				Please wait and sorry for the inconvenience",
+      "El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>Por favor, tenga paciencia, disculpe las molestias."
+      => "The pincho is waiting to be accepted on the competition.<br>Please wait and sorry for the inconvenience",
   "Modificar pincho" => "Modify pincho",
   "+ opciones" => "+ options",
   "Crear Jurado Profesional" => "Create Professional Jury",
@@ -115,5 +114,7 @@
                 Muchas gracias por participar." => "MasterPintxo has come to an end. <br> In the + information section are the prize distribution.<br>
                 Thank you very much for participating",
   "Fin de concurso" => "Competition closure",
+  "Desbanear" => "Unban",
+  "Banear" => "Ban",
   )
 ?>

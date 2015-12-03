@@ -24,8 +24,7 @@ $usuario = $view->getVariable("currentusername");
             <img class="dividerline" src="img/sep.png" alt="separador">
             <h2><?= i18n("Información para establecimiento")?></h2>
             <img class="dividerline" src="img/sep.png" alt="separador">
-            <p><?= i18n("El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>
-                Por favor, tenga paciencia, disculpe las molestias.")?></p>
+            <p><?= i18n("El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>Por favor, tenga paciencia, disculpe las molestias.")?></p>
         </div>
     </div>
 </section>

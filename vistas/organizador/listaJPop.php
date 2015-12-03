@@ -48,7 +48,7 @@ $usuario = $view->getVariable("currentusername");
                 <h4><?= i18n("Estado")?></h4>
             </div>
             <div class="col-md-3">
-                <h4><?= i18n("Accion")?></h4>
+                <h4><?= i18n("Acci&oacute;n")?></h4>
             </div>
         </div>
         <!-- Bucle-->
@@ -65,9 +65,9 @@ $usuario = $view->getVariable("currentusername");
             </div>
             <div class="col-md-3">
             <?php if($jp["estado"]=="baneado"){
-                    echo '<a href="index.php?controller=organizador&amp;action=desbanear&amp;listar=listarJPop&amp;idUsuario='.$jp["dniJP"].'"><button class="submit button" type="button">Desbanear</button></a>';
+                    echo '<a href="index.php?controller=organizador&amp;action=desbanear&amp;listar=listarJPop&amp;idUsuario='.$jp["dniJP"].'"><button class="submit button" type="button">'.i18n("Desbanear").'</button></a>';
                 }else{
-                    echo '<a href="index.php?controller=organizador&amp;action=banear&amp;listar=listarJPop&amp;idUsuario='.$jp["dniJP"].'"><button class="submit button" type="button">Banear</button></a>';
+                    echo '<a href="index.php?controller=organizador&amp;action=banear&amp;listar=listarJPop&amp;idUsuario='.$jp["dniJP"].'"><button class="submit button" type="button">'.i18n("Banear").'</button></a>';
                 }
             ?>
             </div>

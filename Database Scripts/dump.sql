@@ -432,22 +432,22 @@ INSERT INTO JuradoPopular (nombreJP,dniJP,direccion,cp,contrasenhaJP,apellidosJP
 INSERT INTO JuradoProfesional (nombreJPro,dniJPro,telefJPro,contrasenhaJPro) VALUES ("Gannon Ratliff","44484444D","988309000","bfd59291e825b5f2bbf1eb76569f8fe7"),("Donovan Stevenson","44484445D","988309001","bfd59291e825b5f2bbf1eb76569f8fe7"),("Jeanette Velazquez","44484446D","988309002","bfd59291e825b5f2bbf1eb76569f8fe7"),("Ariana Wiggins","44484447D","988309003","bfd59291e825b5f2bbf1eb76569f8fe7");
 
 
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111111', '0', '000000000', 'A41234568');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111112', '0', '000000000', 'A41234568');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111113', '0', '000000000', 'A41234568');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111114', '0', '000000000', 'A41234568');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111111', '0', '000000000', 'A41234568');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111112', '0', '000000000', 'A41234568');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111113', '0', '000000000', 'A41234568');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('111111114', '0', '000000000', 'A41234568');
 
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222221', '0', '000000000', 'A41234569');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222222', '0', '000000000', 'A41234569');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222223', '0', '000000000', 'A41234569');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222224', '0', '000000000', 'A41234569');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222221', '0', '000000000', 'A41234569');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222222', '0', '000000000', 'A41234569');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222223', '0', '000000000', 'A41234569');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('222222224', '0', '000000000', 'A41234569');
 
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333331', '0', '000000000', 'A41234570');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333332', '0', '000000000', 'A41234570');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333333', '0', '000000000', 'A41234570');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333334', '0', '000000000', 'A41234570');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333331', '0', '000000000', 'A41234570');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333332', '0', '000000000', 'A41234570');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333333', '0', '000000000', 'A41234570');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('333333334', '0', '000000000', 'A41234570');
 
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444441', '0', '000000000', 'A41234571');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444442', '0', '000000000', 'A41234571');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444443', '0', '000000000', 'A41234571');
-INSERT INTO `G_31MasterPintxo`.`codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444444', '0', '000000000', 'A41234571');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444441', '0', '000000000', 'A41234571');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444442', '0', '000000000', 'A41234571');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444443', '0', '000000000', 'A41234571');
+INSERT INTO `G_31MasterPintxo`.`Codigo` (`idCodigo`, `usado`, `JuradoPopular_dniJP`, `Establecimiento_nif`) VALUES ('444444444', '0', '000000000', 'A41234571');

@@ -65,9 +65,9 @@ $usuario = $view->getVariable("currentusername");
                 </div>
                 <div class="col-md-3">
                     <?php if($est["estado"]=="baneado"){
-                        echo '<a href="index.php?controller=organizador&amp;action=desbanear&amp;listar=listarEst&amp;idUsuario='.$est["nif"].'"><button class="submit button" type="button">Desbanear</button></a>';
+                        echo '<a href="index.php?controller=organizador&amp;action=desbanear&amp;listar=listarEst&amp;idUsuario='.$est["nif"].'"><button class="submit button" type="button">'.i18n("Desbanear").'</button></a>';
                     }else{
-                        echo '<a href="index.php?controller=organizador&amp;action=banear&amp;listar=listarEst&amp;idUsuario='.$est["nif"].'"><button class="submit button" type="button">Banear</button></a>';
+                        echo '<a href="index.php?controller=organizador&amp;action=banear&amp;listar=listarEst&amp;idUsuario='.$est["nif"].'"><button class="submit button" type="button">'.i18n("Banear").'</button></a>';
                     }
                     ?>
                 </div>

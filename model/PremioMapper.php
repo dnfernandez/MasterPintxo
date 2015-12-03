@@ -124,4 +124,15 @@ class PremioMapper{
 
 
     }
+
+    /**
+     * Comprueba si ya hay pinchos valorados
+     */
+
+    public function comprobarPinchosValorados(){
+        $stmt = $this->db->query("select count(*) from Pincho_Finalista_JuradoProfesional");
+        if($stmt->fetchColumn()>0){
+            return true;
+        }
+    }
 }

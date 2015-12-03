@@ -22,9 +22,8 @@
   "Códigos generados:" => "Códigos xerados",
   "Crear pincho" => "Crear pincho",
   "Información para establecimiento" => "Información para o establecemento",
-  "El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>
-                Por favor, tenga paciencia, disculpe las molestias." => "O pincho presentado todavía se atopa &aacute; espera de ser aceptado para o concurso.<br>
-				Por favor, te&ntilde;a paciencia, disculpe as molestias",
+  "El pincho presentado todavía se encuentra a la espera de ser aceptado en el concurso.<br>Por favor, tenga paciencia, disculpe las molestias."
+   => "O pincho presentado todavía se atopa &aacute; espera de ser aceptado para o concurso.<br>Por favor, te&ntilde;a paciencia, disculpe as molestias",
   "Modificar pincho" => "Modificar pincho",
   "+ opciones" => "+ opciones",
   "Crear Jurado Profesional" => "Crear Xurado Profesional",
@@ -115,5 +114,7 @@
                 Muchas gracias por participar." => "MasterPintxo rematou.<br> Na secci&oacute;n de + informaci&oacute;n est&aacute; disponible o reparto de premios.<br>
                 Moitas gracias por participar",
   "Fin de concurso" => "Fin do concurso",
+  "Desbanear" => "Desbanear",
+  "Banear" => "Banear",
   )
 ?>

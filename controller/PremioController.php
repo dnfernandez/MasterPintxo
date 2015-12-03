@@ -56,7 +56,7 @@ class PremioController extends BaseController
         $organizador = $this->view->getVariable("organizador");
         if (isset($this->currentUser) && isset($organizador)) {
             $pinchos = $this->pinchoMapper->listarPinchosFinalistas();
-            if (isset($pinchos)) {
+            if (isset($pinchos) && $this->premioMapper->comprobarPinchosValorados()) {
                 $mediaPinchos = Array();
                 foreach ($pinchos as $pincho) {
                     $valoracion = $this->premioMapper->obtenerValoracion($pincho["idPincho"]);
