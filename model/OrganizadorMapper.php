@@ -56,7 +56,7 @@ class OrganizadorMapper
      */
     public function listarNoAsignados()
     {
-        $stmt = $this->db->query("select * from Pincho where not idPincho in (select Pincho_idPincho from Pincho_Elegido_JP);");
+        $stmt = $this->db->query("select * from Pincho where not idPincho in (select Pincho_idPincho from Pincho_Elegido_JP) and concursante='1' and finalista='0';");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
