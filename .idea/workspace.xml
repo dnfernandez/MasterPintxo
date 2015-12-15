@@ -22,84 +22,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fin_concurso.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/premio/fin_concurso.php">
+      <file leaf-file-name="OrganizadorController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/OrganizadorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.870968">
-              <caret line="28" column="47" selection-start-line="26" selection-start-column="24" selection-end-line="28" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.42190304">
+              <caret line="141" column="12" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages_en.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/messages/messages_en.php">
+      <file leaf-file-name="valorarFinalistas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/profesional/valorarFinalistas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.33846155">
-              <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+            <state vertical-scroll-proportion="-25.036364">
+              <caret line="81" column="71" selection-start-line="81" selection-start-column="71" selection-end-line="81" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="language_select_element.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vistas/layouts/language_select_element.php">
+      <file leaf-file-name="ProfesionalController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/ProfesionalController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25374857">
-              <caret line="10" column="142" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="149" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages_ga.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/messages/messages_ga.php">
+      <file leaf-file-name="inicioJpro.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/profesional/inicioJpro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.8">
-              <caret line="114" column="47" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
+            <state vertical-scroll-proportion="-11.0">
+              <caret line="38" column="83" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/layouts/default.php">
+      <file leaf-file-name="PinchoMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.870968">
-              <caret line="76" column="142" selection-start-line="76" selection-start-column="130" selection-end-line="76" selection-end-column="142" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/UsuarioController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.451612">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PremioController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/PremioController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.290323">
-              <caret line="287" column="5" selection-start-line="287" selection-start-column="5" selection-end-line="287" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="premiosJP.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/premio/premiosJP.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.967742">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state vertical-scroll-proportion="-7.0384617">
+              <caret line="144" column="67" selection-start-line="144" selection-start-column="67" selection-end-line="144" selection-end-column="67" />
               <folding>
-                <marker date="1449059048037" expanded="true" signature="571:1392" placeholder="..." />
-                <marker date="1449059048037" expanded="true" signature="870:1338" placeholder="..." />
+                <marker date="1450193089151" expanded="true" signature="387:429" placeholder="select max(i..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="629:680" placeholder="select count..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="959:1114" placeholder="insert into Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="1520:1646" placeholder="update Pinch..." />
+                <marker date="1450193089151" expanded="true" signature="2016:2051" placeholder="delete from ..." />
+                <marker date="1450193089151" expanded="true" signature="2283:2344" placeholder="select * fro..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="2578:2620" placeholder="select * fro..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="2876:2980" placeholder="select * fro..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="3347:3397" placeholder="update Pinch..." />
+                <marker date="1450193089151" expanded="true" signature="3590:3639" placeholder="update Pinch..." />
+                <marker date="1450193089151" expanded="true" signature="3827:3890" placeholder="select * fro..Pincho..." />
+                <marker date="1450193089151" expanded="true" signature="4135:4183" placeholder="update Pinch..." />
+                <marker date="1450193089151" expanded="true" signature="4368:4428" placeholder="select * fro..Pincho..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asignarPinchos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vistas/organizador/asignarPinchos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganizadorMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.4615386">
+              <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+              <folding>
+                <marker date="1450190332208" expanded="true" signature="400:466" placeholder="select count..Organizador..." />
+                <marker date="1450190332208" expanded="true" signature="740:835" placeholder="select count..Organizador..." />
+                <marker date="1450190332208" expanded="true" signature="1106:1175" placeholder="update Organ..." />
+                <marker date="1450190332208" expanded="true" signature="1456:1570" placeholder="select * fro..Pincho..." />
+                <marker date="1450190332208" expanded="true" signature="1456:1584" placeholder="select * fro..Pincho..." />
+                <marker date="1450190332208" expanded="true" signature="1500:1545" placeholder="select Pinch..Pincho_Elegido_JP..." />
+                <marker date="1450190332208" expanded="true" signature="1798:1874" placeholder="select count..Pincho_Elegido_JP..." />
+                <marker date="1450190332208" expanded="true" signature="2252:2351" placeholder="insert into Pincho_Elegido_JP..." />
+                <marker date="1450190332208" expanded="true" signature="2595:2732" placeholder="select * fro..Pincho..." />
+                <marker date="1450190332208" expanded="true" signature="2595:2733" placeholder="SELECT Pinch..pincho_elegido_jp..." />
+                <marker date="1450190332208" expanded="true" signature="2972:3012" placeholder="select * fro..Pincho..." />
+                <marker date="1450190332208" expanded="true" signature="3109:3140" placeholder="select * fro..JuradoProfesional..." />
+                <marker date="1450190332208" expanded="true" signature="3333:3444" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+                <marker date="1450190332208" expanded="true" signature="3622:3737" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
+                <marker date="1450190332208" expanded="true" signature="3993:4038" placeholder="select count..Baneos..." />
+                <marker date="1450190332208" expanded="true" signature="4298:4337" placeholder="insert into Baneos..." />
+                <marker date="1450190332208" expanded="true" signature="4490:4526" placeholder="delete from ..." />
               </folding>
             </state>
           </provider>
@@ -115,11 +134,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vistas/popular/inicioJuradoPopular.php" />
-        <option value="$PROJECT_DIR$/model/OrganizadorMapper.php" />
         <option value="$PROJECT_DIR$/vistas/organizador/listaJPop.php" />
         <option value="$PROJECT_DIR$/vistas/organizador/listaJPro.php" />
         <option value="$PROJECT_DIR$/vistas/organizador/listaEst.php" />
-        <option value="$PROJECT_DIR$/vistas/organizador/asignarPinchos.php" />
         <option value="$PROJECT_DIR$/vistas/organizador/inicioOrganizador.php" />
         <option value="$PROJECT_DIR$/vistas/popular/votar.php" />
         <option value="$PROJECT_DIR$/js/gastromapa.js" />
@@ -131,7 +148,6 @@
         <option value="$PROJECT_DIR$/vistas/premio/premio.php" />
         <option value="$PROJECT_DIR$/controller/Premio.php" />
         <option value="$PROJECT_DIR$/css/estilo.css" />
-        <option value="$PROJECT_DIR$/model/PinchoMapper.php" />
         <option value="$PROJECT_DIR$/vistas/organizador/panelControl.php" />
         <option value="$PROJECT_DIR$/vistas/pincho/index.php" />
         <option value="$PROJECT_DIR$/vistas/premio/premiosNo.php" />
@@ -157,14 +173,17 @@
         <option value="$PROJECT_DIR$/vistas/usuario/login.php" />
         <option value="$PROJECT_DIR$/js/Validaciones.js" />
         <option value="$PROJECT_DIR$/vistas/organizador/fin_concurso.php" />
-        <option value="$PROJECT_DIR$/controller/OrganizadorController.php" />
-        <option value="$PROJECT_DIR$/controller/ProfesionalController.php" />
         <option value="$PROJECT_DIR$/controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/controller/PremioController.php" />
         <option value="$PROJECT_DIR$/vistas/premio/fin_concurso.php" />
         <option value="$PROJECT_DIR$/vistas/messages/messages_ga.php" />
         <option value="$PROJECT_DIR$/vistas/messages/messages_en.php" />
         <option value="$PROJECT_DIR$/vistas/layouts/language_select_element.php" />
+        <option value="$PROJECT_DIR$/controller/ProfesionalController.php" />
+        <option value="$PROJECT_DIR$/model/OrganizadorMapper.php" />
+        <option value="$PROJECT_DIR$/vistas/organizador/asignarPinchos.php" />
+        <option value="$PROJECT_DIR$/model/PinchoMapper.php" />
+        <option value="$PROJECT_DIR$/controller/OrganizadorController.php" />
       </list>
     </option>
   </component>
@@ -180,8 +199,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -256,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="premio" />
+              <option name="myItemId" value="profesional" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,7 +293,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pincho" />
+              <option name="myItemId" value="organizador" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,43 +307,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vistas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterPintxo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterPintxo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vistas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="establecimiento" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterPintxo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterPintxo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nucleo" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,10 +388,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13229166" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -464,13 +447,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vistas/organizador/listaJPop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2563805">
-          <caret line="13" column="136" selection-start-line="13" selection-start-column="136" selection-end-line="13" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/organizador/listaJPro.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63109046">
@@ -482,20 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.923077">
           <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/profesional/inicioJpro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60556847">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/organizador/asignarPinchos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4528303">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -540,20 +502,6 @@
         <state vertical-scroll-proportion="0.44191617">
           <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78306264">
-          <caret line="155" column="23" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/profesional/valorarFinalistas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44779584">
-          <caret line="102" column="118" selection-start-line="98" selection-start-column="40" selection-end-line="102" selection-end-column="118" />
         </state>
       </provider>
     </entry>
@@ -659,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.516129">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="112" selection-start-line="39" selection-start-column="112" selection-end-line="39" selection-end-column="112" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.3028953">
           <caret line="167" column="1" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,15 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5940023">
           <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/OrganizadorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.822376">
-          <caret line="255" column="5" selection-start-line="255" selection-start-column="5" selection-end-line="255" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76124567">
           <caret line="30" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,10 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3425605">
           <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
-          <folding>
-            <marker date="1449059048018" expanded="true" signature="649:1257" placeholder="..." />
-            <marker date="1449059048018" expanded="true" signature="866:1241" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,15 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.88811994">
           <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ProfesionalController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30449826">
-          <caret line="24" column="106" selection-start-line="24" selection-start-column="106" selection-end-line="24" selection-end-column="106" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.025374856">
           <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9850058">
           <caret line="125" column="33" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,76 +698,149 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4567474">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <marker date="1449059048041" expanded="true" signature="529:1350" placeholder="..." />
-            <marker date="1449059048041" expanded="true" signature="828:1296" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/layouts/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.870968">
+        <state vertical-scroll-proportion="2.319569">
           <caret line="76" column="142" selection-start-line="76" selection-start-column="130" selection-end-line="76" selection-end-column="142" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/premio/premiosJP.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.967742">
+        <state vertical-scroll-proportion="0.9156194">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <marker date="1449059048037" expanded="true" signature="571:1392" placeholder="..." />
-            <marker date="1449059048037" expanded="true" signature="870:1338" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/PremioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.290323">
-          <caret line="287" column="5" selection-start-line="287" selection-start-column="5" selection-end-line="287" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="8.759425">
+          <caret line="291" column="5" selection-start-line="291" selection-start-column="5" selection-end-line="291" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/UsuarioController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.451612">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="1.6175942">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/messages/messages_ga.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.8">
-          <caret line="114" column="47" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
-          <folding />
+        <state vertical-scroll-proportion="3.448833">
+          <caret line="119" column="2" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/premio/fin_concurso.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.870968">
+        <state vertical-scroll-proportion="-18.307692">
           <caret line="28" column="47" selection-start-line="26" selection-start-column="24" selection-end-line="28" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/messages/messages_en.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.33846155">
-          <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="59" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vistas/layouts/language_select_element.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25374857">
-          <caret line="10" column="142" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="149" />
+        <state vertical-scroll-proportion="0.30520648">
+          <caret line="10" column="138" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/OrganizadorMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4615386">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding>
+            <marker date="1450190332208" expanded="true" signature="400:466" placeholder="select count..Organizador..." />
+            <marker date="1450190332208" expanded="true" signature="740:835" placeholder="select count..Organizador..." />
+            <marker date="1450190332208" expanded="true" signature="1106:1175" placeholder="update Organ..." />
+            <marker date="1450190332208" expanded="true" signature="1456:1570" placeholder="select * fro..Pincho..." />
+            <marker date="1450190332208" expanded="true" signature="1456:1584" placeholder="select * fro..Pincho..." />
+            <marker date="1450190332208" expanded="true" signature="1500:1545" placeholder="select Pinch..Pincho_Elegido_JP..." />
+            <marker date="1450190332208" expanded="true" signature="1798:1874" placeholder="select count..Pincho_Elegido_JP..." />
+            <marker date="1450190332208" expanded="true" signature="2252:2351" placeholder="insert into Pincho_Elegido_JP..." />
+            <marker date="1450190332208" expanded="true" signature="2595:2732" placeholder="select * fro..Pincho..." />
+            <marker date="1450190332208" expanded="true" signature="2595:2733" placeholder="SELECT Pinch..pincho_elegido_jp..." />
+            <marker date="1450190332208" expanded="true" signature="2972:3012" placeholder="select * fro..Pincho..." />
+            <marker date="1450190332208" expanded="true" signature="3109:3140" placeholder="select * fro..JuradoProfesional..." />
+            <marker date="1450190332208" expanded="true" signature="3333:3444" placeholder="select count..Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1450190332208" expanded="true" signature="3622:3737" placeholder="insert into Pincho_Finalista_JuradoProfesional..." />
+            <marker date="1450190332208" expanded="true" signature="3993:4038" placeholder="select count..Baneos..." />
+            <marker date="1450190332208" expanded="true" signature="4298:4337" placeholder="insert into Baneos..." />
+            <marker date="1450190332208" expanded="true" signature="4490:4526" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/profesional/valorarFinalistas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.036364">
+          <caret line="81" column="71" selection-start-line="81" selection-start-column="71" selection-end-line="81" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ProfesionalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/profesional/inicioJpro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="38" column="83" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/organizador/asignarPinchos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PinchoMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0384617">
+          <caret line="144" column="67" selection-start-line="144" selection-start-column="67" selection-end-line="144" selection-end-column="67" />
+          <folding>
+            <marker date="1450193089151" expanded="true" signature="387:429" placeholder="select max(i..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="629:680" placeholder="select count..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="959:1114" placeholder="insert into Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="1520:1646" placeholder="update Pinch..." />
+            <marker date="1450193089151" expanded="true" signature="2016:2051" placeholder="delete from ..." />
+            <marker date="1450193089151" expanded="true" signature="2283:2344" placeholder="select * fro..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="2578:2620" placeholder="select * fro..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="2876:2980" placeholder="select * fro..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="3347:3397" placeholder="update Pinch..." />
+            <marker date="1450193089151" expanded="true" signature="3590:3639" placeholder="update Pinch..." />
+            <marker date="1450193089151" expanded="true" signature="3827:3890" placeholder="select * fro..Pincho..." />
+            <marker date="1450193089151" expanded="true" signature="4135:4183" placeholder="update Pinch..." />
+            <marker date="1450193089151" expanded="true" signature="4368:4428" placeholder="select * fro..Pincho..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/OrganizadorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42190304">
+          <caret line="141" column="12" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
           <folding />
         </state>
       </provider>

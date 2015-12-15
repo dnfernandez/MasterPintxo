@@ -85,6 +85,21 @@ class OrganizadorMapper
         $stmt->execute(array($idPincho, $dniJpro, "0"));
     }
 
+
+    /**
+     * Calcular los pinchos finalistas para que los Jpros puedan puntuarlos
+     */
+
+    public function calcularFinalistas()
+    {
+        $stmt1 = $this->db->query("SELECT Pincho_idPincho,SUM(valoracion) as votos FROM pincho_elegido_jp GROUP BY Pincho_idPincho HAVING votos>0 ORDER BY votos DESC LIMIT 5");
+
+        return $stmt1->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+
+
     /**
      * Asignar los pinchos finalistas para que los Jpros puedan puntuarlos
      */

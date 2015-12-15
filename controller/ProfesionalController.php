@@ -45,7 +45,7 @@ class ProfesionalController extends BaseController
         if (isset($this->currentUser) && $this->juradoProfesionalMapper->existeUsuario($this->username)) {
             foreach ($_POST["pincho"] as $pincho) {
                 $this->juradoProfesionalMapper->elegirFinalistas($pincho, '1', $this->currentUser->getDniJpro());
-                $this->pinchoMapper->actualizarPinchoFinalista($pincho);
+
             }
         }
         $this->view->redirect("profesional", "index#seccionI");

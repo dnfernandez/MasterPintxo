@@ -45,8 +45,7 @@ $usuario = $view->getVariable("currentusername");
 							<div class="col-md-4 asignar">
 								<div class="form-group">
 									<a target="secundaria" href="index.php?controller=pincho&amp;action=consultarPincho&amp;idPincho=<?php echo $pincho["idPincho"]; ?>#seccionI" class="contact"><?php echo htmlentities($pincho["nombreP"]);?></a>
-									<select class="contact submit" name="<?php echo "jurado".$pincho["idPincho"]; ?>">
-										<option value="noAsignar"><?= i18n("Sin asignar")?></option>
+									<select multiple="multiple" class="contact submit" name="<?php echo "jurado".$pincho["idPincho"]; ?>[]">
 										<?php foreach($listaJurados as $jurado):
 											$pos = strpos($jurado["nombreJPro"]," ");
 											$nombre =substr($jurado["nombreJPro"],0,$pos + 2);

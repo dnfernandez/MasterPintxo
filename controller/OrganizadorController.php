@@ -97,8 +97,11 @@ class OrganizadorController extends BaseController
 
         foreach ($listaPinchos as $pincho) {
             foreach ($listaJuradoProfesional as $jurado) {
-                if (($pincho["idPincho"] == $_POST["pincho" . $pincho["idPincho"]]) && ($jurado["dniJPro"] == $_POST["jurado" . $pincho["idPincho"]])) {
-                    $this->organizadorMapper->asignarElegidos($pincho["idPincho"], $jurado["dniJPro"]);
+                foreach($_POST["jurado" . $pincho["idPincho"]] as $jur) {
+                    if (($pincho["idPincho"] == $_POST["pincho" . $pincho["idPincho"]]) && ($jurado["dniJPro"] == $jur)) {
+
+                        $this->organizadorMapper->asignarElegidos($pincho["idPincho"], $jurado["dniJPro"]);
+                    }
                 }
             }
         }
@@ -129,6 +132,12 @@ class OrganizadorController extends BaseController
     public function asignarFinalistas()
     {
         if (isset($this->currentUser) && $this->organizadorMapper->comprobarUsuario($this->username)) {
+            $finalistas = $this->organizadorMapper->calcularFinalistas();
+
+            foreach($finalistas as $pincho){
+                $this->pinchoMapper->actualizarPinchoFinalista($pincho["Pincho_idPincho"]);
+
+            }
             $this->organizadorMapper->asignarFinalistas();
             $this->view->redirect("organizador", "index#seccionI");
         } else {

@@ -142,8 +142,9 @@ class PinchoMapper
 
     public function actualizarPinchoFinalista($idPincho)
     {
-        $stmt = $this->db->prepare("update Pincho set finalista=(select valoracion from Pincho_Elegido_JP where Pincho_idPincho=?) where idPincho=?");
-        $stmt->execute(array($idPincho, $idPincho));
+        $stmt = $this->db->prepare("update Pincho set finalista='1' where idPincho=?");
+        $stmt->execute(array($idPincho));
+
     }
 
     /**
