@@ -92,7 +92,7 @@ class OrganizadorMapper
 
     public function calcularFinalistas()
     {
-        $stmt1 = $this->db->query("SELECT Pincho_idPincho,SUM(valoracion) as votos FROM pincho_elegido_jp GROUP BY Pincho_idPincho HAVING votos>0 ORDER BY votos DESC LIMIT 5");
+        $stmt1 = $this->db->query("SELECT Pincho_idPincho,SUM(valoracion) as votos FROM Pincho_Elegido_JP GROUP BY Pincho_idPincho HAVING votos>0 ORDER BY votos DESC LIMIT 5");
 
         return $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
